@@ -11,7 +11,9 @@
 }
 
 [class^="icon-"]:before,
-[class*="icon-"]:before {
+[class*="icon-"]:before,
+.swiper-button-next:after,
+.swiper-button-prev:after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'iconfonts' !important;
   speak: never;
@@ -29,13 +31,16 @@
 //< " КЛАССЫ " >=============================================================================================================>//
 
 
-.icon-moon:before {
-  content: "\e902";
-}
-.icon-backet:before {
-  content: "\e903";
+.icon-close-pixel:before {
+  content: "\e90a";
 }
 .icon-close:before {
+  content: "\e902";
+}
+.icon-moon:before {
+  content: "\e903";
+}
+.icon-backet:before {
   content: "\e904";
 }
 .icon-favorite:before {
@@ -53,9 +58,10 @@
 .icon-time:before {
   content: "\e909";
 }
-.icon-arrow-left:before {
-  content: "\e900";
+.swiper-button-prev:after {
+  content: "\e900" !important;
 }
-.icon-arrow-right:before {
-  content: "\e901";
+.swiper-button-next:after {
+  content: "\e901" !important;
 }
+
