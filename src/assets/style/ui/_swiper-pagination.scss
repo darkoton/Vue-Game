@@ -1,0 +1,17 @@
+.swiper-pagination{
+  position: relative;
+  bottom: auto !important;
+  top:auto !important;
+  @include adaptiv-value(margin-top, 30, 10, 1);
+
+}
+.swiper-pagination-bullet{
+  @include adaptiv-value(width, 40, 25, 1);
+  height: 6px;
+  border-radius: 10px;
+  background: #FFF;
+  margin: 0px 10px !important;
+  @media (max-width: 1200px){
+    margin: calc(0px + 0 * ((100vw - 320px) / 880)) calc(5px + 5 * ((100vw - 320px) / 880));
+  }
+}

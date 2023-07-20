@@ -4,7 +4,6 @@
       <div class="banner__container _container">
         <div class="banner__body">
           <swiper
-            :options="swiperOptions"
             :slidesPerView="1"
             :spaceBetween="20"
             class="banner__swiper"
@@ -14,6 +13,11 @@
               delay: 2500,
             }"
             :modules="modules"
+            :navigation="{
+              prevEl: prev,
+              nextEl: next,
+            }"
+            :pagination="true"
             :breakpoints="{
               '320': {
                 slidesPerView: 1,
@@ -93,6 +97,9 @@
             <div ref="prev" class="banner__arrow swiper-button-prev"></div>
             <div ref="next" class="banner__arrow swiper-button-next"></div>
           </div>
+
+          <div class="banner__pagination" ref="pagination"></div>
+
         </div>
       </div>
     </div>
@@ -100,11 +107,15 @@
 </template>
 
 <script>
+import { ref } from 'vue';
+
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/autoplay";
+import 'swiper/css/pagination';
+import '@/assets/style/ui/_swiper-pagination.scss';
 
 export default {
   components: {
@@ -112,22 +123,16 @@ export default {
     SwiperSlide,
   },
 
-  data() {
-    return {
-      swiperOptions: {
-        navigation: {
-              prevEl: "prev",
-              nextEl: "next",
-            }
-      },
-    };
-  },
-
   setup() {
-    const modules = [Autoplay, Navigation];
+    const prev = ref(null);
+    const next = ref(null);
+    const modules = [Autoplay, Navigation, Pagination];
+
 
     return {
       modules,
+      prev,
+      next,
     };
   },
 };
@@ -255,18 +260,20 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: calc((100vw - 20px) / 1.32);
+    width: calc((100% - 20px) / 1.32);
 
     @media (max-width: 640px){
-      width: calc((100vw - 20px) / 1);
+      width: calc((100% - 20px) / 1);
     }
   }
   &__arrow{
     border-radius: 35px;
     background: #38D991;
-    @include adaptiv-value(width, 50, 30, 1);
-    @include adaptiv-value(height, 50, 30, 1);
+    border: 2px solid #38D991;
+    @include adaptiv-value(width, 45, 30, 1);
+    @include adaptiv-value(height, 45, 30, 1);
     @include adaptiv-font(25, 20);
+    @include adaptiv-value(margin-top, -30, -10, 1);
     color: #000;
     display: flex;
     align-items: center;
@@ -276,7 +283,8 @@ export default {
       cursor: pointer;
       transition: all 0.3s ease 0s;
     &:hover{
-      transform: scale(1.1);
+      background: transparent;
+      color: #38D991;
     }
     }
 
@@ -287,6 +295,8 @@ export default {
       transform: translate(2px);
     }
   }
+
+
 }
 
 
