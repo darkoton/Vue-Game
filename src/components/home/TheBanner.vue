@@ -43,7 +43,7 @@
               </div>
 
               <div class="banner__text">
-                <h2 class="banner__title">Эпические приключения</h2>
+                <h2 class="banner__title">Криминальный мир</h2>
                 <button class="banner__button">Посмотреть</button>
               </div>
             </swiper-slide>
@@ -54,40 +54,32 @@
               </div>
 
               <div class="banner__text">
-                <h2 class="banner__title">Эпические приключения</h2>
+                <h2 class="banner__title">Красивые приёмы</h2>
                 <button class="banner__button">Посмотреть</button>
               </div>
             </swiper-slide>
 
             <swiper-slide class="banner__slide">
               <div class="banner__img">
-                <img src="@/assets/img/main/god-of-war.png" alt="" />
+                <img src="@/assets/img/main/rdr2.jpg" alt="" />
               </div>
 
               <div class="banner__text">
-                <h2 class="banner__title">Эпические приключения</h2>
+                <h2 class="banner__title">Красивый открыйтый мир</h2>
                 <button class="banner__button">Посмотреть</button>
               </div>
             </swiper-slide>
 
             <swiper-slide class="banner__slide">
               <div class="banner__img">
-                <img src="@/assets/img/main/gta5.png" alt="" />
+                <img
+                  src="@/assets/img/main/hollow-knight-silksong.webp"
+                  alt=""
+                />
               </div>
 
               <div class="banner__text">
-                <h2 class="banner__title">Эпические приключения</h2>
-                <button class="banner__button">Посмотреть</button>
-              </div>
-            </swiper-slide>
-
-            <swiper-slide class="banner__slide">
-              <div class="banner__img">
-                <img src="@/assets/img/main/tekken8.png" alt="" />
-              </div>
-
-              <div class="banner__text">
-                <h2 class="banner__title">Эпические приключения</h2>
+                <h2 class="banner__title">Завораживающий сюжет</h2>
                 <button class="banner__button">Посмотреть</button>
               </div>
             </swiper-slide>
@@ -99,7 +91,6 @@
           </div>
 
           <div class="banner__pagination" ref="pagination"></div>
-
         </div>
       </div>
     </div>
@@ -107,15 +98,15 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/autoplay";
-import 'swiper/css/pagination';
-import '@/assets/style/ui/_swiper-pagination.scss';
+import "swiper/css/pagination";
+import "@/assets/style/ui/_swiper-pagination.scss";
 
 export default {
   components: {
@@ -251,7 +242,7 @@ export default {
       }
     }
   }
-  &__navigation{
+  &__navigation {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -261,14 +252,14 @@ export default {
     z-index: 2;
     width: calc((100% - 20px) / 1.32);
 
-    @media (max-width: 640px){
+    @media (max-width: 640px) {
       width: calc((100% - 20px) / 1);
     }
   }
-  &__arrow{
+  &__arrow {
     border-radius: 35px;
-    background: #38D991;
-    border: 2px solid #38D991;
+    background: #38d991;
+    border: 2px solid #38d991;
     @include adaptiv-value(width, 45, 30, 1);
     @include adaptiv-value(height, 45, 30, 1);
     @include adaptiv-font(25, 20);
@@ -278,25 +269,21 @@ export default {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    @media (any-hover:hover){
+    @media (any-hover: hover) {
       cursor: pointer;
       transition: all 0.3s ease 0s;
-    &:hover{
-      background: transparent;
-      color: #38D991;
-    }
+      &:hover {
+        background: transparent;
+        color: #38d991;
+      }
     }
 
-    &.swiper-button-prev:after{
+    &.swiper-button-prev:after {
       transform: translate(-1px);
     }
-    &.swiper-button-next:after{
+    &.swiper-button-next:after {
       transform: translate(2px);
     }
   }
-
-
 }
-
-
 </style>
