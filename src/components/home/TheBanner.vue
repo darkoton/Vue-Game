@@ -128,7 +128,6 @@ export default {
     const next = ref(null);
     const modules = [Autoplay, Navigation, Pagination];
 
-
     return {
       modules,
       prev,
