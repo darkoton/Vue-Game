@@ -1,14 +1,8 @@
 <template>
   <div class="products">
-    <div class="products__wrapper">
-      <div class="products__container _container">
-        <div class="products__body">
-          <ul class="products__list">
-            <card v-for="game in games" :key="game" :game="game" />
-          </ul>
-        </div>
-      </div>
-    </div>
+    <ul class="products__list">
+      <card v-for="game in games" :key="game" :game="game" />
+    </ul>
   </div>
 </template>
 
@@ -49,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .products {
+  @include adaptiv-value(margin-bottom, 45, 20, 1);
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));

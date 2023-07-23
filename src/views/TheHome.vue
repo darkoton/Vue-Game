@@ -1,8 +1,22 @@
 <template>
   <div class="home">
-    <banner />
-    <navigation class="navigation" v-model="navValue" :genres="genres" />
-    <products :category="navValue" />
+    <div class="home__wrapper">
+      <div class="home__container _container">
+        <div class="home__body">
+          <banner />
+          <navigation class="navigation" v-model="navValue" :genres="genres" />
+          <products :category="navValue" />
+
+          <h2 class="title">Новинки</h2>
+
+          <products :category="11" />
+
+          <h2 class="title">Популярные</h2>
+
+          <products :category="12" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -26,6 +40,8 @@ export default {
   mounted() {
     this.$get("genres").then((r) => {
       this.genres = r.data;
+      this.genres.splice(10, 1);
+      this.genres.splice(10, 1);
     });
   },
 };
@@ -34,5 +50,13 @@ export default {
 <style lang="scss" scoped>
 .navigation {
   @include adaptiv-value(margin-bottom, 50, 20, 1);
+}
+.title {
+  @include adaptiv-value(margin-bottom, 30, 10, 1);
+  color: #fff;
+  font-family: $fontJura;
+  @include adaptiv-font(30, 20);
+  font-weight: 700;
+  line-height: 22px;
 }
 </style>

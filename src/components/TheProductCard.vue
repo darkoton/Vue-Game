@@ -1,6 +1,9 @@
 <template>
   <div class="card">
     <div class="card__top">
+      <span v-if="game.discount" class="percent"
+        >-{{ 100 - (game.discount / game.price).toFixed(2) * 100 }}%</span
+      >
       <div class="card__favorite">
         <img src="@/assets/img/card/heart.png" alt="" />
         <img src="@/assets/img/card/heart-active.png" alt="" />
@@ -16,11 +19,11 @@
       </div>
       <div class="card__price" v-if="game.state == 'released'">
         <span v-if="game.discount" class="discount">
-          Стоимость: {{ game.discount }}
+          Стоимость: {{ game.discount }}$
           <span class="start">{{ game.price }} </span>
         </span>
 
-        <span v-else> Стоимость: {{ game.price }} </span>
+        <span v-else> Стоимость: {{ game.price }}$ </span>
       </div>
       <button class="card__submit" :disabled="game.state != 'released'">
         {{ game.state != "released" ? "Скоро" : "В корзину" }}
@@ -60,14 +63,37 @@ export default {
   display: flex;
   flex-direction: column;
   font-family: $fontJura;
+  overflow: hidden;
   &__top {
     position: relative;
+    max-height: 282px;
+    overflow: hidden;
+    height: 100%;
+
+    .percent {
+      z-index: 2;
+      position: absolute;
+      font-size: 20px;
+      font-family: $fontPressStart;
+      background: #222;
+      top: 5px;
+      left: -100%;
+      padding: 10px;
+      color: #38d991;
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    max-height: 282px;
+    transition: all 0.3s ease 0s;
   }
   &__favorite {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
+    z-index: 2;
 
     img {
       transition: all 0.4s ease 0s;
@@ -109,6 +135,7 @@ export default {
     color: #fff;
     font-size: 18px;
     font-weight: 600;
+    transition: all 0.3s ease 0s;
   }
   &__description {
     color: #9d9d9d;
@@ -167,6 +194,22 @@ export default {
       &:hover {
         color: #38d991;
         background: transparent;
+      }
+    }
+  }
+
+  @media (any-hover: hover) {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      .percent {
+        left: 0;
+      }
+      & .card__img {
+        transform: scale(1.1);
+      }
+      & .card__title {
+        color: #38d991;
       }
     }
   }

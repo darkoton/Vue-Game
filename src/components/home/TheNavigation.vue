@@ -1,22 +1,16 @@
 <template>
   <div class="navigation">
-    <div class="navigation__wrapper">
-      <div class="navigation__container _container">
-        <div class="navigation__body">
-          <ul class="navigation__list">
-            <li
-              class="navigation__genre"
-              :class="{ 'navigation__genre-active': modelValue == genre.id }"
-              v-for="genre in genres"
-              :key="genre"
-              @click="$emit('update:modelValue', genre.id)"
-            >
-              {{ genre.name }}
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <ul class="navigation__list">
+      <li
+        class="navigation__genre"
+        :class="{ 'navigation__genre-active': modelValue == genre.id }"
+        v-for="genre in genres"
+        :key="genre"
+        @click="$emit('update:modelValue', genre.id)"
+      >
+        {{ genre.name }}
+      </li>
+    </ul>
   </div>
 </template>
 

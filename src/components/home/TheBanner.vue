@@ -1,99 +1,82 @@
 <template>
   <div class="banner">
-    <div class="banner__wrapper">
-      <div class="banner__container _container">
-        <div class="banner__body">
-          <swiper
-            :slidesPerView="1"
-            :spaceBetween="20"
-            class="banner__swiper"
-            :centeredSlides="true"
-            :loop="true"
-            :autoplay="{
-              delay: 2500,
-            }"
-            :modules="modules"
-            :navigation="{
-              prevEl: prev,
-              nextEl: next,
-            }"
-            :pagination="true"
-            :breakpoints="{
-              '320': {
-                slidesPerView: 1,
-              },
-              '640': {
-                slidesPerView: 1.32,
-              },
-            }"
-          >
-            <swiper-slide class="banner__slide">
-              <div class="banner__img">
-                <img src="@/assets/img/main/god-of-war.png" alt="" />
-              </div>
-
-              <div class="banner__text">
-                <h2 class="banner__title">Эпические приключения</h2>
-                <button class="banner__button">Посмотреть</button>
-              </div>
-            </swiper-slide>
-            <swiper-slide class="banner__slide">
-              <div class="banner__img">
-                <img src="@/assets/img/main/gta5.png" alt="" />
-              </div>
-
-              <div class="banner__text">
-                <h2 class="banner__title">Криминальный мир</h2>
-                <button class="banner__button">Посмотреть</button>
-              </div>
-            </swiper-slide>
-
-            <swiper-slide class="banner__slide">
-              <div class="banner__img">
-                <img src="@/assets/img/main/tekken8.png" alt="" />
-              </div>
-
-              <div class="banner__text">
-                <h2 class="banner__title">Красивые приёмы</h2>
-                <button class="banner__button">Посмотреть</button>
-              </div>
-            </swiper-slide>
-
-            <swiper-slide class="banner__slide">
-              <div class="banner__img">
-                <img src="@/assets/img/main/rdr2.jpg" alt="" />
-              </div>
-
-              <div class="banner__text">
-                <h2 class="banner__title">Красивый открыйтый мир</h2>
-                <button class="banner__button">Посмотреть</button>
-              </div>
-            </swiper-slide>
-
-            <swiper-slide class="banner__slide">
-              <div class="banner__img">
-                <img
-                  src="@/assets/img/main/hollow-knight-silksong.webp"
-                  alt=""
-                />
-              </div>
-
-              <div class="banner__text">
-                <h2 class="banner__title">Завораживающий сюжет</h2>
-                <button class="banner__button">Посмотреть</button>
-              </div>
-            </swiper-slide>
-          </swiper>
-
-          <div class="banner__navigation">
-            <div ref="prev" class="banner__arrow swiper-button-prev"></div>
-            <div ref="next" class="banner__arrow swiper-button-next"></div>
-          </div>
-
-          <div class="banner__pagination" ref="pagination"></div>
+    <swiper
+      :slidesPerView="1"
+      :spaceBetween="20"
+      class="banner__swiper"
+      :effect="'fade'"
+      :loop="true"
+      :autoplay="{
+        delay: 2500,
+      }"
+      :modules="modules"
+      :navigation="{
+        prevEl: prev,
+        nextEl: next,
+      }"
+      :pagination="{ clickable: true }"
+    >
+      <swiper-slide class="banner__slide">
+        <div class="banner__img">
+          <img src="@/assets/img/main/god-of-war.png" alt="" />
         </div>
-      </div>
+
+        <div class="banner__text">
+          <h2 class="banner__title">Эпические приключения</h2>
+          <button class="banner__button">Посмотреть</button>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="banner__slide">
+        <div class="banner__img">
+          <img src="@/assets/img/main/gta5.png" alt="" />
+        </div>
+
+        <div class="banner__text">
+          <h2 class="banner__title">Криминальный мир</h2>
+          <button class="banner__button">Посмотреть</button>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="banner__slide">
+        <div class="banner__img">
+          <img src="@/assets/img/main/tekken8.png" alt="" />
+        </div>
+
+        <div class="banner__text">
+          <h2 class="banner__title">Красивые приёмы</h2>
+          <button class="banner__button">Посмотреть</button>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="banner__slide">
+        <div class="banner__img">
+          <img src="@/assets/img/main/rdr2.jpg" alt="" />
+        </div>
+
+        <div class="banner__text">
+          <h2 class="banner__title">Красивый открыйтый мир</h2>
+          <button class="banner__button">Посмотреть</button>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="banner__slide">
+        <div class="banner__img">
+          <img src="@/assets/img/main/hollow-knight-silksong.webp" alt="" />
+        </div>
+
+        <div class="banner__text">
+          <h2 class="banner__title">Завораживающий сюжет</h2>
+          <button class="banner__button">Посмотреть</button>
+        </div>
+      </swiper-slide>
+    </swiper>
+
+    <div class="banner__navigation">
+      <div ref="prev" class="banner__arrow swiper-button-prev"></div>
+      <div ref="next" class="banner__arrow swiper-button-next"></div>
     </div>
+
+    <div class="banner__pagination" ref="pagination"></div>
   </div>
 </template>
 
@@ -101,11 +84,12 @@
 import { ref } from "vue";
 
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 import "@/assets/style/ui/_swiper-pagination.scss";
 
 export default {
@@ -117,7 +101,7 @@ export default {
   setup() {
     const prev = ref(null);
     const next = ref(null);
-    const modules = [Autoplay, Navigation, Pagination];
+    const modules = [Autoplay, Navigation, Pagination, EffectFade];
 
     return {
       modules,
@@ -131,10 +115,9 @@ export default {
 <style lang="scss" scoped>
 .banner {
   font-family: $fontJura;
-  &__body {
-    padding: 15px 0 30px 0;
-    position: relative;
-  }
+  padding: 15px 0 30px 0;
+  position: relative;
+
   &__swiper {
     overflow: visible;
   }
@@ -147,7 +130,7 @@ export default {
     img {
       width: 100%;
       height: 100%;
-      max-height: 480px;
+      max-height: 575px;
       min-height: 250px;
       object-fit: cover;
     }
