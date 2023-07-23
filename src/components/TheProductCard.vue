@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="card__favorite">
+    <div class="card__favorite" @click="favorite()">
       <img src="@/assets/img/card/heart.png" alt="" />
       <img src="@/assets/img/card/heart-active.png" alt="" />
     </div>
@@ -49,6 +49,31 @@ export default {
     return {
       test: "/Rust.png",
     };
+  },
+
+  methods: {
+    favorite() {
+      if (
+        !JSON.parse(localStorage.favorites).find((el) => el.id == this.game.id)
+      ) {
+        if (localStorage.favorites) {
+          let fav = JSON.parse(localStorage.favorites);
+          fav.push(this.game);
+          localStorage.setItem("favorites", JSON.stringify(fav));
+        } else {
+          localStorage.setItem("favorites", JSON.stringify([this.game]));
+        }
+      } else {
+        let fav = JSON.parse(localStorage.favorites);
+        fav.splice(
+          fav.findIndex((el) => el.id == this.game.id),
+          1
+        );
+        localStorage.setItem("favorites", JSON.stringify(fav));
+      }
+
+      this.$emit("favorite");
+    },
   },
 };
 </script>
@@ -109,6 +134,10 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
+        &.active {
+          opacity: 1;
+          z-index: 3;
+        }
       }
     }
 
@@ -261,6 +290,34 @@ export default {
       top: 50%;
       right: calc(-50% + 10px);
       transform: translate(-50%, -50%);
+    }
+  }
+
+  &.favorite {
+    & .card__favorite {
+      img {
+        &:nth-child(1) {
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          opacity: 1;
+        }
+      }
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          img {
+            &:nth-child(1) {
+              opacity: 1;
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
