@@ -1,13 +1,15 @@
 <template>
   <div class="card">
+    <div class="card__favorite">
+      <img src="@/assets/img/card/heart.png" alt="" />
+      <img src="@/assets/img/card/heart-active.png" alt="" />
+    </div>
+
+    <span v-if="game.discount" class="percent"
+      >-{{ 100 - (game.discount / game.price).toFixed(2) * 100 }}%</span
+    >
+
     <div class="card__top">
-      <span v-if="game.discount" class="percent"
-        >-{{ 100 - (game.discount / game.price).toFixed(2) * 100 }}%</span
-      >
-      <div class="card__favorite">
-        <img src="@/assets/img/card/heart.png" alt="" />
-        <img src="@/assets/img/card/heart-active.png" alt="" />
-      </div>
       <div class="card__img">
         <img :src="game.uploadImg" alt="" />
       </div>
@@ -20,7 +22,7 @@
       <div class="card__price" v-if="game.state == 'released'">
         <span v-if="game.discount" class="discount">
           Стоимость: {{ game.discount }}$
-          <span class="start">{{ game.price }} </span>
+          <span class="start">{{ game.price }}$ </span>
         </span>
 
         <span v-else> Стоимость: {{ game.price }}$ </span>
@@ -53,6 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  position: relative;
   width: 100%;
   max-width: 282px;
   height: 600px;
@@ -69,21 +72,25 @@ export default {
     max-height: 282px;
     overflow: hidden;
     height: 100%;
-
-    .percent {
-      z-index: 2;
-      position: absolute;
-      font-size: 20px;
-      font-family: $fontPressStart;
-      background: #222;
-      top: 5px;
-      left: -100%;
-      padding: 10px;
-      color: #38d991;
-      transition: all 0.3s ease-out 0s;
-    }
+  }
+  .percent {
+    z-index: 2;
+    position: absolute;
+    @include adaptiv-font(20, 10);
+    font-family: $fontPressStart;
+    background: #111;
+    top: 5px;
+    left: -100%;
+    @include adaptiv-value(padding, 10, 8, 1);
+    color: #38d991;
+    transition: all 0.3s ease-out 0s;
   }
   &__img {
+    img {
+      width: 100%;
+    }
+    @include adaptiv-value-width(max-width, 90, 70, 600, 1);
+    @include adaptiv-value-width(max-height, 80, 60, 600, 1);
     max-width: 100%;
     max-height: 282px;
     transition: all 0.3s ease 0s;
@@ -123,7 +130,7 @@ export default {
     flex-direction: column;
     height: 100%;
     padding: 25px 12px 15px 12px;
-    @include adaptiv-value(paddig-top, 25, 10, 1);
+    @include adaptiv-value(padding-top, 25, 10, 1);
   }
   &__text {
     display: flex;
@@ -133,7 +140,7 @@ export default {
   &__title {
     margin-bottom: 10px;
     color: #fff;
-    font-size: 18px;
+    @include adaptiv-font(18, 14);
     font-weight: 600;
     transition: all 0.3s ease 0s;
   }
@@ -147,6 +154,7 @@ export default {
     color: #38d991;
     font-family: $fontPressStart;
     font-size: 13px;
+    @include adaptiv-font(13, 10);
     line-height: 14px;
     margin-bottom: 15px;
     .discount {
@@ -156,11 +164,12 @@ export default {
       position: absolute;
       right: 0;
       top: -20px;
+      @include adaptiv-font(13, 7);
       color: rgba(#38d991, 0.3);
       &::after {
         content: "";
         width: calc(100% + 10px);
-        height: 1px;
+        height: 0.5px;
         background: #38d991;
         position: absolute;
         top: 50%;
@@ -173,14 +182,14 @@ export default {
   &__submit {
     color: #000;
     font-family: $fontPressStart;
-    font-size: 13px;
+    @include adaptiv-font(13, 10);
     font-weight: 400;
     line-height: 14px;
     background: #38d991;
     border: 2px solid #38d991;
     display: block;
     width: 100%;
-    @include adaptiv-padding(12, 8, 0, 0, 1);
+    @include adaptiv-padding(12, 4, 0, 0, 1);
 
     &:disabled {
       background: rgba(56, 217, 145, 0.3);
@@ -211,6 +220,47 @@ export default {
       & .card__title {
         color: #38d991;
       }
+    }
+  }
+  @media (max-width: 600px) {
+    align-items: center;
+    flex-direction: row;
+    max-width: 100%;
+    padding: 10px;
+    height: auto;
+    &__top {
+      display: flex;
+      align-items: center;
+    }
+    &__img {
+      height: 100%;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__bottom {
+      padding: 0;
+      margin-left: 10px;
+    }
+    &__description {
+      display: none;
+    }
+    &__submit {
+      width: 140px;
+    }
+
+    & .percent {
+      left: auto;
+      right: 0;
+      top: auto;
+      bottom: 10px;
+    }
+    & .start {
+      top: 50%;
+      right: calc(-50% + 10px);
+      transform: translate(-50%, -50%);
     }
   }
 }

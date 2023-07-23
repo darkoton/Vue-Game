@@ -6,7 +6,7 @@
     "description": "God of War: Ragnarök - ожидаемое продолжение культовой игры с эпическим сюжетом и захватывающими сражениями в мире скандинавской мифологии. Вас ждут новые приключения Кратоса и Атреуса, битвы с богами и грозный Рагнарек. Новые навыки, исследование мира и увлекательный геймплей - ждут вас!",
     "price": "61",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690093619/god-of-war-2_syodzy.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/god-of-war-2_uab9jd.png"
   },
   {
     "genreId": "1",
@@ -15,7 +15,7 @@
     "description": "Добро пожаловать в мир Hollow Knight! Исследуйте загадочные подземные локации, сражайтесь с опасными врагами и раскройте тайны этого мрачного и прекрасного мира. Готовьтесь к захватывающему приключению, наполненному великолепным художественным стилем и уникальной атмосферой.",
     "price": "8",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/hollow-knight_heenf2.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/hollow-knight_rupyir.png"
   },
   {
     "genreId": "1",
@@ -24,7 +24,7 @@
     "description": "Добро пожаловать в мир Ori and the Blind Forest! Отправляйтесь в увлекательное приключение, исследуйте волшебный лес, сражайтесь с врагами и восстановите разрушенный мир. Готовьтесь к трогательной истории, потрясающей музыке и увлекательному геймплею.",
     "price": "11",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Ori_and_the_Blind_Forest_x6434g.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/Ori_and_the_Blind_Forest_shsww3.png"
   },
   {
     "genreId": "1",
@@ -33,7 +33,7 @@
     "description": "Добро пожаловать в мир Prey! Отправляйтесь на захватывающую космическую станцию, сражайтесь за выживание, раскрывайте тайны и используйте способность изменять форму. Готовьтесь к научно-фантастическому приключению, полному интриги и головоломок.",
     "price": "13",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/prey_hedygi.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/prey_iifkzr.png"
   },
   {
     "genreId": "2",
@@ -42,7 +42,7 @@
     "description": "Street Fighter 6 - легендарная файтинговая игра с уникальными бойцами и захватывающими боями. Сражайтесь с игроками со всего мира, улучшайте навыки и станьте настоящим чемпионом. Готовы к вызову? Присоединяйтесь к Street Fighter 6 и покажите свое мастерство!",
     "price": "48.1",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/Street_Fighter_6_rwo4ja.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Street_Fighter_6_r2ehkz.png"
   },
   {
     "genreId": "2",
@@ -51,7 +51,7 @@
     "description": "DRAGON BALL FighterZ - захватывающая файтинговая игра с легендарными героями и уникальными боями. Выберите свою команду и сразитесь с другими игроками в онлайн-режиме. Погрузитесь в аниме-стиль и станьте самым мощным воином DRAGON BALL. Готовы к эпическим схваткам? Присоединяйтесь к DRAGON BALL FighterZ!",
     "price": "24",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038220/DRAGON_BALL_FIGHTERZ_m1kmtg.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/DRAGON_BALL_FIGHTERZ_wxzkxp.png"
   },
   {
     "genreId": "2",
@@ -60,7 +60,7 @@
     "description": "GUILTY GEAR -STRIVE-: захватывающий файтинг с уникальными бойцами и красочными сражениями. Погрузитесь в эпический мир сюжета и испытайте невероятные комбо. Готовы к адреналиновой битве? Присоединяйтесь к GUILTY GEAR -STRIVE- и станьте настоящим мастером файтинга!",
     "price": "12.4",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038220/GUILTY_GEAR_-STRIVE-_z6fyfk.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/GUILTY_GEAR_-STRIVE-_ltb1qy.png"
   },
   {
     "genreId": "2",
@@ -69,7 +69,7 @@
     "description": "Mortal Kombat X - культовая файтинговая игра, где ждут кровавые поединки, захватывающие бойцы и уникальные фаталити. Выберите своего любимого бойца, сражайтесь с оппонентами и станьте легендой арены. Готовы к смертельным схваткам? Присоединяйтесь к Mortal Kombat X и докажите свою силу!",
     "price": "13",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Mortal_Kombat_X_d4vfwt.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/Mortal_Kombat_X_nnitrh.png"
   },
   {
     "genreId": "3",
@@ -78,7 +78,7 @@
     "description": "Rust - безжалостный выживальческий мир, где вас ждут опасности и великие возможности. Выживайте в дикой природе, стройте укрепления, сражайтесь с другими игроками и добывайте ресурсы. Готовы стать легендой выживания? Присоединяйтесь к Rust!",
     "price": "16.9",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/Rust_rtbfku.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Rust_pa5gy7.png"
   },
   {
     "genreId": "3",
@@ -87,7 +87,7 @@
     "description": "Project Zomboid - захватывающая выживальческая игра с зомби-апокалипсисом. Искать ресурсы, выживать и бороться с ходячими мертвецами. Готовы к борьбе за выживание? Присоединяйтесь к Project Zomboid!",
     "price": "11.1",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Project_Zomboid_y7wfj5.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/Project_Zomboid_kepvhn.png"
   },
   {
     "genreId": "3",
@@ -96,7 +96,7 @@
     "description": "ARK: Survival Evolved - захватывающая выживальческая игра с динозаврами и дикой природой. Собирайте ресурсы, стройте убежище и приручайте динозавров. Готовы к выживанию? Присоединяйтесь к ARK: Survival Evolved!",
     "price": "7.5",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/ARK_Survival_Evolved_henxmz.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/ARK_Survival_Evolved_jdog0g.png"
   },
   {
     "genreId": "3",
@@ -105,7 +105,7 @@
     "description": "Valheim - захватывающая выживальческая игра в викингском мире. Исследуйте, сражайтесь с монстрами, создавайте и выживайте. Готовы к викингскому приключению? Присоединяйтесь к Valheim!",
     "price": "7.5",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/Valheim_ruvgpt.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Valheim_li1mrm.png"
   },
   {
     "genreId": "4",
@@ -114,7 +114,7 @@
     "description": "The Elder Scrolls® Online - увлекательная MMORPG в мире Тамриэля. Исследуйте, сражайтесь и развивайтесь вместе с друзьями. Готовы к захватывающему приключению? Присоединяйтесь!",
     "price": "16.1",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/The_Elder_Scrolls_Online_bymgnq.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/The_Elder_Scrolls_Online_dkyvvo.png"
   },
   {
     "genreId": "4",
@@ -123,16 +123,16 @@
     "description": "Hunt: Showdown - захватывающая многопользовательская охота на монстров. Сражайтесь, исследуйте и выживайте вместе с друзьями. Готовы к адреналиновой охоте? Присоединяйтесь!",
     "price": "15.9",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Hunt_Showdown_wjmkfw.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/Hunt_Showdown_r6ukkl.png"
   },
   {
     "genreId": "4",
     "id": "15",
     "title": "Sea of Thieves 2023 Edition",
-    "description": "ARK: Survival Evolved - захватывающая выживальческая игра с динозаврами и дикой природой. Собирайте ресурсы, стройте убежище и приручайте динозавров. Готовы к выживанию? Присоединяйтесь к ARK: Survival Evolved!",
+    "description": "Sea of Thieves - это пиратская многопользовательская игра с открытым миром, разработанная студией Rare и изданная Xbox Game Studios. В ней игроки воплощают роль пирата и исследуют огромный мир, сражаясь с монстрами, совершая пиратские ограбления и ища сокровища.",
     "price": "6",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/Sea_of_Thieves_2023_Edition_qhhod8.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100630/Sea_of_Thieves_2023_Edition_b1um3d.png"
   },
   {
     "genreId": "4",
@@ -141,7 +141,7 @@
     "description": "theHunter: Call of the Wild™ - захватывающая симуляция охоты. Охотьтесь на животных, исследуйте миры, используйте оружие. Готовы к приключению? Присоединяйтесь!",
     "price": "13",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/theHunter_qbiulz.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/theHunter_m4nstu.png"
   },
   {
     "genreId": "5",
@@ -150,7 +150,7 @@
     "description": "Slay the Spire - увлекательная карточная рогалик игра с уникальными колодами и стратегиями. Сразитесь с врагами и покорите вершину башни. Готовы к вызову? Присоединяйтесь к Slay the Spire и станьте карточным мастером!",
     "price": "8.8",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/Slay_the_Spire_ka6ms1.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Slay_the_Spire_rn3zjb.png"
   },
   {
     "genreId": "5",
@@ -159,7 +159,7 @@
     "description": "Bloons TD 6 - захватывающая tower defense с яркой графикой. Защищайте базу от атакующих шаров, размещая оборонительные башни и используя стратегии. Готовы к битве? Присоединяйтесь!",
     "price": "5.9",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/Bloons_TD_6_qdihyg.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Bloons_TD_6_qtz4fk.png"
   },
   {
     "genreId": "5",
@@ -168,7 +168,7 @@
     "description": "Company of Heroes 3 - захватывающая стратегическая игра о Второй мировой войне. Командуйте войсками и побеждайте противника. Готовы к битве? Присоединяйтесь!",
     "price": "37.7",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/Company_of_Heroes_3_hu2m60.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/Company_of_Heroes_3_z8yt1l.png"
   },
   {
     "genreId": "5",
@@ -177,7 +177,7 @@
     "description": "ShellShock Live - захватывающая аркадная игра с танками и многопользовательскими пошаговыми боями. Готовы сразиться? Присоединяйтесь!",
     "price": "6",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/ShellShock_Live_gpw0ds.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/ShellShock_Live_zu4nsr.png"
   },
   {
     "genreId": "6",
@@ -186,7 +186,7 @@
     "description": "Hades II - продолжение захватывающего рогалика! Ощути мощь богов, сразись с врагами и раскрой тайны подземного царства. Создавай уникальные комбинации способностей, развивай своего героя и готовься к эпическим сражениям. Каждая смерть - новый шанс на победу. Вернись в мир Hades и стань непобедимым!",
     "price": "",
     "state": "in developing",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Hades_II_wznmqr.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/Hades_II_pf92fm.png"
   },
   {
     "genreId": "6",
@@ -195,7 +195,7 @@
     "description": "Noita - захватывающая рогалик-песочница с магией и физикой. Исследуйте мир, создавайте заклинания и сражайтесь. Готовы к волшебному приключению? Присоединяйтесь!",
     "price": "7.5",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Noita_myl78r.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/Noita_tskwm1.png"
   },
   {
     "genreId": "6",
@@ -204,7 +204,7 @@
     "description": "BPM: Bullets Per Minute - захватывающая рогалик-шутер игра с музыкальным вдохновением. Сражайтесь в ритме музыки с демонами и станьте героем! Присоединяйтесь!",
     "price": "7.5",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/BPM_BULLETS_PER_MINUTE_x17ld9.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/BPM_BULLETS_PER_MINUTE_qztc5u.png"
   },
   {
     "genreId": "6",
@@ -213,7 +213,7 @@
     "description": "Enter the Gungeon - захватывающий рогалик-шутер с уникальными персонажами и ловушками. Исследуйте подземелье, сражайтесь с врагами и боссами. Готовы к вызову? Присоединяйтесь!",
     "price": "8.7",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038220/Enter_the_Gungeon_oidqrz.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/Enter_the_Gungeon_nsdyyd.png"
   },
   {
     "genreId": "7",
@@ -222,7 +222,7 @@
     "description": "Battle Bit - новый онлайн-шутер, где сражения с миллионами игроков станут твоим вызовом! Выбери свой стиль игры, прокачай навыки, соревнуйся и победи в захватывающих боях. Готов ли ты к вызову Battle Bit? Присоединяйся сейчас и стань настоящим воином!",
     "price": "11",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/Battle_Bit_qgxkpa.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Battle_Bit_nqnsiv.png"
   },
   {
     "genreId": "7",
@@ -232,7 +232,7 @@
     "price": "24",
     "discount": "15",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Red_Dead_Redemption_2_zf6zpy.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Red_Dead_Redemption_2_gckjjq.png"
   },
   {
     "genreId": "7",
@@ -241,7 +241,7 @@
     "description": "Elden Ring - захватывающая action-RPG от создателей серии Dark Souls и Game of Thrones. Вас ждет уникальный открытый мир, где вы станете воином, исследующим огромный и опасный мир, сражаясь с могущественными врагами и обладая сверхъестественными способностями. Погрузитесь в захватывающее фэнтезийное приключение и раскройте тайны Elden Ring!",
     "price": "24.2",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038220/ELDEN_RING_pbcjbq.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/ELDEN_RING_l7rj1d.png"
   },
   {
     "genreId": "7",
@@ -250,7 +250,7 @@
     "description": "God of War - захватывающая экшен-приключенческая игра с могущественным богом войны Кратосом. Готовы стать легендарным воином? Присоединяйтесь!",
     "price": "32.3",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038220/god-of-war_pyo7hz.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/god-of-war_wbdfhq.png"
   },
   {
     "genreId": "8",
@@ -259,7 +259,7 @@
     "description": "Stardew Valley - увлекательная сельская фермерская симуляция. Исследуйте, возделывайте, взаимодействуйте. Готовы начать свою фермерскую жизнь? Присоединяйтесь!",
     "price": "6.1",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/Stardew_Valley_egq2in.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Stardew_Valley_eamdwi.png"
   },
   {
     "genreId": "8",
@@ -268,7 +268,7 @@
     "description": "Sekiro™: Shadows Die Twice - GOTY Edition - захватывающая экшен-приключенческая игра в средневековом Японии. Сражайтесь с могущественными противниками, исследуйте мир и разгадывайте головоломки. Готовы к вызову? Присоединяйтесь!",
     "price": "43.3",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/Sekiro_Shadows_Die_Twice_-_GOTY_Edition_xlxwzf.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Sekiro_Shadows_Die_Twice_-_GOTY_Edition_isvf9x.png"
   },
   {
     "genreId": "8",
@@ -277,7 +277,7 @@
     "description": "Sonic Frontiers - захватывающее приключение с Соником. Исследуйте мир, встречайте персонажей. Готовы к захватывающим моментам? Присоединяйтесь!",
     "price": "43",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038222/Sonic_Frontiers_vpcgxi.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Sonic_Frontiers_m1kh8c.png"
   },
   {
     "genreId": "8",
@@ -286,7 +286,7 @@
     "description": "Grand Theft Auto V - культовая экшен-приключенческая игра. Откройте для себя огромный мир, сражайтесь, взаимодействуйте с персонажами. Готовы к преступному приключению? Присоединяйтесь!",
     "price": "8.7",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038220/Grand_Theft_Auto_V_olwnvf.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/Grand_Theft_Auto_V_zyza1e.png"
   },
   {
     "genreId": "9",
@@ -295,7 +295,7 @@
     "description": "Resident Evil 2 - ужасающий survival horror. Выживайте, сражайтесь с монстрами, раскройте тайны. Готовы испытать ужасы? Присоединяйтесь!",
     "price": "32.2",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Resident_Evil_2_q22n8y.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100631/Resident_Evil_2_btjppp.png"
   },
   {
     "genreId": "9",
@@ -304,7 +304,7 @@
     "description": "Alien: Isolation - захватывающий survival horror. Выживайте, уклоняйтесь от опасного инопланетного существа. Готовы столкнуться с ужасом? Присоединяйтесь!",
     "price": "7.5",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/Alien_Isolation_p5wm45.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Alien_Isolation_tax6ae.png"
   },
   {
     "genreId": "9",
@@ -313,16 +313,16 @@
     "description": "Darkwood - захватывающая survival horror игра с атмосферой ужаса и мистики. Выживайте в зловещем и загадочном лесу, сражайтесь с монстрами и темными силами. Исследуйте мир, укрепляйте базу, принимайте сложные решения. Готовы к мрачному приключению? Присоединяйтесь к Darkwood и переживите ночные кошмары!",
     "price": "43",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/Darkwood_yvob7d.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Darkwood_qp83jo.png"
   },
   {
     "genreId": "9",
     "id": "36",
-    "title": "Dying Light",
-    "description": "Dying Light - захватывающая экшен-приключенческая игра с зомби-апокалипсисом. Исследуйте город, сражайтесь, выживайте. Готовы к вызову? Присоединяйтесь!",
+    "title": "Dying Light 2",
+    "description": "Dying Light 2 - это ожидаемое продолжение популярной игры Dying Light, разрабатываемой студией Techland. Это экшн-хоррор с элементами выживания и открытым миром, который перенесет игроков в город, охваченный зомби-апокалипсисом, где их выборы и действия имеют влияние на ход сюжета и окружающий мир.",
     "price": "5.6",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038220/Dying_Light_xrpgpv.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/Dying_Light_petj4g.png"
   },
   {
     "genreId": "10",
@@ -331,7 +331,7 @@
     "description": "Deep Rock Galactic - захватывающая кооперативная шутер-песочница. Исследуйте пещеры, сражайтесь с врагами и добывайте ресурсы. Готовы к приключению? Присоединяйтесь!",
     "price": "32.2",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/Deep_Rock_Galactic_eqzuqw.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/Deep_Rock_Galactic_hkh1pl.png"
   },
   {
     "genreId": "10",
@@ -340,7 +340,7 @@
     "description": "Half-Life: Alyx - захватывающая виртуальная реальность экшен-игра. Исследуйте мир Халф-Лайф, сражайтесь и решайте головоломки. Готовы к виртуальным приключениям? Присоединяйтесь!",
     "price": "30.3",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038221/Half-Life_Alyx_godk3s.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/Half-Life_Alyx_d0zk5z.png"
   },
   {
     "genreId": "10",
@@ -349,7 +349,7 @@
     "description": "DOOM Eternal - адский шутер от первого лица. Сражайтесь с демонами, раскройте тайны. Готовы к апокалипсису? Присоединяйтесь!",
     "price": "43",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038220/DOOM_Eternal_mrjiq8.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/DOOM_Eternal_iuefea.png"
   },
   {
     "genreId": "10",
@@ -358,7 +358,7 @@
     "description": "Battlefield 4™ - захватывающий военный шутер. Сражайтесь на многопользовательских картах, используйте разнообразное оружие. Готовы к сражениям? Присоединяйтесь!",
     "price": "5.6",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690038219/Battlefield_4_yv1ufp.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Battlefield_4_lgmw48.png"
   },
   {
     "genreId": "11",
@@ -367,7 +367,7 @@
     "description": "LEGO® 2K Drive - захватывающая гоночная игра с любимыми героями LEGO®, уникальными трассами и настройками машин. Бесплатно и для всех возрастов! Присоединяйтесь и станьте легендарным гонщиком LEGO®!",
     "price": "38.4",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690060118/LEGO_2K_Drive_bvmub3.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/LEGO_2K_Drive_ihh2kf.png"
   },
   {
     "genreId": "11",
@@ -376,7 +376,7 @@
     "description": "OXENFREE II: Lost Signals - ожидаемое продолжение приключенческой игры OXENFREE. Расскажет историю Райли, которая сталкивается с загадочными сигналами и сверхъестественными событиями на таинственном острове. Исследуйте мир, решайте головоломки и взаимодействуйте с уникальными персонажами. Ожидается на PC, PlayStation, Xbox и Nintendo Switch.",
     "price": "11",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690060118/OXENFREE_II_Lost_Signals_i05iwn.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/OXENFREE_II_Lost_Signals_fhw8qu.png"
   },
   {
     "genreId": "11",
@@ -385,7 +385,7 @@
     "description": "Dredge - захватывающая игра рыбалки с реалистичной графикой и увлекательным геймплеем. Путешествуйте по различным местам, ловите разнообразные виды рыбы и соревнуйтесь с другими игроками. Готовы стать настоящим профессионалом рыбалки? Присоединяйтесь к нам в Dredge!",
     "price": "13.7",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690060118/Dredge_yh9an8.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Dredge_ripv45.png"
   },
   {
     "genreId": "11",
@@ -394,7 +394,7 @@
     "description": "Добро пожаловать в мрачный и опасный мир \"Aliens: Dark Descent\" - захватывающей научно-фантастической игры, где вы столкнетесь с ужасами неизведанного и битвами с опасными инопланетными созданиями!",
     "price": "22.7",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690060118/Aliens_Dark_Descent_yjfhnp.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Aliens_Dark_Descent_eini8v.png"
   },
   {
     "genreId": "12",
@@ -403,7 +403,7 @@
     "description": "Rainbow Six Siege - увлекательная тактическая игра с уникальными операторами, интенсивными сражениями и стратегическим подходом. Сражайтесь в команде, используйте разрушаемое окружение и координируйте действия, чтобы одержать победу. Присоединяйтесь к Rainbow Six Siege и станьте настоящим оперативником!",
     "price": "8",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690061277/Rainbow_Six_Siege_z7dvn9.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100635/Rainbow_Six_Siege_detmkm.png"
   },
   {
     "genreId": "12",
@@ -413,7 +413,7 @@
     "price": "22.7",
     "discount": "3.3",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690061277/Borderlands_3_hc4kx4.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Borderlands_3_k3z3ny.png"
   },
   {
     "genreId": "12",
@@ -423,7 +423,7 @@
     "price": "13.7",
     "discount": "5.5",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690061277/Rain_World_jpved6.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100634/Rain_World_xwdjr1.png"
   },
   {
     "genreId": "12",
@@ -433,6 +433,6 @@
     "price": "21.3",
     "discount": "3.2",
     "state": "released",
-    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690061277/Titanfall_2_nusadf.png"
+    "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100632/Titanfall_2_tchy5h.png"
   }
 ]

@@ -69,16 +69,19 @@ export default {
     padding: 5px;
     border-radius: 5px;
     background: rgba(63, 63, 63, 0.46);
+    overflow-x: auto;
   }
   &__genre {
     color: rgba(255, 255, 255, 0.4);
     font-family: $fontJura;
     font-size: 18px;
+    @include adaptiv-font(18, 14);
     font-weight: 500;
     line-height: 12px;
     padding: 8.5px 5px;
     cursor: pointer;
     transition: all 0.4s ease 0s;
+    white-space: nowrap;
 
     &-active {
       border-radius: 2px;

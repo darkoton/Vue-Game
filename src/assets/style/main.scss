@@ -24,6 +24,17 @@ body {
   &._lock-scroll {
      overflow: hidden;
   }
+  
+  &::-webkit-scrollbar {
+    width: 5px;              
+  }
+  &::-webkit-scrollbar-track {
+    background: #111;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #38d991;   
+    border-radius: 20px;      
+  }
 }
 #app{
   height: 100%;

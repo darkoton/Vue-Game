@@ -46,7 +46,13 @@ export default {
   @include adaptiv-value(margin-bottom, 45, 20, 1);
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 </style>

@@ -167,7 +167,15 @@ export default {
       search: "",
       language: "RU",
       burger: false,
+      genres: [],
     };
+  },
+  mounted() {
+    this.$get("genres").then((r) => {
+      this.genres = r.data;
+      this.genres.splice(10, 1);
+      this.genres.splice(10, 1);
+    });
   },
 };
 </script>
@@ -524,6 +532,26 @@ export default {
     &.active {
       opacity: 1;
       z-index: 50;
+    }
+  }
+  &__navigation {
+    display: none;
+    justify-content: space-between;
+    column-gap: 10px;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    padding-bottom: 20px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    @media (max-width: 900px) {
+      display: flex;
+    }
+
+    & .header__nav {
+      white-space: nowrap;
     }
   }
 }
