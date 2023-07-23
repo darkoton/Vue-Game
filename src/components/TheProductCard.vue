@@ -27,8 +27,12 @@
 
         <span v-else> Стоимость: {{ game.price }}$ </span>
       </div>
-      <button class="card__submit" :disabled="game.state != 'released'">
-        {{ game.state != "released" ? "Скоро" : "В корзину" }}
+      <button
+        class="card__submit"
+        :disabled="game.state != 'released'"
+        @click="basket"
+      >
+        {{ game.state != "released" ? "Скоро" : "Купить" }}
       </button>
     </div>
   </div>
@@ -54,6 +58,7 @@ export default {
   methods: {
     favorite() {
       if (
+        localStorage.favorites &&
         !JSON.parse(localStorage.favorites).find((el) => el.id == this.game.id)
       ) {
         if (localStorage.favorites) {
@@ -73,6 +78,16 @@ export default {
       }
 
       this.$emit("favorite");
+    },
+    basket() {
+      if (localStorage.basket) {
+        let fav = JSON.parse(localStorage.basket);
+        fav.push(this.game);
+        localStorage.setItem("basket", JSON.stringify(fav));
+      } else {
+        localStorage.setItem("basket", JSON.stringify([this.game]));
+      }
+      this.$emit("basket");
     },
   },
 };
@@ -209,6 +224,7 @@ export default {
     }
   }
   &__submit {
+    position: relative;
     color: #000;
     font-family: $fontPressStart;
     @include adaptiv-font(13, 10);
@@ -317,6 +333,24 @@ export default {
             }
           }
         }
+      }
+    }
+  }
+
+  &.basket {
+    & .card__submit {
+      opacity: 0.5;
+      pointer-events: none;
+      color: transparent;
+
+      &::after {
+        content: "В корзине";
+        display: block;
+        color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }

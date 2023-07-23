@@ -7,8 +7,10 @@
         :game="game"
         :class="{
           favorite: favorites.find((el) => el.id == game.id),
+          basket: basket.find((el) => el.id == game.id),
         }"
         @favorite="getFavorite"
+        @basket="getBasket"
       />
     </ul>
   </div>
@@ -30,6 +32,7 @@ export default {
     return {
       games: [],
       favorites: [],
+      basket: [],
     };
   },
   methods: {
@@ -48,6 +51,9 @@ export default {
       this.favorites = localStorage.favorites
         ? JSON.parse(localStorage.favorites)
         : [];
+    },
+    getBasket() {
+      this.basket = localStorage.basket ? JSON.parse(localStorage.basket) : [];
     },
   },
   watch: {
