@@ -74,7 +74,7 @@
 
             <div class="header__actions">
               <router-link
-                to="#"
+                to="/basket"
                 class="header__action header__backet icon-backet"
               >
                 <span class="header__counter">{{
@@ -134,7 +134,7 @@
             </div>
 
             <div class="burger-menu__actions header__actions">
-              <router-link to="#" class="header__backet">
+              <router-link to="/basket" class="header__backet">
                 <span class="icon-backet"></span>
                 <span>Корзина</span>
                 <span class="header__counter">{{

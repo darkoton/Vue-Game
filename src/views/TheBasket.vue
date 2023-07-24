@@ -1,21 +1,21 @@
 <template>
-  <div class="favorites">
-    <div class="favorites__wrapper">
-      <div class="favorites__container _container">
-        <div class="favorites__body">
-          <div class="favorites__top">
-            <h2 class="favorites__title">Избраное</h2>
-            <button class="favorites__clear" @click="clear">
+  <div class="basket">
+    <div class="basket__wrapper">
+      <div class="basket__container _container">
+        <div class="basket__body">
+          <div class="basket__top">
+            <div class="basket__title">Корзина</div>
+            <button class="basket__clear" @click="clear">
               Очистить <i class="icon-trash"></i>
             </button>
           </div>
 
-          <ul class="favorites__list">
+          <ul class="basket__list">
             <card
-              v-for="game in $store.state.favorites"
+              v-for="game in $store.state.basket"
               :key="game"
               :game="game"
-              :type="'favorites'"
+              :type="'basket'"
             />
           </ul>
         </div>
@@ -37,15 +37,15 @@ export default {
   },
   methods: {
     clear() {
-      localStorage.setItem("favorites", JSON.stringify([]));
-      this.$store.state.favorites = [];
+      localStorage.setItem("basket", JSON.stringify([]));
+      this.$store.state.basket = [];
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.favorites {
+.basket {
   &__top {
     display: flex;
     justify-content: space-between;

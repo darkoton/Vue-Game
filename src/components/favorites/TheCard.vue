@@ -1,11 +1,14 @@
 <template>
   <div
     class="card"
-    :class="{
-      basket: $store.state.basket.find((el) => el.id == game.id),
-    }"
+    :class="
+      ({
+        inBasket: $store.state.basket.find((el) => el.id == game.id),
+      },
+      'card-' + type)
+    "
   >
-    <div class="card__left">
+    <div class="card__left" v-if="type == 'favorites'">
       <i class="card__move icon-move"></i>
     </div>
     <div class="card__main">
@@ -28,6 +31,7 @@
         <div class="card__submit">
           <div class="card__price">{{ game.price }}$</div>
           <button
+            v-if="type == 'favorites'"
             class="card__button"
             @click="
               $store.state.basket.find((el) => el.id == game.id)
@@ -44,11 +48,21 @@
         </div>
 
         <div class="card__added-date">
-          Добавлено <span>{{ game.dateAdded }}</span>
+          Добавлено
+          <span>{{
+            type == "favorites" ? game.dateFavoriteAdded : game.dateBasketAdded
+          }}</span>
         </div>
       </div>
     </div>
-    <div class="card__remove" @click="$store.commit('favorite', game)">
+    <div
+      class="card__remove"
+      @click="
+        type == 'favorites'
+          ? $store.commit('favorite', game)
+          : $store.commit('basket', game)
+      "
+    >
       <span></span><span></span>
     </div>
   </div>
@@ -57,7 +71,7 @@
 <script>
 export default {
   name: "favoriteCard",
-  props: ["game"],
+  props: ["game", "type"],
 };
 </script>
 
@@ -145,7 +159,7 @@ export default {
 
     & .card__price {
       height: 100%;
-      padding: 0 20px;
+      padding: 14px 20px;
     }
 
     button {
@@ -214,7 +228,7 @@ export default {
     }
   }
 
-  // &.basket {
+  // &.inBasket {
   //   & .card__button {
   //     color: transparent;
   //     background: rgba(56, 217, 145, 0.4);
@@ -231,6 +245,12 @@ export default {
   //     }
   //   }
   // }
+
+  &.card-basket {
+    .card__main {
+      border-left: 0;
+    }
+  }
 
   @media (any-hover: hover) {
     transition: all 0.3s ease 0s;

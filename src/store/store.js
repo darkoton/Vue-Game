@@ -12,7 +12,7 @@ const store = createStore({
     favorite(state, game) {
       let fav = JSON.parse(localStorage.favorites);
       if (
-        !JSON.parse(localStorage.favorites).find((el) => el.id == game.id)
+        !fav.find((el) => el.id == game.id)
       ) {
 
         const today = new Date();
@@ -23,7 +23,7 @@ const store = createStore({
         if (dd < 10) dd = "0" + dd;
         if (mm < 10) mm = "0" + mm;
 
-        game.dateAdded = dd + "." + mm + "." + yyyy;
+        game.dateFavoriteAdded = dd + "." + mm + "." + yyyy;
 
         fav.push(game);
         localStorage.setItem("favorites", JSON.stringify(fav));
@@ -39,9 +39,29 @@ const store = createStore({
     },
     basket(state, game) {
       let basket = JSON.parse(localStorage.basket);
-      basket.push(game);
-      localStorage.setItem("basket", JSON.stringify(basket));
 
+      if (
+        !basket.find((el) => el.id == game.id)
+      ) {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+
+        if (dd < 10) dd = "0" + dd;
+        if (mm < 10) mm = "0" + mm;
+
+        game.dateBasketAdded = dd + "." + mm + "." + yyyy;
+
+        basket.push(game);
+        localStorage.setItem("basket", JSON.stringify(basket));
+      } else {
+        basket.splice(
+          basket.findIndex((el) => el.id == game.id),
+          1
+        );
+        localStorage.setItem("basket", JSON.stringify(basket));
+      }
       state.basket = basket
     }
   }

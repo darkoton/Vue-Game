@@ -2,8 +2,8 @@
   <div
     class="card"
     :class="{
-      favorite: $store.state.favorites.find((el) => el.id == game.id),
-      basket: $store.state.basket.find((el) => el.id == game.id),
+      inFavorite: $store.state.favorites.find((el) => el.id == game.id),
+      inBasket: $store.state.basket.find((el) => el.id == game.id),
     }"
   >
     <div class="card__favorite" @click="favorite">
@@ -286,7 +286,7 @@ export default {
     }
   }
 
-  &.favorite {
+  &.inFavorite {
     & .card__favorite {
       img {
         &:nth-child(1) {
@@ -314,7 +314,7 @@ export default {
     }
   }
 
-  &.basket {
+  &.inBasket {
     & .card__submit {
       opacity: 0.5;
       pointer-events: none;
