@@ -75,12 +75,16 @@
             <div class="header__actions">
               <router-link
                 to="#"
-                class="header__backet icon-backet"
-              ></router-link>
+                class="header__action header__backet icon-backet"
+              >
+                <span class="header__counter">{{ basketCount }}</span>
+              </router-link>
               <router-link
                 to="#"
-                class="header__favorite icon-favorite"
-              ></router-link>
+                class="header__action header__favorite icon-favorite"
+              >
+                <span class="header__counter">{{ favoritesCount }}</span>
+              </router-link>
             </div>
           </div>
 
@@ -168,9 +172,22 @@ export default {
       language: "RU",
       burger: false,
       genres: [],
+      favoritesCount: 0,
+      basketCount: 0,
     };
   },
+  watch: {
+    "$store.state.favorite"() {
+      this.favoritesCount = JSON.parse(localStorage.favorites).length;
+    },
+    "$store.state.basket"() {
+      this.basketCount = JSON.parse(localStorage.basket).length;
+    },
+  },
   mounted() {
+    this.favoritesCount = JSON.parse(localStorage.favorites).length;
+    this.basketCount = JSON.parse(localStorage.basket).length;
+
     this.$get("genres").then((r) => {
       this.genres = r.data;
       this.genres.splice(10, 1);
@@ -411,7 +428,7 @@ export default {
     column-gap: 23px;
 
     a {
-      font-size: 24px;
+      font-size: 26px;
       color: #fff;
 
       @media (any-hover: hover) {
@@ -428,6 +445,26 @@ export default {
         }
       }
     }
+  }
+  &__action {
+    position: relative;
+  }
+  &__counter {
+    position: absolute;
+    top: -20%;
+    right: -50%;
+    font-size: 15px;
+    font-weight: 900;
+    font-family: $fontInter;
+    padding: 5px;
+    background: #38d991;
+    color: #000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__burger {
     display: flex;

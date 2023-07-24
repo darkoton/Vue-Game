@@ -50,24 +50,17 @@ export default {
   },
 
   data() {
-    return {
-      test: "/Rust.png",
-    };
+    return {};
   },
 
   methods: {
     favorite() {
       if (
-        localStorage.favorites &&
         !JSON.parse(localStorage.favorites).find((el) => el.id == this.game.id)
       ) {
-        if (localStorage.favorites) {
-          let fav = JSON.parse(localStorage.favorites);
-          fav.push(this.game);
-          localStorage.setItem("favorites", JSON.stringify(fav));
-        } else {
-          localStorage.setItem("favorites", JSON.stringify([this.game]));
-        }
+        let fav = JSON.parse(localStorage.favorites);
+        fav.push(this.game);
+        localStorage.setItem("favorites", JSON.stringify(fav));
       } else {
         let fav = JSON.parse(localStorage.favorites);
         fav.splice(
@@ -77,17 +70,14 @@ export default {
         localStorage.setItem("favorites", JSON.stringify(fav));
       }
 
-      this.$emit("favorite");
+      this.$store.commit("favorite");
     },
     basket() {
-      if (localStorage.basket) {
-        let fav = JSON.parse(localStorage.basket);
-        fav.push(this.game);
-        localStorage.setItem("basket", JSON.stringify(fav));
-      } else {
-        localStorage.setItem("basket", JSON.stringify([this.game]));
-      }
-      this.$emit("basket");
+      let fav = JSON.parse(localStorage.basket);
+      fav.push(this.game);
+      localStorage.setItem("basket", JSON.stringify(fav));
+
+      this.$store.commit("basket");
     },
   },
 };

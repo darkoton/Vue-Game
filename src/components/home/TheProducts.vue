@@ -9,8 +9,6 @@
           favorite: favorites.find((el) => el.id == game.id),
           basket: basket.find((el) => el.id == game.id),
         }"
-        @favorite="getFavorite"
-        @basket="getBasket"
       />
     </ul>
   </div>
@@ -42,27 +40,30 @@ export default {
           this.games = r.data;
         })
         .then(() => {
-          this.favorites = localStorage.favorites
-            ? JSON.parse(localStorage.favorites)
-            : [];
+          this.getFavorite();
         });
     },
     getFavorite() {
-      this.favorites = localStorage.favorites
-        ? JSON.parse(localStorage.favorites)
-        : [];
+      this.favorites = JSON.parse(localStorage.favorites);
     },
     getBasket() {
-      this.basket = localStorage.basket ? JSON.parse(localStorage.basket) : [];
+      this.basket = JSON.parse(localStorage.basket);
     },
   },
   watch: {
     category() {
       this.getProducts();
     },
+    "$store.state.favorite"() {
+      this.getFavorite();
+    },
+    "$store.state.basket"() {
+      this.getBasket();
+    },
   },
   mounted() {
     this.getProducts();
+    this.getBasket();
   },
 };
 </script>
