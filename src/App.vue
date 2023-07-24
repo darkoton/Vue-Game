@@ -21,6 +21,9 @@ export default {
     if (!localStorage.favorites) {
       localStorage.setItem("favorites", JSON.stringify([]));
     }
+    if (!localStorage.basket) {
+      localStorage.setItem("basket", JSON.stringify([]));
+    }
   },
 };
 </script>

@@ -1,5 +1,10 @@
 <template>
-  <div class="card">
+  <div
+    class="card"
+    :class="{
+      basket: $store.state.basket.find((el) => el.id == game.id),
+    }"
+  >
     <div class="card__left">
       <i class="card__move icon-move"></i>
     </div>
@@ -22,7 +27,20 @@
       <div class="card__right">
         <div class="card__submit">
           <div class="card__price">{{ game.price }}$</div>
-          <button class="card__button">В корзину</button>
+          <button
+            class="card__button"
+            @click="
+              $store.state.basket.find((el) => el.id == game.id)
+                ? $router.push('/basket')
+                : ($store.commit('basket', game), $router.push('/basket'))
+            "
+          >
+            {{
+              $store.state.basket.find((el) => el.id == game.id)
+                ? "В корзине"
+                : "В корзину"
+            }}
+          </button>
         </div>
 
         <div class="card__added-date">
@@ -30,7 +48,9 @@
         </div>
       </div>
     </div>
-    <div class="card__remove"><span></span><span></span></div>
+    <div class="card__remove" @click="$store.commit('favorite', game)">
+      <span></span><span></span>
+    </div>
   </div>
 </template>
 
@@ -135,6 +155,7 @@ export default {
       font-weight: bold;
       font-size: 14px;
       white-space: nowrap;
+      position: relative;
       @media (any-hover: hover) {
         cursor: pointer;
         transition: all 0.3s ease 0s;
@@ -192,6 +213,24 @@ export default {
       }
     }
   }
+
+  // &.basket {
+  //   & .card__button {
+  //     color: transparent;
+  //     background: rgba(56, 217, 145, 0.4);
+  //     border-color: rgba(56, 217, 145, 0.4);
+  //     pointer-events: none;
+
+  //     &::after {
+  //       content: "В корзине";
+  //       position: absolute;
+  //       top: 50%;
+  //       left: 50%;
+  //       transform: translate(-50%, -50%);
+  //       color: #000;
+  //     }
+  //   }
+  // }
 
   @media (any-hover: hover) {
     transition: all 0.3s ease 0s;

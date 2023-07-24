@@ -1,14 +1,7 @@
 <template>
   <div class="products">
     <ul class="products__list">
-      <card
-        v-for="game in games"
-        :key="game"
-        :game="game"
-        :class="{
-          favorite: favorites.find((el) => el.id == game.id),
-        }"
-      />
+      <card v-for="game in games" :key="game" :game="game" />
     </ul>
   </div>
 </template>
@@ -33,24 +26,14 @@ export default {
   },
   methods: {
     getProducts() {
-      this.$get(`/genres/${this.category}/games`)
-        .then((r) => {
-          this.games = r.data;
-        })
-        .then(() => {
-          this.getFavorite();
-        });
-    },
-    getFavorite() {
-      this.favorites = JSON.parse(localStorage.favorites);
+      this.$get(`/genres/${this.category}/games`).then((r) => {
+        this.games = r.data;
+      });
     },
   },
   watch: {
     category() {
       this.getProducts();
-    },
-    "$store.state.favorite"() {
-      this.getFavorite();
     },
   },
   mounted() {

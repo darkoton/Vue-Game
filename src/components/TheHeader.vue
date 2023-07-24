@@ -74,10 +74,20 @@
 
             <div class="header__actions">
               <router-link
+                to="#"
+                class="header__action header__backet icon-backet"
+              >
+                <span class="header__counter">{{
+                  this.$store.state.basket.length
+                }}</span>
+              </router-link>
+              <router-link
                 to="/favorites"
                 class="header__action header__favorite icon-favorite"
               >
-                <span class="header__counter">{{ favoritesCount }}</span>
+                <span class="header__counter">{{
+                  this.$store.state.favorites.length
+                }}</span>
               </router-link>
             </div>
           </div>
@@ -124,13 +134,22 @@
             </div>
 
             <div class="burger-menu__actions header__actions">
+              <router-link to="#" class="header__backet">
+                <span class="icon-backet"></span>
+                <span>Корзина</span>
+                <span class="header__counter">{{
+                  this.$store.state.basket.length
+                }}</span>
+              </router-link>
               <router-link
                 to="/favorites"
                 class="header__action header__favorite"
               >
                 <span class="icon-favorite"></span>
                 <span>Избраное</span>
-                <span class="header__counter">{{ favoritesCount }}</span>
+                <span class="header__counter">{{
+                  this.$store.state.favorites.length
+                }}</span>
               </router-link>
 
               <div class="header__languages">
@@ -166,17 +185,10 @@ export default {
       language: "RU",
       burger: false,
       genres: [],
-      favoritesCount: 0,
     };
   },
-  watch: {
-    "$store.state.favorite"() {
-      this.favoritesCount = JSON.parse(localStorage.favorites).length;
-    },
-  },
+  watch: {},
   mounted() {
-    this.favoritesCount = JSON.parse(localStorage.favorites).length;
-
     this.$get("genres").then((r) => {
       this.genres = r.data;
       this.genres.splice(10, 1);

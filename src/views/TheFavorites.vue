@@ -5,13 +5,17 @@
         <div class="favorites__body">
           <div class="favorites__top">
             <h2 class="favorites__title">Избраное</h2>
-            <button class="favorites__clear">
+            <button class="favorites__clear" @click="clear">
               Очистить <i class="icon-trash"></i>
             </button>
           </div>
 
           <ul class="favorites__list">
-            <card v-for="game in favorites" :key="game" :game="game" />
+            <card
+              v-for="game in $store.state.favorites"
+              :key="game"
+              :game="game"
+            />
           </ul>
         </div>
       </div>
@@ -28,13 +32,13 @@ export default {
   },
 
   data() {
-    return {
-      favorites: [],
-    };
+    return {};
   },
-
-  mounted() {
-    this.favorites = JSON.parse(localStorage.favorites);
+  methods: {
+    clear() {
+      localStorage.setItem("favorites", JSON.stringify([]));
+      this.$store.state.favorites = [];
+    },
   },
 };
 </script>

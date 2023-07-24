@@ -1,6 +1,12 @@
 <template>
-  <div class="card">
-    <div class="card__favorite" @click="favorite()">
+  <div
+    class="card"
+    :class="{
+      favorite: $store.state.favorites.find((el) => el.id == game.id),
+      basket: $store.state.basket.find((el) => el.id == game.id),
+    }"
+  >
+    <div class="card__favorite" @click="favorite">
       <img src="@/assets/img/card/heart.png" alt="" />
       <img src="@/assets/img/card/heart-active.png" alt="" />
     </div>
@@ -27,9 +33,13 @@
 
         <span v-else> Стоимость: {{ game.price }}$ </span>
       </div>
-      <router-link class="card__submit" to="#">
+      <button
+        class="card__submit"
+        :disabled="game.state != 'released'"
+        @click="basket"
+      >
         {{ game.state != "released" ? "Скоро" : "Купить" }}
-      </router-link>
+      </button>
     </div>
   </div>
 </template>
@@ -51,34 +61,10 @@ export default {
 
   methods: {
     favorite() {
-      if (
-        !JSON.parse(localStorage.favorites).find((el) => el.id == this.game.id)
-      ) {
-        let fav = JSON.parse(localStorage.favorites);
-        let game = this.game;
-
-        const today = new Date();
-        const yyyy = today.getFullYear();
-        let mm = today.getMonth() + 1; // Months start at 0!
-        let dd = today.getDate();
-
-        if (dd < 10) dd = "0" + dd;
-        if (mm < 10) mm = "0" + mm;
-
-        game.dateAdded = dd + "." + mm + "." + yyyy;
-
-        fav.push(game);
-        localStorage.setItem("favorites", JSON.stringify(fav));
-      } else {
-        let fav = JSON.parse(localStorage.favorites);
-        fav.splice(
-          fav.findIndex((el) => el.id == this.game.id),
-          1
-        );
-        localStorage.setItem("favorites", JSON.stringify(fav));
-      }
-
-      this.$store.commit("favorite");
+      this.$store.commit("favorite", this.game);
+    },
+    basket() {
+      this.$store.commit("basket", this.game);
     },
   },
 };
@@ -226,6 +212,12 @@ export default {
     display: block;
     text-align: center;
     @include adaptiv-padding(12, 4, 0, 0, 1);
+
+    &:disabled {
+      background: rgba(56, 217, 145, 0.3);
+      border-color: rgba(56, 217, 145, 0.3);
+      pointer-events: none;
+    }
 
     @media (any-hover: hover) {
       cursor: pointer;
