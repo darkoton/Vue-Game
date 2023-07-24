@@ -17,7 +17,7 @@
     <div class="card__bottom">
       <div class="card__text">
         <h3 class="card__title">{{ game.title }}</h3>
-        <div class="card__description">{{ game.description }}</div>
+        <div class="card__description">{{ game.ru.description }}</div>
       </div>
       <div class="card__price" v-if="game.state == 'released'">
         <span v-if="game.discount" class="discount">
@@ -27,10 +27,7 @@
 
         <span v-else> Стоимость: {{ game.price }}$ </span>
       </div>
-      <router-link
-        class="card__submit"
-        to="#"
-      >
+      <router-link class="card__submit" to="#">
         {{ game.state != "released" ? "Скоро" : "Купить" }}
       </router-link>
     </div>
@@ -58,7 +55,19 @@ export default {
         !JSON.parse(localStorage.favorites).find((el) => el.id == this.game.id)
       ) {
         let fav = JSON.parse(localStorage.favorites);
-        fav.push(this.game);
+        let game = this.game;
+
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+
+        if (dd < 10) dd = "0" + dd;
+        if (mm < 10) mm = "0" + mm;
+
+        game.dateAdded = dd + "." + mm + "." + yyyy;
+
+        fav.push(game);
         localStorage.setItem("favorites", JSON.stringify(fav));
       } else {
         let fav = JSON.parse(localStorage.favorites);
@@ -215,7 +224,7 @@ export default {
     background: #38d991;
     border: 2px solid #38d991;
     display: block;
-    width: 100%;
+    text-align: center;
     @include adaptiv-padding(12, 4, 0, 0, 1);
 
     @media (any-hover: hover) {

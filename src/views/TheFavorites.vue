@@ -9,6 +9,10 @@
               Очистить <i class="icon-trash"></i>
             </button>
           </div>
+
+          <ul class="favorites__list">
+            <card v-for="game in favorites" :key="game" :game="game" />
+          </ul>
         </div>
       </div>
     </div>
@@ -16,7 +20,23 @@
 </template>
 
 <script>
-export default {};
+import card from "@/components/favorites/TheCard.vue";
+
+export default {
+  components: {
+    card,
+  },
+
+  data() {
+    return {
+      favorites: [],
+    };
+  },
+
+  mounted() {
+    this.favorites = JSON.parse(localStorage.favorites);
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -44,6 +64,12 @@ export default {};
         opacity: 1;
       }
     }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 20px;
   }
 }
 </style>
