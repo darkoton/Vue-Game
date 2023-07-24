@@ -27,13 +27,12 @@
 
         <span v-else> Стоимость: {{ game.price }}$ </span>
       </div>
-      <button
+      <router-link
         class="card__submit"
-        :disabled="game.state != 'released'"
-        @click="basket"
+        to="#"
       >
         {{ game.state != "released" ? "Скоро" : "Купить" }}
-      </button>
+      </router-link>
     </div>
   </div>
 </template>
@@ -71,13 +70,6 @@ export default {
       }
 
       this.$store.commit("favorite");
-    },
-    basket() {
-      let fav = JSON.parse(localStorage.basket);
-      fav.push(this.game);
-      localStorage.setItem("basket", JSON.stringify(fav));
-
-      this.$store.commit("basket");
     },
   },
 };
@@ -226,12 +218,6 @@ export default {
     width: 100%;
     @include adaptiv-padding(12, 4, 0, 0, 1);
 
-    &:disabled {
-      background: rgba(56, 217, 145, 0.3);
-      border-color: rgba(56, 217, 145, 0.3);
-      pointer-events: none;
-    }
-
     @media (any-hover: hover) {
       cursor: pointer;
       transition: all 0.3s ease 0s;
@@ -341,6 +327,7 @@ export default {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
       }
     }
   }

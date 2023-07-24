@@ -18,10 +18,6 @@ export default {
     TheFooter,
   },
   created() {
-    if (!localStorage.basket) {
-      localStorage.setItem("basket", JSON.stringify([]));
-    }
-
     if (!localStorage.favorites) {
       localStorage.setItem("favorites", JSON.stringify([]));
     }

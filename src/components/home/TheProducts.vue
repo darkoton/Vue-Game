@@ -7,7 +7,6 @@
         :game="game"
         :class="{
           favorite: favorites.find((el) => el.id == game.id),
-          basket: basket.find((el) => el.id == game.id),
         }"
       />
     </ul>
@@ -30,7 +29,6 @@ export default {
     return {
       games: [],
       favorites: [],
-      basket: [],
     };
   },
   methods: {
@@ -46,9 +44,6 @@ export default {
     getFavorite() {
       this.favorites = JSON.parse(localStorage.favorites);
     },
-    getBasket() {
-      this.basket = JSON.parse(localStorage.basket);
-    },
   },
   watch: {
     category() {
@@ -57,13 +52,9 @@ export default {
     "$store.state.favorite"() {
       this.getFavorite();
     },
-    "$store.state.basket"() {
-      this.getBasket();
-    },
   },
   mounted() {
     this.getProducts();
-    this.getBasket();
   },
 };
 </script>

@@ -74,13 +74,7 @@
 
             <div class="header__actions">
               <router-link
-                to="#"
-                class="header__action header__backet icon-backet"
-              >
-                <span class="header__counter">{{ basketCount }}</span>
-              </router-link>
-              <router-link
-                to="#"
+                to="/favorites"
                 class="header__action header__favorite icon-favorite"
               >
                 <span class="header__counter">{{ favoritesCount }}</span>
@@ -130,13 +124,13 @@
             </div>
 
             <div class="burger-menu__actions header__actions">
-              <router-link to="#" class="header__backet">
-                <span class="icon-backet"></span>
-                <span>Корзина</span>
-              </router-link>
-              <router-link to="#" class="header__favorite">
+              <router-link
+                to="/favorites"
+                class="header__action header__favorite"
+              >
                 <span class="icon-favorite"></span>
                 <span>Избраное</span>
+                <span class="header__counter">{{ favoritesCount }}</span>
               </router-link>
 
               <div class="header__languages">
@@ -173,20 +167,15 @@ export default {
       burger: false,
       genres: [],
       favoritesCount: 0,
-      basketCount: 0,
     };
   },
   watch: {
     "$store.state.favorite"() {
       this.favoritesCount = JSON.parse(localStorage.favorites).length;
     },
-    "$store.state.basket"() {
-      this.basketCount = JSON.parse(localStorage.basket).length;
-    },
   },
   mounted() {
     this.favoritesCount = JSON.parse(localStorage.favorites).length;
-    this.basketCount = JSON.parse(localStorage.basket).length;
 
     this.$get("genres").then((r) => {
       this.genres = r.data;
@@ -428,7 +417,7 @@ export default {
     column-gap: 23px;
 
     a {
-      font-size: 26px;
+      font-size: 24px;
       color: #fff;
 
       @media (any-hover: hover) {
@@ -540,9 +529,14 @@ export default {
         display: flex;
         column-gap: 20px;
         span {
-          width: 26px;
+          // width: 26px;
         }
       }
+    }
+    & .header__counter {
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
     }
     &__theme {
       position: absolute;
