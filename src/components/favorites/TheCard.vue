@@ -9,7 +9,7 @@
     "
   >
     <div class="card__left" v-if="type == 'favorites'">
-      <i class="card__move icon-move"></i>
+      <i class="card__move icon-move handle"></i>
     </div>
     <div class="card__main">
       <div class="card__img">
