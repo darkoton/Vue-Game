@@ -18,6 +18,26 @@
               :type="'basket'"
             />
           </ul>
+
+          <div class="basket__confirm">
+            <div class="basket__left">
+              <div class="basket__value">
+                Всего товаров: {{ $store.state.basket.length }}
+              </div>
+              <div class="basket__price">
+                Общая сума:
+                {{
+                  $store.state.basket.reduce(
+                    (accumulator, currentValue) =>
+                      accumulator + +currentValue.price,
+                    (initialValue = 0)
+                  )
+                }}$
+              </div>
+            </div>
+
+            <div class="basket__button">Купить</div>
+          </div>
         </div>
         <div class="basket__body" v-else>
           <div class="basket__empty">
@@ -86,6 +106,42 @@ export default {
     flex-direction: column;
     row-gap: 10px;
     margin-top: 20px;
+  }
+  &__confirm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  &__price,
+  &__value {
+    font-size: 20px;
+    color: #fff;
+    margin-left: 30px;
+  }
+  &__button {
+    font-size: 20px;
+    color: #000;
+    background: #38d991;
+    border: 2px solid #38d991;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        background: transparent;
+        color: #38d991;
+      }
+    }
   }
   &__empty {
     display: flex;

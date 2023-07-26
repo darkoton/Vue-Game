@@ -17,10 +17,10 @@
       </div>
       <div class="card__text">
         <h4 class="card__title">{{ game.title }}</h4>
-        <div class="card__realese">
+        <div class="card__realese" v-if="type == 'favorites'">
           ДАТА ВЫХОДА: <span>{{ game.ru.releaseDate }}</span>
         </div>
-        <div class="card__genres">
+        <div class="card__genres" v-if="type == 'favorites'">
           <div class="card__genre" v-for="genre in game.ru.genres" :key="genre">
             {{ genre }}
           </div>
@@ -29,7 +29,12 @@
 
       <div class="card__right">
         <div class="card__submit">
-          <div class="card__price">{{ game.price }}$</div>
+          <div class="card__price">
+            <div class="card__price-discount" v-if="game.discount">
+              {{ game.price }}$
+            </div>
+            {{ game.discount ? game.discount : game.price }}$
+          </div>
           <button
             v-if="type == 'favorites'"
             class="card__button"
@@ -80,15 +85,16 @@ export default {
   display: flex;
   align-items: center;
   background: #111;
-  padding: 0 10px;
+  @include adaptiv-padding(0, 0, 10, 3, 1);
   border-radius: 10px;
   color: #fff;
   position: relative;
   &__move {
     color: #fff;
     opacity: 0.6;
-    font-size: 30px;
-    margin-right: 10px;
+    @include adaptiv-font(30, 18);
+    @include adaptiv-value-width(padding, 3, 5, 500, 1);
+    @include adaptiv-value(margin-right, 10, 5, 1);
     @media (any-hover: hover) {
       cursor: pointer;
       transition: all 0.3s ease 0s;
@@ -101,12 +107,15 @@ export default {
     display: flex;
     border-left: 1px solid #10412b;
     padding: 12px;
+    @include adaptiv-value(padding, 12, 10, 0);
+
     width: 100%;
   }
   &__img {
-    max-width: 300px;
-    max-height: 150px;
+    @include adaptiv-value(width, 300, 150, 0);
+    @include adaptiv-value(height, 150, 75, 0);
     margin-right: 10px;
+
     img {
       width: 100%;
       height: 100%;
@@ -118,22 +127,29 @@ export default {
     width: 100%;
   }
   &__title {
-    font-size: 25px;
+    @include adaptiv-font(25, 12);
     margin-bottom: 10px;
     transition: all 0.3s ease 0s;
   }
 
   &__realese {
     font-size: 14px;
+    @include adaptiv-font(14, 11);
     color: #777;
     margin-bottom: 10px;
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
   &__genres {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    row-gap: 3px;
     column-gap: 5px;
+    @media (max-width: 540px) {
+      display: none;
+    }
   }
   &__genre {
     padding: 5px;
@@ -151,6 +167,9 @@ export default {
   &__right {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 115px;
+    justify-content: flex-end;
   }
   &__submit {
     display: flex;
@@ -158,16 +177,35 @@ export default {
     align-items: center;
 
     & .card__price {
+      @include adaptiv-font(14, 12);
       height: 100%;
-      padding: 14px 20px;
+      @include adaptiv-padding(14, 5, 20, 10, 1);
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 10px;
+      &-discount {
+        color: #119258;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          display: block;
+          transform: translateY(-50%);
+          background: #38d991;
+        }
+      }
     }
 
     button {
-      padding: 10px;
+      @include adaptiv-value(padding, 10, 5, 1);
       background: #38d991;
       border: 2px solid #38d991;
       font-weight: bold;
-      font-size: 14px;
+      @include adaptiv-font(14, 12);
       white-space: nowrap;
       position: relative;
       @media (any-hover: hover) {
@@ -196,8 +234,8 @@ export default {
     position: absolute;
     width: 15px;
     height: 15px;
-    top: 12px;
-    right: 12px;
+    @include adaptiv-value(top, 12, 5, 1);
+    @include adaptiv-value(right, 12, 5, 1);
     cursor: pointer;
     span {
       display: inline-block;
@@ -228,23 +266,41 @@ export default {
     }
   }
 
-  // &.inBasket {
-  //   & .card__button {
-  //     color: transparent;
-  //     background: rgba(56, 217, 145, 0.4);
-  //     border-color: rgba(56, 217, 145, 0.4);
-  //     pointer-events: none;
+  @media (max-width: 500px) {
+    padding: 10px;
+    padding-left: 5px;
 
-  //     &::after {
-  //       content: "В корзине";
-  //       position: absolute;
-  //       top: 50%;
-  //       left: 50%;
-  //       transform: translate(-50%, -50%);
-  //       color: #000;
-  //     }
-  //   }
-  // }
+    &__main {
+      padding: calc(10px + 2 * ((100vw - 320px) / 1600)) 0;
+      padding-left: calc(10px + 2 * ((100vw - 320px) / 1600));
+    }
+    &__right {
+      max-width: none;
+      width: auto;
+      justify-content: stretch;
+    }
+    &__submit {
+      flex-direction: column;
+    }
+    &__button {
+      width: 100%;
+    }
+    & .card__price {
+      padding: 5px 0;
+    }
+  }
+  @media (max-width: 380px) {
+    &__img {
+      width: 100%;
+    }
+    &__main {
+      justify-content: space-between;
+    }
+    &__right {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
 
   &.card-basket {
     .card__main {

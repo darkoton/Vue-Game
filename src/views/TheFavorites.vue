@@ -26,7 +26,7 @@
             handle=".handle"
           >
             <template #item="{ element }">
-              <li>
+              <li class="favorites__li">
                 <card :game="element" :type="'favorites'" />
               </li>
             </template>
@@ -164,7 +164,9 @@ export default {
     row-gap: 10px;
     margin-top: 20px;
   }
-
+  &__li {
+    list-style: none;
+  }
   &__empty {
     display: flex;
     flex-direction: column;

@@ -63,6 +63,9 @@ body {
   padding: 0px #{calc($containerPadding / 2) + px} 0px #{calc($containerPadding / 2) + px};
   margin: 0px auto;
   max-width: $maxWidthContainer + px;
+  @media (max-width: 400px){
+    padding: 0 5px  ;
+  }
 }
 .page {
   flex: 1 1 auto;
