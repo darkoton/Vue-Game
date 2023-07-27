@@ -245,7 +245,6 @@ export default {
     border: 2px solid #38d991;
     @include adaptiv-value(width, 45, 30, 1);
     @include adaptiv-value(height, 45, 30, 1);
-    @include adaptiv-font(25, 20);
     @include adaptiv-value(margin-top, -30, -10, 1);
     color: #000;
     display: flex;
@@ -258,6 +257,12 @@ export default {
       &:hover {
         background: transparent;
         color: #38d991;
+      }
+    }
+    &::after {
+      font-size: calc(20px + 5 * (100vw / 1920)) !important;
+      @media screen and (min-width: 767px) {
+        font-size: calc(20px + 5 * (100vw / 1920)) !important;
       }
     }
 

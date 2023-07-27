@@ -2,7 +2,7 @@
   <div class="favorites">
     <div class="favorites__wrapper">
       <div class="favorites__container _container">
-        <div class="favorites__body" v-if="this.$store.state.favorites.length">
+        <div class="favorites__body" v-if="$store.state.favorites.length">
           <div class="favorites__top">
             <h2 class="favorites__title">Избраное</h2>
             <button class="favorites__clear" @click="clear">
@@ -18,7 +18,7 @@
               type: 'transition-group',
               name: !drag ? 'flip-list' : null,
             }"
-            v-model="this.$store.state.favorites"
+            v-model="$store.state.favorites"
             v-bind="dragOptions"
             @start="drag = true"
             @end="drag = false"
@@ -75,11 +75,12 @@ export default {
     };
   },
   watch: {
-    "$store.state.favorites"() {
-      localStorage.setItem(
-        "favorites",
-        JSON.stringify(this.$store.state.favorites)
-      );
+    "$store.state.favorites"(value) {
+      localStorage.setItem("favorites", JSON.stringify(value));
+
+      if (!value.length) {
+        this.animation();
+      }
     },
   },
   methods: {
@@ -173,7 +174,8 @@ export default {
     align-items: center;
     margin-top: 20px;
     &-title {
-      font-size: 30px;
+      @include adaptiv-font(30, 25);
+      text-align: center;
       color: #38d991;
       font-family: $fontJura;
       font-weight: bold;

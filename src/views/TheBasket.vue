@@ -2,7 +2,7 @@
   <div class="basket">
     <div class="basket__wrapper">
       <div class="basket__container _container">
-        <div class="basket__body" v-if="this.$store.state.basket.length">
+        <div class="basket__body" v-if="$store.state.basket.length">
           <div class="basket__top">
             <div class="basket__title">Корзина</div>
             <button class="basket__clear" @click="clear">
@@ -149,7 +149,7 @@ export default {
     align-items: center;
     margin-top: 20px;
     &-title {
-      font-size: 30px;
+      @include adaptiv-font(30, 25);
       color: #38d991;
       font-family: $fontJura;
       font-weight: bold;

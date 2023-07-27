@@ -22,7 +22,11 @@
     </div>
     <div class="card__bottom">
       <div class="card__text">
-        <h3 class="card__title">{{ game.title }}</h3>
+        <router-link
+          :to="'/product/' + game.genreId + '/' + game.id"
+          class="card__title"
+          >{{ game.title }}</router-link
+        >
         <div class="card__description">{{ game.ru.description }}</div>
       </div>
       <div class="card__price" v-if="game.state == 'released'">
@@ -159,9 +163,9 @@ export default {
     flex: 1 1 auto;
   }
   &__title {
+    @include adaptiv-font(18, 14);
     margin-bottom: 10px;
     color: #fff;
-    @include adaptiv-font(18, 14);
     font-weight: 600;
     transition: all 0.3s ease 0s;
   }

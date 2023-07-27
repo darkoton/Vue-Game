@@ -23,7 +23,7 @@
 <script>
 import banner from "@/components/home/TheBanner.vue";
 import navigation from "@/components/home/TheNavigation.vue";
-import products from "@/components/home/TheProducts.vue";
+import products from "@/components/TheProducts.vue";
 export default {
   name: "TheHome",
   components: {

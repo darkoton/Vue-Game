@@ -16,11 +16,15 @@
         <img :src="game.uploadImg" alt="" />
       </div>
       <div class="card__text">
-        <h4 class="card__title">{{ game.title }}</h4>
-        <div class="card__realese" v-if="type == 'favorites'">
+        <router-link
+          :to="'/product/' + game.genreId + '/' + game.id"
+          class="card__title"
+          >{{ game.title }}</router-link
+        >
+        <div class="card__realese">
           ДАТА ВЫХОДА: <span>{{ game.ru.releaseDate }}</span>
         </div>
-        <div class="card__genres" v-if="type == 'favorites'">
+        <div class="card__genres">
           <div class="card__genre" v-for="genre in game.ru.genres" :key="genre">
             {{ genre }}
           </div>
@@ -128,8 +132,10 @@ export default {
   }
   &__title {
     @include adaptiv-font(25, 12);
+    display: inline-block;
     margin-bottom: 10px;
     transition: all 0.3s ease 0s;
+    color: #fff;
   }
 
   &__realese {
@@ -168,7 +174,7 @@ export default {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 115px;
+    max-width: 120px;
     justify-content: flex-end;
   }
   &__submit {
@@ -179,7 +185,7 @@ export default {
     & .card__price {
       @include adaptiv-font(14, 12);
       height: 100%;
-      @include adaptiv-padding(14, 5, 20, 10, 1);
+      @include adaptiv-padding(8, 5, 20, 10, 1);
       display: flex;
       flex-wrap: wrap;
       column-gap: 10px;
