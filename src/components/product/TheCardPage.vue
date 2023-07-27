@@ -46,8 +46,8 @@
           <div class="product-card__actions">
             <div class="product-card__price">
               <div class="product-card__price-discount" v-if="game.discount">
+                <span class="price-old">{{ game.price }}$ </span>
                 <span class="price">{{ game.discount }}$</span>
-                <span class="price-old">{{ game.price }}</span>
               </div>
 
               <div class="product-card__price-price" v-else>
@@ -219,6 +219,23 @@ export default {
     @include adaptiv-font(20, 14);
     background: #0c2e1e;
     color: #38d991;
+
+    & .price-old {
+      color: #1c6d49;
+      margin-right: 10px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #38d991;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
   }
   &__basket {
     @include adaptiv-font(22, 14);
