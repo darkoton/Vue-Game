@@ -5,8 +5,9 @@
       inFavorite: $store.state.favorites.find((el) => el.id == game.id),
       inBasket: $store.state.basket.find((el) => el.id == game.id),
     }"
+    @click="$router.push('/product/' + game.genreId + '/' + game.id)"
   >
-    <div class="card__favorite" @click="favorite">
+    <div class="card__favorite" @click.stop="favorite">
       <img src="@/assets/img/card/heart.png" alt="" />
       <img src="@/assets/img/card/heart-active.png" alt="" />
     </div>
@@ -40,7 +41,7 @@
       <button
         class="card__submit"
         :disabled="game.state != 'released'"
-        @click="basket"
+        @click.stop="basket"
       >
         {{ game.state != "released" ? "Скоро" : "Купить" }}
       </button>

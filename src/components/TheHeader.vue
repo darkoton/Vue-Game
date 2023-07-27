@@ -3,41 +3,6 @@
     <div class="header__wrapper">
       <div class="header__container _container">
         <div class="header__body">
-          <div class="header__top">
-            <div class="header__info header__top-left">
-              <div class="header__info-item">
-                <div class="header__info-icon icon-phone"></div>
-                <span class="header__info-title">Тех поддержка:</span>
-                <a href="tel:+380235266490" class="header__info-tel"
-                  >+380235266490</a
-                >
-              </div>
-
-              <div class="header__info-item">
-                <div class="header__info-icon icon-time"></div>
-                <span class="header__info-title">Режим работы:</span>
-                <div class="header__info-ordinary">ПН-ВС: 10:00 - 23:00</div>
-              </div>
-            </div>
-            <div class="header__top-right">
-              <div class="header__languages">
-                <div class="header__languages-body">
-                  <span class="header__language" @click="language = 'EN'"
-                    >EN</span
-                  ><span class="header__language" @click="language = 'RU'"
-                    >RU</span
-                  >
-                  <div
-                    class="header__select"
-                    :class="{ en: language == 'EN', ru: language == 'RU' }"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="header__theme icon-sun"></div>
-            </div>
-          </div>
-
           <div class="header__bottom">
             <div class="header__burger" @click="burger = true">
               <span></span>
@@ -182,7 +147,6 @@ export default {
   data() {
     return {
       search: "",
-      language: "RU",
       burger: false,
       genres: [],
     };
@@ -200,6 +164,9 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background: #111;
 
   &__body {
@@ -208,15 +175,6 @@ export default {
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
-  }
-  &__top {
-    width: 100%;
-    display: flex;
-    column-gap: 30px;
-    justify-content: space-between;
-    @media (max-width: 840px) {
-      display: none;
-    }
   }
   &__bottom {
     display: flex;
@@ -227,101 +185,6 @@ export default {
     @media (max-width: 740px) {
       .header__logo span {
         display: none;
-      }
-    }
-  }
-
-  &__info {
-    display: flex;
-    align-items: center;
-    column-gap: 60px;
-
-    &-item {
-      display: flex;
-      align-items: center;
-    }
-    &-icon {
-      color: #8b8b8b;
-      font-size: 20px;
-      margin-right: 7px;
-    }
-
-    &-title {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 15px;
-      position: relative;
-    }
-    &-tel {
-      color: #38d991;
-      @include adaptiv-font(14, 12);
-      margin-left: 5px;
-      @media (any-hover: hover) {
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-        &:hover {
-          color: #207a52;
-        }
-      }
-    }
-    &-ordinary {
-      line-height: 15px;
-      color: #e6e1e5;
-      @include adaptiv-font(14, 12);
-      margin-left: 5px;
-    }
-  }
-  &__top-right {
-    display: flex;
-    column-gap: 20px;
-  }
-
-  &__languages {
-    &-body {
-      display: flex;
-      column-gap: 4px;
-      align-items: center;
-      position: relative;
-    }
-  }
-  &__language {
-    padding: 6px;
-    color: #fff;
-    font-size: 13px;
-    line-height: 10px;
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-  }
-  &__select {
-    background: #00b588;
-    width: 50%;
-    height: 22px;
-    border-radius: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: all 0.2s ease-in 0s;
-
-    &.en {
-      transform: translateX(0);
-    }
-    &.ru {
-      transform: translateX(100%);
-    }
-  }
-  &__theme {
-    font-size: 22px;
-    color: #fff;
-    margin-left: 20px;
-    cursor: pointer;
-    @media (any-hover: hover) {
-      cursor: pointer;
-      transition: all 0.3s ease 0s;
-      &:hover {
-        color: #3ad992;
       }
     }
   }
