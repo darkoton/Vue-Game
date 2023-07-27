@@ -5,7 +5,7 @@ const store = createStore({
     return {
       favorites: localStorage.favorites ? JSON.parse(localStorage.favorites) : [],
       basket: localStorage.basket ? JSON.parse(localStorage.basket) : [],
-
+      language: "RU"
     }
   },
   mutations: {

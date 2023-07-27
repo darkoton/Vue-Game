@@ -1,4 +1,9 @@
 <template>
+  <div
+    class="header__backdrop-shadow"
+    :class="{ active: burger }"
+    @click="burger = false"
+  ></div>
   <div class="header">
     <div class="header__wrapper">
       <div class="header__container _container">
@@ -58,11 +63,6 @@
           </div>
 
           <div
-            class="header__backdrop-shadow"
-            :class="{ active: burger }"
-            @click="burger = false"
-          ></div>
-          <div
             class="header__burger-menu burger-menu"
             :class="{ active: burger }"
           >
@@ -99,7 +99,7 @@
             </div>
 
             <div class="burger-menu__actions header__actions">
-              <router-link to="/basket" class="header__backet">
+              <router-link to="/basket" class="header__action header__backet">
                 <span class="icon-backet"></span>
                 <span>Корзина</span>
                 <span class="header__counter">{{
@@ -119,14 +119,21 @@
 
               <div class="header__languages">
                 <div class="header__languages-body">
-                  <span class="header__language" @click="language = 'EN'"
+                  <span
+                    class="header__language"
+                    @click="$store.state.language = 'EN'"
                     >EN</span
-                  ><span class="header__language" @click="language = 'RU'"
+                  ><span
+                    class="header__language"
+                    @click="$store.state.language = 'RU'"
                     >RU</span
                   >
                   <div
                     class="header__select"
-                    :class="{ en: language == 'EN', ru: language == 'RU' }"
+                    :class="{
+                      en: $store.state.language == 'EN',
+                      ru: $store.state.language == 'RU',
+                    }"
                   ></div>
                 </div>
               </div>
@@ -148,16 +155,12 @@ export default {
     return {
       search: "",
       burger: false,
-      genres: [],
     };
   },
-  watch: {},
-  mounted() {
-    this.$get("genres").then((r) => {
-      this.genres = r.data;
-      this.genres.splice(10, 1);
-      this.genres.splice(10, 1);
-    });
+  watch: {
+    $route() {
+      this.burger = false;
+    },
   },
 };
 </script>
@@ -185,6 +188,97 @@ export default {
     @media (max-width: 740px) {
       .header__logo span {
         display: none;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+    &-icon {
+      color: #8b8b8b;
+      font-size: 20px;
+      margin-right: 7px;
+    }
+
+    &-title {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      position: relative;
+    }
+    &-tel {
+      color: #38d991;
+      @include adaptiv-font(14, 12);
+      margin-left: 5px;
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: #207a52;
+        }
+      }
+    }
+    &-ordinary {
+      line-height: 15px;
+      color: #e6e1e5;
+      @include adaptiv-font(14, 12);
+      margin-left: 5px;
+    }
+  }
+
+  &__languages {
+    &-body {
+      display: flex;
+      column-gap: 4px;
+      align-items: center;
+      position: relative;
+    }
+  }
+  &__language {
+    padding: 6px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 10px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  &__select {
+    background: #00b588;
+    width: 50%;
+    height: 22px;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.2s ease-in 0s;
+
+    &.en {
+      transform: translateX(0);
+    }
+    &.ru {
+      transform: translateX(100%);
+    }
+  }
+  &__theme {
+    font-size: 22px;
+    color: #fff;
+    margin-left: 20px;
+    cursor: pointer;
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: #3ad992;
       }
     }
   }
@@ -351,7 +445,7 @@ export default {
   & .burger-menu {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     background: #000;
     width: 100%;
     @include adaptiv-value-width(max-width, 400, 290, 840, 1);
@@ -421,25 +515,6 @@ export default {
     }
   }
 
-  &__backdrop-shadow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.4);
-    transition: all 0.5s ease 0s;
-    @media (min-width: 840px) {
-      display: none;
-    }
-
-    &.active {
-      opacity: 1;
-      z-index: 50;
-    }
-  }
   &__navigation {
     display: none;
     justify-content: space-between;
@@ -459,6 +534,26 @@ export default {
     & .header__nav {
       white-space: nowrap;
     }
+  }
+}
+
+.header__backdrop-shadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease 0s;
+  @media (min-width: 840px) {
+    display: none;
+  }
+
+  &.active {
+    opacity: 1;
+    z-index: 9;
   }
 }
 </style>

@@ -285,7 +285,7 @@ export default {
     color: #01492a;
   }
   @media (max-width: 750px) {
-    &__body {
+    &__main {
       flex-direction: column;
       row-gap: 20px;
     }

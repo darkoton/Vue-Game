@@ -19,6 +19,7 @@ body {
   font-family: $fontInter;
   color: $colorDark;
   font-size: 14px;
+  overflow-x:hidden;
 
   // ._lock-scroll
   &._lock-scroll {
@@ -46,7 +47,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 //< " СЕТКА " >=============================================================================================================>//

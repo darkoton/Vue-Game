@@ -23,14 +23,21 @@
           <div class="header-banner__top-right">
             <div class="header-banner__languages">
               <div class="header-banner__languages-body">
-                <span class="header-banner__language" @click="language = 'EN'"
+                <span
+                  class="header-banner__language"
+                  @click="$store.state.language = 'EN'"
                   >EN</span
-                ><span class="header-banner__language" @click="language = 'RU'"
+                ><span
+                  class="header-banner__language"
+                  @click="$store.state.language = 'RU'"
                   >RU</span
                 >
                 <div
                   class="header-banner__select"
-                  :class="{ en: language == 'EN', ru: language == 'RU' }"
+                  :class="{
+                    en: $store.state.language == 'EN',
+                    ru: $store.state.language == 'RU',
+                  }"
                 ></div>
               </div>
             </div>

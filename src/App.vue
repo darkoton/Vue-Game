@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="wrapper">
     <div class="content">
       <the-header-banner></the-header-banner>
       <the-header></the-header>
