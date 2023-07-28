@@ -5,7 +5,6 @@ const store = createStore({
     return {
       favorites: localStorage.favorites ? JSON.parse(localStorage.favorites) : [],
       basket: localStorage.basket ? JSON.parse(localStorage.basket) : [],
-      language: "RU",
       games: []
     }
   },
@@ -64,6 +63,9 @@ const store = createStore({
         localStorage.setItem("basket", JSON.stringify(basket));
       }
       state.basket = basket
+    },
+    selectLanguage(state, language) {
+      localStorage.setItem("language", language)
     }
   }
 })

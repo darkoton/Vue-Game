@@ -30,7 +30,7 @@
                 <div class="header__search-icon icon-search"></div>
                 <input
                   type="text"
-                  placeholder="Поиск"
+                  :placeholder="$t('message.search')"
                   class="header__search-input"
                   :value="search"
                   @input="(event) => (search = event.target.value)"
@@ -71,14 +71,8 @@
                   </li>
                 </ul>
               </div>
-              <button
-                @click="
-                  $router.push('/search/' + search.toLowerCase());
-                  search = '';
-                "
-                class="header__search-submit"
-              >
-                Поиск
+              <button @click="searchSubmit" class="header__search-submit">
+                {{ $t("message.search") }}
               </button>
             </div>
 
@@ -125,7 +119,9 @@
             <div class="header__info burger-menu__info">
               <div class="header__info-item">
                 <div class="header__info-icon icon-phone"></div>
-                <span class="header__info-title">Тех поддержка:</span>
+                <span class="header__info-title"
+                  >{{ $t("message.support") }}:</span
+                >
                 <a href="tel:+380235266490" class="header__info-tel"
                   >+380235266490</a
                 >
@@ -133,15 +129,19 @@
 
               <div class="header__info-item">
                 <div class="header__info-icon icon-time"></div>
-                <span class="header__info-title">Режим работы:</span>
-                <div class="header__info-ordinary">ПН-ВС: 10:00 - 23:00</div>
+                <span class="header__info-title"
+                  >{{ $t("message.workingHours") }}:</span
+                >
+                <div class="header__info-ordinary">
+                  {{ $t("message.workingHoursInfo") }}
+                </div>
               </div>
             </div>
 
             <div class="burger-menu__actions header__actions">
               <router-link to="/basket" class="header__action header__backet">
                 <span class="icon-backet"></span>
-                <span>Корзина</span>
+                <span> {{ $t("message.basket") }} </span>
                 <span class="header__counter">{{
                   this.$store.state.basket.length
                 }}</span>
@@ -151,7 +151,7 @@
                 class="header__action header__favorite"
               >
                 <span class="icon-favorite"></span>
-                <span>Избраное</span>
+                <span>{{ $t("message.favorites") }}</span>
                 <span class="header__counter">{{
                   this.$store.state.favorites.length
                 }}</span>
@@ -161,18 +161,24 @@
                 <div class="header__languages-body">
                   <span
                     class="header__language"
-                    @click="$store.state.language = 'EN'"
+                    @click="
+                      $store.commit('selectLanguage', 'en');
+                      $i18n.locale = 'en';
+                    "
                     >EN</span
                   ><span
                     class="header__language"
-                    @click="$store.state.language = 'RU'"
+                    @click="
+                      $store.commit('selectLanguage', 'ru');
+                      $i18n.locale = 'ru';
+                    "
                     >RU</span
                   >
                   <div
                     class="header__select"
                     :class="{
-                      en: $store.state.language == 'EN',
-                      ru: $store.state.language == 'RU',
+                      en: $i18n.locale == 'en',
+                      ru: $i18n.locale == 'ru',
                     }"
                   ></div>
                 </div>
@@ -220,6 +226,12 @@ export default {
       setTimeout(() => {
         this.searchFocus = false;
       }, 100);
+    },
+    searchSubmit() {
+      if (this.search.length) {
+        this.$router.push("/search/" + this.search.toLowerCase());
+        this.search = "";
+      }
     },
   },
   mounted() {

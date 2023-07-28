@@ -10,7 +10,7 @@
               alt=""
             />
             <h2 class="footer__title">Vue Game</h2>
-            <p class="footer__subtitle">Развлекайтесь с нами!</p>
+            <p class="footer__subtitle">{{ $t("message.tagline") }}</p>
           </div>
         </div>
       </div>

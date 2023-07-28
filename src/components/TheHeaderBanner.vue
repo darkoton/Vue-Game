@@ -6,7 +6,9 @@
           <div class="header-banner__info header-banner__top-left">
             <div class="header-banner__info-item">
               <div class="header-banner__info-icon icon-phone"></div>
-              <span class="header-banner__info-title">Тех поддержка:</span>
+              <span class="header-banner__info-title"
+                >{{ $t("message.support") }}:</span
+              >
               <a href="tel:+380235266490" class="header-banner__info-tel"
                 >+380235266490</a
               >
@@ -14,9 +16,11 @@
 
             <div class="header-banner__info-item">
               <div class="header-banner__info-icon icon-time"></div>
-              <span class="header-banner__info-title">Режим работы:</span>
+              <span class="header-banner__info-title"
+                >{{ $t("message.workingHours") }}:</span
+              >
               <div class="header-banner__info-ordinary">
-                ПН-ВС: 10:00 - 23:00
+                {{ $t("message.workingHoursInfo") }}
               </div>
             </div>
           </div>
@@ -25,18 +29,24 @@
               <div class="header-banner__languages-body">
                 <span
                   class="header-banner__language"
-                  @click="$store.state.language = 'EN'"
+                  @click="
+                    $store.commit('selectLanguage', 'en');
+                    $i18n.locale = 'en';
+                  "
                   >EN</span
                 ><span
                   class="header-banner__language"
-                  @click="$store.state.language = 'RU'"
+                  @click="
+                    $store.commit('selectLanguage', 'ru');
+                    $i18n.locale = 'ru';
+                  "
                   >RU</span
                 >
                 <div
                   class="header-banner__select"
                   :class="{
-                    en: $store.state.language == 'EN',
-                    ru: $store.state.language == 'RU',
+                    en: $i18n.locale == 'en',
+                    ru: $i18n.locale == 'ru',
                   }"
                 ></div>
               </div>
@@ -54,7 +64,7 @@
 export default {
   data() {
     return {
-      language: "RU",
+      language: "ru",
     };
   },
 };

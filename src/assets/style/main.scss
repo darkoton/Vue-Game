@@ -25,21 +25,24 @@ body {
      overflow: hidden;
   }
   
-  &::-webkit-scrollbar {
-    width: 5px;              
-  }
-  &::-webkit-scrollbar-track {
-    background: #111;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #38d991;   
-    border-radius: 20px;      
-  }
 }
 #app{
   height: 100%;
   width: 100%;
   overflow-x:hidden;
+
+  @media (min-width: 992px) {
+    &::-webkit-scrollbar {
+      width: 5px;              
+    }
+    &::-webkit-scrollbar-track {
+      background: #111;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #38d991;   
+      border-radius: 20px;      
+    }
+  }
 }
 
 //< " ОБОЛОЧКА " >=============================================================================================================>//

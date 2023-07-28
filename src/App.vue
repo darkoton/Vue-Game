@@ -27,6 +27,9 @@ export default {
     if (!localStorage.basket) {
       localStorage.setItem("basket", JSON.stringify([]));
     }
+    if (!localStorage.language) {
+      localStorage.setItem("language", "ru");
+    }
   },
 };
 </script>
