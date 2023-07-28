@@ -4,7 +4,7 @@
     :class="{ active: burger }"
     @click="burger = false"
   ></div>
-  <div class="header">
+  <div class="header" :class="{ _focus: searchFocus }">
     <div class="header__wrapper">
       <div class="header__container _container">
         <div class="header__body">
@@ -24,23 +24,51 @@
               <span class="header__logo-text">Vue Game</span>
             </router-link>
 
-            <form class="header__search">
+            <div class="header__search">
               <div class="header__search-left">
                 <div class="header__search-icon icon-search"></div>
                 <input
                   type="text"
                   placeholder="Поиск"
                   class="header__search-input"
-                  v-model="search"
+                  :value="search"
+                  @input="(event) => (search = event.target.value)"
+                  @blur="blur"
+                  @focus="searchFocus = true"
                 />
+                {{ search }}
+
                 <div
                   class="header__search-close icon-close"
                   v-if="search.length > 0"
                   @click="search = ''"
                 ></div>
+                <ul class="header__search-result" v-if="searchFocus">
+                  <li
+                    class="header__search-result-li"
+                    v-for="game in gamesResult"
+                    :key="game"
+                    @click="$router.push(`/product/${game.genreId}/${game.id}`)"
+                  >
+                    <div class="header__search-result-img">
+                      <img :src="game.uploadImg" alt="" />
+                    </div>
+                    <div class="header__search-result-text">
+                      <div class="header__search-result-title">
+                        {{ game.title }}
+                      </div>
+                      <div
+                        class="header__search-result-price"
+                        v-if="game.price"
+                      >
+                        {{ game.price }}$
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
               <button class="header__search-submit">Поиск</button>
-            </form>
+            </div>
 
             <div class="header__actions">
               <router-link
@@ -148,6 +176,8 @@
 </template>
 
 <script>
+import axios from "@/axios/base";
+
 export default {
   name: "TheHeader",
 
@@ -155,12 +185,36 @@ export default {
     return {
       search: "",
       burger: false,
+      searchFocus: false,
+      games: [],
     };
+  },
+  computed: {
+    gamesResult() {
+      if (this.search.length) {
+        return this.games.filter((el) =>
+          el.title.toLowerCase().includes(this.search.toLowerCase())
+        );
+      }
+      return [];
+    },
   },
   watch: {
     $route() {
       this.burger = false;
     },
+  },
+  methods: {
+    blur() {
+      setTimeout(() => {
+        this.searchFocus = false;
+      }, 100);
+    },
+  },
+  mounted() {
+    axios.axios2.get(process.env.VUE_APP_BACKEND_URL2 + "/games").then((r) => {
+      this.games = r.data;
+    });
   },
 };
 </script>
@@ -208,7 +262,7 @@ export default {
     }
 
     &-title {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.5);
       font-size: 15px;
       position: relative;
     }
@@ -294,13 +348,23 @@ export default {
     line-height: 14px;
     word-spacing: -15px;
     margin-right: 10px;
+    transition: all 0.5s ease-in 0s;
+    @media (max-width: 520px) {
+      max-width: 50px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
   }
   &__search {
     display: flex;
     position: relative;
     flex: 1 1 auto;
     justify-content: flex-end;
+    transition: all 0.5s ease-in 0s;
     @include adaptiv-value(margin-right, 20, 10, 1);
+    background: #111;
     &-left {
       display: flex;
       border: 1px solid #d9d9d9;
@@ -309,6 +373,9 @@ export default {
       align-items: center;
       padding-left: 10px;
       position: relative;
+      width: 100%;
+      max-width: 300px;
+      transition: all 0.6s ease-in-out 0s;
       @media (max-width: 520px) {
         border-width: 1px;
         border-radius: 5px;
@@ -379,11 +446,78 @@ export default {
         display: none;
       }
     }
+
+    &-result {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: calc(100% + 1px);
+      left: 0;
+      width: 100%;
+      background: rgba(34, 34, 34, 0.95);
+      max-height: 60vh;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #111;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #38d991;
+        border-radius: 20px;
+      }
+
+      & li {
+        display: flex;
+        column-gap: 10px;
+        color: #fff;
+        padding: 10px;
+        align-items: center;
+      }
+      &-img {
+        width: 100%;
+        height: 100%;
+        max-width: 75px;
+        height: 50px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      &-price {
+        color: #38d991;
+      }
+    }
+
+    & li {
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          background: #ccc;
+          color: #000;
+
+          & .header__search-result-price {
+            color: #198554;
+          }
+        }
+      }
+    }
   }
 
   &__actions {
     display: flex;
     column-gap: 23px;
+    transition: all 0.5s ease-in 0s;
+    max-width: 72px;
 
     a {
       font-size: 24px;
@@ -427,11 +561,13 @@ export default {
   &__burger {
     display: flex;
     flex-direction: column;
-    min-width: 30px;
+    width: 100%;
+    max-width: 30px;
     height: 22px;
     justify-content: space-between;
     @include adaptiv-value(margin-right, 20, 10, 1);
     display: none;
+    transition: all 0.5s ease-in 0s;
     @media (max-width: 840px) {
       display: flex;
     }
@@ -533,6 +669,29 @@ export default {
 
     & .header__nav {
       white-space: nowrap;
+    }
+  }
+
+  &._focus {
+    @media (max-width: 520px) {
+      & .header__burger {
+        max-width: 0;
+        margin: 0;
+      }
+      & .header__logo {
+        max-width: 0;
+        margin: 0;
+      }
+      & .header__actions {
+        max-width: 0;
+        opacity: 0;
+      }
+      & .header__search {
+        margin: 0;
+      }
+      & .header__search-left {
+        max-width: 100%;
+      }
     }
   }
 }

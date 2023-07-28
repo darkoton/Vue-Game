@@ -44,7 +44,7 @@
           <h2 class="product-card__title">{{ game.title }}</h2>
 
           <div class="product-card__actions">
-            <div class="product-card__price">
+            <div class="product-card__price" v-if="game.price">
               <div class="product-card__price-discount" v-if="game.discount">
                 <span class="price-old">{{ game.price }}$ </span>
                 <span class="price">{{ game.discount }}$</span>
@@ -55,14 +55,19 @@
               </div>
             </div>
 
-            <div class="product-card__basket" @click="basket">
+            <button
+              class="product-card__basket"
+              :disabled="game.state == 'in developing'"
+              @click="basket"
+            >
               {{
                 $store.state.basket.find((el) => el.id == game.id)
                   ? "В корзине"
+                  : game.state == "in developing"
+                  ? "Скоро"
                   : "В корзину"
               }}
-            </div>
-
+            </button>
             <div class="product-card__favorite" @click="favorite">
               <img
                 src="@/assets/img/card/heart.png"
@@ -251,6 +256,11 @@ export default {
         background: transparent;
         color: #38d991;
       }
+    }
+    &:disabled {
+      pointer-events: none;
+      background: #165a3b;
+      border-color: #165a3b;
     }
   }
   &__favorite {

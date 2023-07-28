@@ -33,7 +33,7 @@
 
       <div class="card__right">
         <div class="card__submit">
-          <div class="card__price">
+          <div class="card__price" v-if="game.price">
             <div class="card__price-discount" v-if="game.discount">
               {{ game.price }}$
             </div>
@@ -42,6 +42,7 @@
           <button
             v-if="type == 'favorites'"
             class="card__button"
+            :disabled="game.state == 'in developing'"
             @click="
               $store.state.basket.find((el) => el.id == game.id)
                 ? $router.push('/basket')
@@ -51,6 +52,8 @@
             {{
               $store.state.basket.find((el) => el.id == game.id)
                 ? "В корзине"
+                : game.state == "in developing"
+                ? "Скоро"
                 : "В корзину"
             }}
           </button>
@@ -189,6 +192,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       column-gap: 10px;
+      color: #38d991;
       &-discount {
         color: #119258;
         position: relative;
@@ -214,6 +218,7 @@ export default {
       @include adaptiv-font(14, 12);
       white-space: nowrap;
       position: relative;
+      color: #000;
       @media (any-hover: hover) {
         cursor: pointer;
         transition: all 0.3s ease 0s;
@@ -221,6 +226,12 @@ export default {
           color: #38d991;
           background: transparent;
         }
+      }
+
+      &:disabled {
+        pointer-events: none;
+        background: #165a3b;
+        border-color: #165a3b;
       }
     }
   }
@@ -292,7 +303,7 @@ export default {
       width: 100%;
     }
     & .card__price {
-      padding: 5px 0;
+      padding: 10px 5px;
     }
   }
   @media (max-width: 380px) {
@@ -311,6 +322,10 @@ export default {
   &.card-basket {
     .card__main {
       border-left: 0;
+    }
+    .card__price {
+      min-width: 70px;
+      justify-content: center;
     }
   }
 
