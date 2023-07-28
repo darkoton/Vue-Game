@@ -7,11 +7,11 @@
           <navigation class="navigation" v-model="navValue" :genres="genres" />
           <products :category="navValue" />
 
-          <h2 class="title">Новинки</h2>
+          <h2 class="title">{{ $t("message.new") }}</h2>
 
           <products :category="11" />
 
-          <h2 class="title">Популярные</h2>
+          <h2 class="title">{{ $t("message.popular") }}</h2>
 
           <products :category="12" />
         </div>

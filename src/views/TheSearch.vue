@@ -4,7 +4,7 @@
       <div class="search__container _container">
         <div class="search__body" v-if="result.length">
           <h1 class="search__title">
-            Результаты по запросу: {{ $route.params.search }}
+            {{ $t("message.resultSearch") }}: {{ $route.params.search }}
           </h1>
 
           <products :gamesParent="result" />
@@ -14,9 +14,11 @@
           <div class="search__img">
             <img src="@/assets/img/search/search.png" alt="" />
           </div>
-          <div class="search__message">Нет результатов</div>
+          <div class="search__message">{{ $t("message.noResult") }}</div>
 
-          <router-link to="/" class="search__back">Вернуться</router-link>
+          <router-link to="/" class="search__back">{{
+            $t("message.back")
+          }}</router-link>
         </div>
       </div>
     </div>

@@ -22,7 +22,8 @@
           >{{ game.title }}</router-link
         >
         <div class="card__realese">
-          ДАТА ВЫХОДА: <span>{{ game.ru.releaseDate }}</span>
+          {{ $t("message.released").toUpperCase() }}:
+          <span>{{ game.ru.releaseDate }}</span>
         </div>
         <div class="card__genres">
           <div class="card__genre" v-for="genre in game.ru.genres" :key="genre">
@@ -51,16 +52,16 @@
           >
             {{
               $store.state.basket.find((el) => el.id == game.id)
-                ? "В корзине"
+                ? $t("message.inBasket")
                 : game.state == "in developing"
-                ? "Скоро"
-                : "В корзину"
+                ? $t("message.soon")
+                : $t("message.addCart")
             }}
           </button>
         </div>
 
         <div class="card__added-date">
-          Добавлено
+          {{ $t("message.added") }}
           <span>{{
             type == "favorites" ? game.dateFavoriteAdded : game.dateBasketAdded
           }}</span>

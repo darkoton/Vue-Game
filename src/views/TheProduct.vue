@@ -5,7 +5,7 @@
         <div class="product__body">
           <product />
 
-          <h2 class="product__title">Рекомендации</h2>
+          <h2 class="product__title">{{ $t("message.recommendations") }}</h2>
           <products
             :filterId="$route.params.id"
             :category="$route.params.genre"

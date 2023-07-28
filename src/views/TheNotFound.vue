@@ -4,10 +4,10 @@
       <div class="error__container _container">
         <div class="error__body">
           <div class="error__message">404</div>
-          <div class="error__sub-message">Страницу не найдено</div>
-          <router-link to="/" class="error__button"
-            >Вернуться на главную</router-link
-          >
+          <div class="error__sub-message">{{ $t("message.notFound") }}</div>
+          <router-link to="/" class="error__button">{{
+            $t("message.backHome")
+          }}</router-link>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
   &__button {
     font-size: 16px;
     @include adaptiv-font(16, 12);
-    padding: 5px 10px;
+    padding: 10px 20px;
     color: #000;
     background: #3ad991;
     border: 1px solid #3ad991;

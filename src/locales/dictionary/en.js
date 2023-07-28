@@ -13,6 +13,27 @@ const en = {
     tekken8: "Beautiful tricks",
     rdr2: "Beautiful open world",
     hollowKnight: "Fascinating plot",
+    price: "Price",
+    soon: "Soon",
+    buy: "Buy",
+    inBasket: "In basket",
+    released: "Release date",
+    addCart: "Add to cart",
+    added: "Added",
+    description: "Description",
+    cleare: "Cleare",
+    totalProducts: "Total products",
+    totalAmount: "Total amount",
+    basketEmpty: "Cart is empty",
+    back: "Back",
+    favoritesEmpty: "Favorites is empty",
+    new: "New",
+    popular: "Popular",
+    notFound: "Page not found",
+    backHome: "Go back to home page",
+    recommendations: "Recommendations",
+    resultSearch: "Results on request",
+    noResult: "No results"
   }
 }
 

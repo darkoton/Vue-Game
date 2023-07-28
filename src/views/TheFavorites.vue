@@ -4,9 +4,9 @@
       <div class="favorites__container _container">
         <div class="favorites__body" v-if="$store.state.favorites.length">
           <div class="favorites__top">
-            <h2 class="favorites__title">Избраное</h2>
+            <h2 class="favorites__title">{{ $t("message.favorites") }}</h2>
             <button class="favorites__clear" @click="clear">
-              Очистить <i class="icon-trash"></i>
+              {{ $t("message.cleare") }} <i class="icon-trash"></i>
             </button>
           </div>
 
@@ -41,10 +41,12 @@
               />
             </div>
 
-            <h2 class="favorites__empty-title">Список желаний пуст</h2>
-            <router-link class="favorites__empty-button" to="/"
-              >Вернуться</router-link
-            >
+            <h2 class="favorites__empty-title">
+              {{ $t("message.favoritesEmpty") }}
+            </h2>
+            <router-link class="favorites__empty-button" to="/">{{
+              $t("message.back")
+            }}</router-link>
           </div>
         </div>
       </div>

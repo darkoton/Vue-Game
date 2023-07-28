@@ -3,7 +3,6 @@
     class="card"
     :class="{
       inFavorite: $store.state.favorites.find((el) => el.id == game.id),
-      inBasket: $store.state.basket.find((el) => el.id == game.id),
     }"
     @click="$router.push('/product/' + game.genreId + '/' + game.id)"
   >
@@ -32,18 +31,27 @@
       </div>
       <div class="card__price" v-if="game.state == 'released'">
         <span v-if="game.discount" class="discount">
-          Стоимость: {{ game.discount }}$
+          {{ $t("message.price") }}: {{ game.discount }}$
           <span class="start">{{ game.price }}$ </span>
         </span>
 
-        <span v-else> Стоимость: {{ game.price }}$ </span>
+        <span v-else> {{ $t("message.price") }}: {{ game.price }}$ </span>
       </div>
       <button
         class="card__submit"
+        :class="{
+          inBasket: $store.state.basket.find((el) => el.id == game.id),
+        }"
         :disabled="game.state != 'released'"
         @click.stop="basket"
       >
-        {{ game.state != "released" ? "Скоро" : "Купить" }}
+        {{
+          game.state != "released"
+            ? $t("message.soon")
+            : $store.state.basket.find((el) => el.id == game.id)
+            ? $t("message.inBasket")
+            : $t("message.buy")
+        }}
       </button>
     </div>
   </div>
@@ -60,15 +68,16 @@ export default {
     },
   },
 
-  data() {
-    return {};
-  },
-
   methods: {
     favorite() {
       this.$store.commit("favorite", this.game);
     },
     basket() {
+      if (this.$store.state.basket.find((el) => el.id == this.game.id)) {
+        this.$router.push("/basket");
+        return;
+      }
+
       this.$store.commit("basket", this.game);
     },
   },
@@ -237,6 +246,12 @@ export default {
         background: transparent;
       }
     }
+
+    &.inBasket {
+      background: rgba(56, 217, 145, 0.3);
+      border-color: rgba(56, 217, 145, 0.3);
+      color: rgb(20, 20, 20);
+    }
   }
 
   @media (any-hover: hover) {
@@ -320,25 +335,6 @@ export default {
             }
           }
         }
-      }
-    }
-  }
-
-  &.inBasket {
-    & .card__submit {
-      opacity: 0.5;
-      pointer-events: none;
-      color: transparent;
-
-      &::after {
-        content: "В корзине";
-        display: block;
-        color: #000;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
       }
     }
   }

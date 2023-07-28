@@ -4,9 +4,9 @@
       <div class="basket__container _container">
         <div class="basket__body" v-if="$store.state.basket.length">
           <div class="basket__top">
-            <div class="basket__title">Корзина</div>
+            <div class="basket__title">{{ $t("message.basket") }}</div>
             <button class="basket__clear" @click="clear">
-              Очистить <i class="icon-trash"></i>
+              {{ $t("message.cleare") }} <i class="icon-trash"></i>
             </button>
           </div>
 
@@ -22,10 +22,11 @@
           <div class="basket__confirm">
             <div class="basket__left">
               <div class="basket__value">
-                Всего товаров: {{ $store.state.basket.length }}
+                {{ $t("message.totalProducts") }}:
+                {{ $store.state.basket.length }}
               </div>
               <div class="basket__price">
-                Общая сума:
+                {{ $t("message.totalAmount") }}:
                 {{
                   $store.state.basket.reduce(
                     (accumulator, currentValue) =>
@@ -36,7 +37,7 @@
               </div>
             </div>
 
-            <div class="basket__button">Купить</div>
+            <div class="basket__button">{{ $t("message.buy") }}:</div>
           </div>
         </div>
         <div class="basket__body" v-else>
@@ -44,10 +45,10 @@
             <div class="basket__empty-img">
               <img src="@/assets/img/basket/basket.svg" alt="" />
             </div>
-            <h2 class="basket__empty-title">Корзина пуста</h2>
-            <router-link class="basket__empty-button" to="/"
-              >Вернуться</router-link
-            >
+            <h2 class="basket__empty-title">{{ $t("message.basketEmpty") }}</h2>
+            <router-link class="basket__empty-button" to="/">{{
+              $t("message.back")
+            }}</router-link>
           </div>
         </div>
       </div>

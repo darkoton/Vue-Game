@@ -62,10 +62,10 @@
             >
               {{
                 $store.state.basket.find((el) => el.id == game.id)
-                  ? "В корзине"
+                  ? $t("message.inBasket")
                   : game.state == "in developing"
-                  ? "Скоро"
-                  : "В корзину"
+                  ? $t("message.soon")
+                  : $t("message.addCart")
               }}
             </button>
             <div class="product-card__favorite" @click="favorite">
@@ -78,7 +78,7 @@
             </div>
           </div>
           <p class="product-card__description">
-            Описание: {{ game.ru.description }}
+            {{ $t("message.description") }}: {{ game.ru.description }}
           </p>
           <ul class="product-card__genres">
             <li
@@ -91,7 +91,7 @@
           </ul>
 
           <div class="product-card__release">
-            Дата выхода: {{ game.ru.releaseDate }}
+            {{ $t("message.released") }}: {{ game.ru.releaseDate }}
           </div>
         </div>
       </div>

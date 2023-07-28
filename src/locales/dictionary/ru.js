@@ -13,6 +13,27 @@ const ru = {
     tekken8: "Красивые приёмы",
     rdr2: "Красивый открыйтый мир",
     hollowKnight: "Завораживающий сюжет",
+    price: "Стоимость",
+    soon: "Скоро",
+    buy: "Купить",
+    inBasket: "В корзине",
+    released: "Дата выхода",
+    addCart: "В корзину",
+    added: "Добавлено",
+    description: "Описание",
+    cleare: "Очистить",
+    totalProducts: "Всего товаров",
+    totalAmount: "Общая сумма",
+    basketEmpty: "Корзина пуста",
+    back: "Вернуться",
+    favoritesEmpty: "Список желаний пуст",
+    new: "Новинки",
+    popular: "Популярные",
+    notFound: "Страницу не найдено",
+    backHome: "Вернуться на главную",
+    recommendations: "Рекомендации",
+    resultSearch: "Результаты по запросу",
+    noResult: "Нет результатов"
   }
 }
 
