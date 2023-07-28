@@ -8,7 +8,7 @@
         :key="genre"
         @click="$emit('update:modelValue', genre.id)"
       >
-        {{ genre.name }}
+        {{ $i18n.locale == "ru" ? genre.ruName : genre.enName }}
       </li>
     </ul>
   </div>

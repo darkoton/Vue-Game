@@ -231,7 +231,7 @@ export default {
 
     searchSubmit() {
       if (this.search.length) {
-        this.$router.push("/search/" + this.search.toLowerCase());
+        this.$router.push("/search/" + this.search);
         this.search = "";
       }
     },

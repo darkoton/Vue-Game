@@ -1,0 +1,62 @@
+[
+  {
+    "ruName": "Приключения",
+    "enName": "Adventures",
+    "id": "1"
+  },
+  {
+    "ruName": "Файтинг",
+    "enName": "Fighting",
+    "id": "2"
+  },
+  {
+    "ruName": "Выживание",
+    "enName": "Survival",
+    "id": "3"
+  },
+  {
+    "ruName": "Кооператив",
+    "enName": "Cooperative",
+    "id": "4"
+  },
+  {
+    "ruName": "Стратегия",
+    "enName": "Strategy",
+    "id": "5"
+  },
+  {
+    "ruName": "Рогалик",
+    "enName": "Roguelike",
+    "id": "6"
+  },
+  {
+    "ruName": "Экшен",
+    "enName": "Action",
+    "id": "7"
+  },
+  {
+    "ruName": "Открытый мир",
+    "enName": "Open world",
+    "id": "8"
+  },
+  {
+    "ruName": "Хоррор",
+    "enName": "Horror",
+    "id": "9"
+  },
+  {
+    "ruName": "Шутер",
+    "enName": "Shooter",
+    "id": "10"
+  },
+  {
+    "ruName": "Новинки",
+    "enName": "New",
+    "id": "11"
+  },
+  {
+    "ruName": "Популярные",
+    "enName": "Popular",
+    "id": "12"
+  }
+]
