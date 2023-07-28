@@ -11,14 +11,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394372/screenshots/god-of-war-ragnarok-image_wvklpe.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690439068/screenshots/GOWR_Preview_Screenshot_15_tjerze.webp"
     ],
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
     "ru": {
       "description": "God of War: Ragnarök - ожидаемое продолжение культовой игры с эпическим сюжетом и захватывающими сражениями в мире скандинавской мифологии. Вас ждут новые приключения Кратоса и Атреуса, битвы с богами и грозный Рагнарек. Новые навыки, исследование мира и увлекательный геймплей - ждут вас!",
-      "releaseDate": "9 ноя. 2022",
-      "genres": [
-        "Приключение",
-        "Экшен"
-      ]
-    }
+      "releaseDate": "9 ноя. 2022"
+    },
+    "en": {}
   },
   {
     "genreId": "1",
@@ -32,14 +33,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394371/screenshots/EMgEzZ6XUAEg5Lg_rhsy6z.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/2017-03-20-_oa6qji.png"
     ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
     "ru": {
       "description": "Добро пожаловать в мир Hollow Knight! Исследуйте загадочные подземные локации, сражайтесь с опасными врагами и раскройте тайны этого мрачного и прекрасного мира. Готовьтесь к захватывающему приключению, наполненному великолепным художественным стилем и уникальной атмосферой.",
-      "releaseDate": "24 фев. 2017",
-      "genres": [
-        "Экшены",
-        "Приключенческие игры",
-        "Инди"
-      ]
+      "releaseDate": "24 фев. 2017"
     }
   },
   {
@@ -54,12 +55,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394375/screenshots/ori-and-the-blind-forest-defin-image-342_ydmegb.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394375/screenshots/ori-gameplay-3_h0sync.webp"
     ],
+    "genres": [
+      "Action"
+    ],
     "ru": {
-      "description": "Добро пожаловать в мир Ori and the Blind Forest! Отправляйтесь в увлекательное приключение, исследуйте волшебный лес, сражайтесь с врагами и восстановите разрушенный мир. Готовьтесь к трогательной истории, потрясающей музыке и увлекательному геймплею.",
-      "releaseDate": "11 мар. 2015",
-      "genres": [
-        "Экшены"
-      ]
+      "description": "Добро пожаловать в мир Ori and the Blind Forest! Отправляйтесь в увлекательное Adventure, исследуйте волшебный лес, сражайтесь с врагами и восстановите разрушенный мир. Готовьтесь к трогательной истории, потрясающей музыке и увлекательному геймплею.",
+      "releaseDate": "11 мар. 2015"
     }
   },
   {
@@ -74,13 +75,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394375/screenshots/Prey_02_e2r7ue.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394375/screenshots/prey_hb1q82.jpg"
     ],
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
     "ru": {
       "description": "Добро пожаловать в мир Prey! Отправляйтесь на захватывающую космическую станцию, сражайтесь за выживание, раскрывайте тайны и используйте способность изменять форму. Готовьтесь к научно-фантастическому приключению, полному интриги и головоломок.",
-      "releaseDate": "4 мая. 2017",
-      "genres": [
-        "Приключение",
-        "Экшен"
-      ]
+      "releaseDate": "4 мая. 2017"
     }
   },
   {
@@ -95,13 +96,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394371/screenshots/FprqVafWAAMfO3r_u1cs7t.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394370/screenshots/ds_01_s_fbbmfo.jpg"
     ],
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
     "ru": {
-      "description": "Street Fighter 6 - легендарная файтинговая игра с уникальными бойцами и захватывающими боями. Сражайтесь с игроками со всего мира, улучшайте навыки и станьте настоящим чемпионом. Готовы к вызову? Присоединяйтесь к Street Fighter 6 и покажите свое мастерство!",
-      "releaseDate": "2 июн. 2023",
-      "genres": [
-        "Приключение",
-        "Экшен"
-      ]
+      "description": "Street Fighter 6 - легендарная Fightingовая игра с уникальными бойцами и захватывающими боями. Сражайтесь с игроками со всего мира, улучшайте навыки и станьте настоящим чемпионом. Готовы к вызову? Присоединяйтесь к Street Fighter 6 и покажите свое мастерство!",
+      "releaseDate": "2 июн. 2023"
     }
   },
   {
@@ -116,12 +117,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394370/screenshots/dragon-ball-fighterz_image_MqfgK_x5fce2.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394366/screenshots/3253891-3844325224-DDOyp_wyp1fm.jpg"
     ],
+    "genres": [
+      "Action"
+    ],
     "ru": {
-      "description": "DRAGON BALL FighterZ - захватывающая файтинговая игра с легендарными героями и уникальными боями. Выберите свою команду и сразитесь с другими игроками в онлайн-режиме. Погрузитесь в аниме-стиль и станьте самым мощным воином DRAGON BALL. Готовы к эпическим схваткам? Присоединяйтесь к DRAGON BALL FighterZ!",
-      "releaseDate": "26 янв. 2018",
-      "genres": [
-        "Экшены"
-      ]
+      "description": "DRAGON BALL FighterZ - захватывающая Fightingовая игра с легендарными героями и уникальными боями. Выберите свою команду и сразитесь с другими игроками в онлайн-режиме. Погрузитесь в аниме-стиль и станьте самым мощным воином DRAGON BALL. Готовы к эпическим схваткам? Присоединяйтесь к DRAGON BALL FighterZ!",
+      "releaseDate": "26 янв. 2018"
     }
   },
   {
@@ -136,12 +137,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394377/screenshots/screenlg17_ismru4.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394372/screenshots/guiltygear-xx-accent-core-wii-screenshot10_a25unx.jpg"
     ],
+    "genres": [
+      "Action"
+    ],
     "ru": {
-      "description": "GUILTY GEAR -STRIVE-: захватывающий файтинг с уникальными бойцами и красочными сражениями. Погрузитесь в эпический мир сюжета и испытайте невероятные комбо. Готовы к адреналиновой битве? Присоединяйтесь к GUILTY GEAR -STRIVE- и станьте настоящим мастером файтинга!",
-      "releaseDate": "11 июн. 2021",
-      "genres": [
-        "Экшены"
-      ]
+      "description": "GUILTY GEAR -STRIVE-: захватывающий Fighting с уникальными бойцами и красочными сражениями. Погрузитесь в эпический мир сюжета и испытайте невероятные комбо. Готовы к адреналиновой битве? Присоединяйтесь к GUILTY GEAR -STRIVE- и станьте настоящим мастером Fightingа!",
+      "releaseDate": "11 июн. 2021"
     }
   },
   {
@@ -156,12 +157,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394384/screenshots/mortalkombatx-hd-screenshot4_b0vo11.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394374/screenshots/mkx_11_hyvccg.jpg"
     ],
+    "genres": [
+      "Action"
+    ],
     "ru": {
-      "description": "Mortal Kombat X - культовая файтинговая игра, где ждут кровавые поединки, захватывающие бойцы и уникальные фаталити. Выберите своего любимого бойца, сражайтесь с оппонентами и станьте легендой арены. Готовы к смертельным схваткам? Присоединяйтесь к Mortal Kombat X и докажите свою силу!",
-      "releaseDate": "14 апр. 2015",
-      "genres": [
-        "Экшены"
-      ]
+      "description": "Mortal Kombat X - культовая Fightingовая игра, где ждут кровавые поединки, захватывающие бойцы и уникальные фаталити. Выберите своего любимого бойца, сражайтесь с оппонентами и станьте легендой арены. Готовы к смертельным схваткам? Присоединяйтесь к Mortal Kombat X и докажите свою силу!",
+      "releaseDate": "14 апр. 2015"
     }
   },
   {
@@ -176,16 +177,16 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394376/screenshots/rust_qzpknt.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394373/screenshots/large_skmeba.jpg"
     ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Multiplayer",
+      "Role-playing"
+    ],
     "ru": {
       "description": "Rust - безжалостный выживальческий мир, где вас ждут опасности и великие возможности. Выживайте в дикой природе, стройте укрепления, сражайтесь с другими игроками и добывайте ресурсы. Готовы стать легендой выживания? Присоединяйтесь к Rust!",
-      "releaseDate": "8 фев. 2018",
-      "genres": [
-        "Экшены",
-        "Приключенческие игры",
-        "Инди",
-        "Многопользовательские игры",
-        "Ролевые игры"
-      ]
+      "releaseDate": "8 фев. 2018"
     }
   },
   {
@@ -200,15 +201,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394375/screenshots/Project-Zomboid-Screenshot-01-1920x1080_rzffwt.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394366/screenshots/1410190-project-zomboid-screenshot_ojrlm0.jpg"
     ],
+    "genres": [
+      "Indie",
+      "Role-playing",
+      "Simulator",
+      "Early Access"
+    ],
     "ru": {
       "description": "Project Zomboid - захватывающая выживальческая игра с зомби-апокалипсисом. Искать ресурсы, выживать и бороться с ходячими мертвецами. Готовы к борьбе за выживание? Присоединяйтесь к Project Zomboid!",
-      "releaseDate": "8 ноя. 2013",
-      "genres": [
-        "Инди",
-        "Ролевые игры",
-        "Симуляторы",
-        "Ранний доступ"
-      ]
+      "releaseDate": "8 ноя. 2013"
     }
   },
   {
@@ -223,16 +224,16 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394374/screenshots/maxresdefault_vom1h9.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/ark-survival-evolved_image_BcTdC_uuw4ey.jpg"
     ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Multiplayer",
+      "Role-playing"
+    ],
     "ru": {
       "description": "ARK: Survival Evolved - захватывающая выживальческая игра с динозаврами и дикой природой. Собирайте ресурсы, стройте убежище и приручайте динозавров. Готовы к выживанию? Присоединяйтесь к ARK: Survival Evolved!",
-      "releaseDate": "27 авг. 2017",
-      "genres": [
-        "Экшены",
-        "Приключенческие игры",
-        "Инди",
-        "Многопользовательские игры",
-        "Ролевые игры"
-      ]
+      "releaseDate": "27 авг. 2017"
     }
   },
   {
@@ -247,16 +248,16 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394380/screenshots/valheim_14_rbtzwb.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394379/screenshots/ss-4b7383597448b991ddb92ec0f3b8d57ce1f36ec8-1613519103942_g1n3.1080_ucexug.webp"
     ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Role-playing",
+      "Early Access"
+    ],
     "ru": {
       "description": "Valheim - захватывающая выживальческая игра в викингском мире. Исследуйте, сражайтесь с монстрами, создавайте и выживайте. Готовы к викингскому приключению? Присоединяйтесь к Valheim!",
-      "releaseDate": "2 фев. 2021",
-      "genres": [
-        "Экшены",
-        "Приключенческие игры",
-        "Инди",
-        "Ролевые игры",
-        "Ранний доступ"
-      ]
+      "releaseDate": "2 фев. 2021"
     }
   },
   {
@@ -271,15 +272,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394379/screenshots/the_elder_scrolls_online_morrowind_pvp-1_fv0py9.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394379/screenshots/the-elder-scrolls-online-screnshot-tgbwh_mlvonc.jpg"
     ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Multiplayer",
+      "Role-playing"
+    ],
     "ru": {
       "description": "The Elder Scrolls® Online - увлекательная MMORPG в мире Тамриэля. Исследуйте, сражайтесь и развивайтесь вместе с друзьями. Готовы к захватывающему приключению? Присоединяйтесь!",
-      "releaseDate": "4 апр. 2014",
-      "genres": [
-        "Экшены",
-        "Приключенческие игры",
-        "Многопользовательские игры",
-        "Ролевые игры"
-      ]
+      "releaseDate": "4 апр. 2014"
     }
   },
   {
@@ -294,14 +295,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394380/screenshots/wanted-ot_wha96t.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394373/screenshots/huntshd_08_d6r05m.jpg"
     ],
+    "genres": [
+      "First person shooter",
+      "Role-playing",
+      "Survival horror"
+    ],
     "ru": {
       "description": "Hunt: Showdown - захватывающая многопользовательская охота на монстров. Сражайтесь, исследуйте и выживайте вместе с друзьями. Готовы к адреналиновой охоте? Присоединяйтесь!",
-      "releaseDate": "27 авг. 2019",
-      "genres": [
-        "Шутер от первого лица",
-        "Компьютерная ролевая игра",
-        "Survival horror"
-      ]
+      "releaseDate": "27 авг. 2019"
     }
   },
   {
@@ -316,16 +317,16 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394377/screenshots/sea-of-thieves-2023-edition-05_m4vsls.png",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394377/screenshots/Sea-of-Thieves_soznpv.jpg"
     ],
+    "genres": [
+      "Fighting",
+      "Action-adventure",
+      "Shooter",
+      "Массовая многопользовательская ролевая онлайн-игра",
+      "Simulator"
+    ],
     "ru": {
       "description": "Sea of Thieves - это пиратская многопользовательская игра с открытым миром, разработанная студией Rare и изданная Xbox Game Studios. В ней игроки воплощают роль пирата и исследуют огромный мир, сражаясь с монстрами, совершая пиратские ограбления и ища сокровища.",
-      "releaseDate": "3 июн. 2020",
-      "genres": [
-        "Файтинг",
-        "Action-adventure",
-        "Шутер",
-        "Массовая многопользовательская ролевая онлайн-игра",
-        "Симулятор"
-      ]
+      "releaseDate": "3 июн. 2020"
     }
   },
   {
@@ -340,15 +341,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394373/screenshots/https___images.prismic.io_avalanche-studios_13ddc07b-9c8e-4c51-90bd-470a7420ddbd_Screenshot_04_wz5wkq.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394366/screenshots/20171016204852_1_jZH9Zpx_kubaz2.jpg"
     ],
+    "genres": [
+      "Simulator",
+      "First person shooter",
+      "Adventure",
+      "Sports"
+    ],
     "ru": {
       "description": "theHunter: Call of the Wild™ - захватывающая симуляция охоты. Охотьтесь на животных, исследуйте миры, используйте оружие. Готовы к приключению? Присоединяйтесь!",
-      "releaseDate": "16 фев. 2017",
-      "genres": [
-        "Симулятор",
-        "Шутер от первого лица",
-        "Adventure",
-        "Sports"
-      ]
+      "releaseDate": "16 фев. 2017"
     }
   },
   {
@@ -363,13 +364,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394370/screenshots/ckzjyfkpqmq51_zofz1z.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/3073808-slay_the_spire_hponrj.jpg"
     ],
+    "genres": [
+      "карточный роуглайк",
+      "Компьютерная стратегическая игра"
+    ],
     "ru": {
       "description": "Slay the Spire - увлекательная карточная рогалик игра с уникальными колодами и стратегиями. Сразитесь с врагами и покорите вершину башни. Готовы к вызову? Присоединяйтесь к Slay the Spire и станьте карточным мастером!",
-      "releaseDate": "23 янв. 2019",
-      "genres": [
-        "карточный роуглайк",
-        "Компьютерная стратегическая игра"
-      ]
+      "releaseDate": "23 янв. 2019"
     }
   },
   {
@@ -384,14 +385,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394382/screenshots/bloons-td-6-ios-review-screenshot-a-desert-level_cixner.png",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394369/screenshots/Bloons_TD6_Gameplay_Screenshot_zmslli.webp"
     ],
+    "genres": [
+      "Защита замка",
+      "Стратегия в реальном времени",
+      "Strategy"
+    ],
     "ru": {
       "description": "Bloons TD 6 - захватывающая tower defense с яркой графикой. Защищайте базу от атакующих шаров, размещая оборонительные башни и используя стратегии. Готовы к битве? Присоединяйтесь!",
-      "releaseDate": "18 дек. 2018",
-      "genres": [
-        "Защита замка",
-        "Стратегия в реальном времени",
-        "Strategy"
-      ]
+      "releaseDate": "18 дек. 2018"
     }
   },
   {
@@ -406,13 +407,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394370/screenshots/Company-of-Heroes-3-feature_ld29gw.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394368/screenshots/coh3_04_z7xumx.jpg"
     ],
+    "genres": [
+      "Стратегия в реальном времени",
+      "Action"
+    ],
     "ru": {
       "description": "Company of Heroes 3 - захватывающая стратегическая игра о Второй мировой войне. Командуйте войсками и побеждайте противника. Готовы к битве? Присоединяйтесь!",
-      "releaseDate": "23 фев. 2023",
-      "genres": [
-        "Стратегия в реальном времени",
-        "Экшен"
-      ]
+      "releaseDate": "23 фев. 2023"
     }
   },
   {
@@ -427,17 +428,17 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394369/screenshots/481671744_preview_set5-2-1_lvhwwj.gif",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394366/screenshots/4798439-shellshock-live-screenshot_oyhhzg.jpg"
     ],
+    "genres": [
+      "Shooter",
+      "Компьютерная стратегическая игра",
+      "Indie-игра",
+      "Казуальная игра",
+      "Massively Multiplayer",
+      "Strategy"
+    ],
     "ru": {
       "description": "ShellShock Live - захватывающая аркадная игра с танками и многопользовательскими пошаговыми боями. Готовы сразиться? Присоединяйтесь!",
-      "releaseDate": "22 мая. 2020",
-      "genres": [
-        "Шутер",
-        "Компьютерная стратегическая игра",
-        "Инди-игра",
-        "Казуальная игра",
-        "Massively Multiplayer",
-        "Strategy"
-      ]
+      "releaseDate": "22 мая. 2020"
     }
   },
   {
@@ -452,14 +453,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394373/screenshots/hades-ii-gameplay-screenshots-v0-gfbzsum7je5a1_ncwzvy.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690396594/screenshots/hades-ii-gameplay-screenshots-v0-80qv62b7je5a1_ipli4a.jpg"
     ],
+    "genres": [
+      "Roguelike",
+      "Action",
+      "Indie-игра"
+    ],
     "ru": {
       "description": "Hades II - продолжение захватывающего рогалика! Ощути мощь богов, сразись с врагами и раскрой тайны подземного царства. Создавай уникальные комбинации способностей, развивай своего героя и готовься к эпическим сражениям. Каждая смерть - новый шанс на победу. Вернись в мир Hades и стань непобедимым!",
-      "releaseDate": "Не обьявлено",
-      "genres": [
-        "Roguelike",
-        "Экшен",
-        "Инди-игра"
-      ]
+      "releaseDate": "Не обьявлено"
     }
   },
   {
@@ -474,13 +475,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394374/screenshots/noita-screenshot-dark-ritual_y7yw5h.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394374/screenshots/noita_04__c3lwih.jpg"
     ],
+    "genres": [
+      "Action",
+      "roguelike"
+    ],
     "ru": {
       "description": "Noita - захватывающая рогалик-песочница с магией и физикой. Исследуйте мир, создавайте заклинания и сражайтесь. Готовы к волшебному приключению? Присоединяйтесь!",
-      "releaseDate": "15 окт. 2020",
-      "genres": [
-        "Action",
-        "roguelike"
-      ]
+      "releaseDate": "15 окт. 2020"
     }
   },
   {
@@ -495,16 +496,16 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394377/screenshots/Screenshot3_cthszs.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394371/screenshots/f2ed278577c74bad19915ff39c87944a8575a00e_vd7vza.jpg"
     ],
+    "genres": [
+      "First person shooter",
+      "Музыкальная игра",
+      "Roguelike",
+      "Indie-игра",
+      "Музыкальная видеоигра"
+    ],
     "ru": {
-      "description": "BPM: Bullets Per Minute - захватывающая рогалик-шутер игра с музыкальным вдохновением. Сражайтесь в ритме музыки с демонами и станьте героем! Присоединяйтесь!",
-      "releaseDate": "15 сен. 2020",
-      "genres": [
-        "Шутер от первого лица",
-        "Музыкальная игра",
-        "Roguelike",
-        "Инди-игра",
-        "Музыкальная видеоигра"
-      ]
+      "description": "BPM: Bullets Per Minute - захватывающая рогалик-Shooter игра с музыкальным вдохновением. Сражайтесь в ритме музыки с демонами и станьте героем! Присоединяйтесь!",
+      "releaseDate": "15 сен. 2020"
     }
   },
   {
@@ -514,16 +515,16 @@
     "price": "8.7",
     "state": "released",
     "uploadImg": "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690100633/Enter_the_Gungeon_nsdyyd.png",
+    "genres": [
+      "Roguelike",
+      "Shooter",
+      "Indie-игра",
+      "Adventure",
+      "Adventure"
+    ],
     "ru": {
-      "description": "Enter the Gungeon - захватывающий рогалик-шутер с уникальными персонажами и ловушками. Исследуйте подземелье, сражайтесь с врагами и боссами. Готовы к вызову? Присоединяйтесь!",
-      "releaseDate": "5 апр. 2016",
-      "genres": [
-        "Roguelike",
-        "Шутер",
-        "Инди-игра",
-        "Приключенческая игра",
-        "Adventure"
-      ]
+      "description": "Enter the Gungeon - захватывающий рогалик-Shooter с уникальными персонажами и ловушками. Исследуйте подземелье, сражайтесь с врагами и боссами. Готовы к вызову? Присоединяйтесь!",
+      "releaseDate": "5 апр. 2016"
     }
   },
   {
@@ -538,14 +539,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/battlebit-remastered-best-settings-guide_knbigm.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/BattleBit-Remastered-SgtOkiDoki_yvutoj.webp"
     ],
+    "genres": [
+      "Shooter",
+      "Massively Multiplayer",
+      "Early Access"
+    ],
     "ru": {
-      "description": "Battle Bit - новый онлайн-шутер, где сражения с миллионами игроков станут твоим вызовом! Выбери свой стиль игры, прокачай навыки, соревнуйся и победи в захватывающих боях. Готов ли ты к вызову Battle Bit? Присоединяйся сейчас и стань настоящим воином!",
-      "releaseDate": "15 июн. 2023",
-      "genres": [
-        "Шутер",
-        "Massively Multiplayer",
-        "Early Access"
-      ]
+      "description": "Battle Bit - новый онлайн-Shooter, где сражения с миллионами игроков станут твоим вызовом! Выбери свой стиль игры, прокачай навыки, соревнуйся и победи в захватывающих боях. Готов ли ты к вызову Battle Bit? Присоединяйся сейчас и стань настоящим воином!",
+      "releaseDate": "15 июн. 2023"
     }
   },
   {
@@ -561,15 +562,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394376/screenshots/red-dead-redemption-2-gunplay-screenshots-burning-house_octfov.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394365/screenshots/2wM8h5SSzZCLk2QPpgeqUK_y8vauj.jpg"
     ],
+    "genres": [
+      "Third person shooter",
+      "First person shooter",
+      "приключенческий боевик",
+      "вестерн"
+    ],
     "ru": {
       "description": "Red Dead Redemption 2 - захватывающая рогалик-песочница с магией и физикой. Исследуйте мир, создавайте заклинания и сражайтесь. Готовы к волшебному приключению? Присоединяйтесь!",
-      "releaseDate": "5 дек. 2019",
-      "genres": [
-        "шутер от третьего лица",
-        "шутер от первого лица",
-        "приключенческий боевик",
-        "вестерн"
-      ]
+      "releaseDate": "5 дек. 2019"
     }
   },
   {
@@ -584,15 +585,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394369/screenshots/Elden-Ring-Screenshot_maxej7.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394365/screenshots/8gWTFzyHLQXnTGiVhRLeea_dvatuv.jpg"
     ],
+    "genres": [
+      "Action/RPG",
+      "Adventure",
+      "Fighting",
+      "Platformer"
+    ],
     "ru": {
-      "description": "Elden Ring - захватывающая action-RPG от создателей серии Dark Souls и Game of Thrones. Вас ждет уникальный открытый мир, где вы станете воином, исследующим огромный и опасный мир, сражаясь с могущественными врагами и обладая сверхъестественными способностями. Погрузитесь в захватывающее фэнтезийное приключение и раскройте тайны Elden Ring!",
-      "releaseDate": "25 фев. 2022",
-      "genres": [
-        "Action/RPG",
-        "Приключенческая игра",
-        "Файтинг",
-        "Платформер"
-      ]
+      "description": "Elden Ring - захватывающая action-RPG от создателей серии Dark Souls и Game of Thrones. Вас ждет уникальный Open world, где вы станете воином, исследующим огромный и опасный мир, сражаясь с могущественными врагами и обладая сверхъестественными способностями. Погрузитесь в захватывающее фэнтезийное Adventure и раскройте тайны Elden Ring!",
+      "releaseDate": "25 фев. 2022"
     }
   },
   {
@@ -607,13 +608,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394372/screenshots/god_of_war_ulsnzk.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394365/screenshots/5d2c5937f27c5_ixkwsm.jpg"
     ],
+    "genres": [
+      "Hack and slash",
+      "action-adventure"
+    ],
     "ru": {
-      "description": "God of War - захватывающая экшен-приключенческая игра с могущественным богом войны Кратосом. Готовы стать легендарным воином? Присоединяйтесь!",
-      "releaseDate": "14 янв. 2022",
-      "genres": [
-        "Hack and slash",
-        "action-adventure"
-      ]
+      "description": "God of War - захватывающая Action-Adventure с могущественным богом войны Кратосом. Готовы стать легендарным воином? Присоединяйтесь!",
+      "releaseDate": "14 янв. 2022"
     }
   },
   {
@@ -628,13 +629,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394368/screenshots/A-screenshot-from-Stardew-Valley-showing-the-players-farm-inventory-and-avatar_gdaa3y.png",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394365/screenshots/101050_olrbsq.jpg"
     ],
+    "genres": [
+      "Simulator жизни",
+      "Role-playing"
+    ],
     "ru": {
       "description": "Stardew Valley - увлекательная сельская фермерская симуляция. Исследуйте, возделывайте, взаимодействуйте. Готовы начать свою фермерскую жизнь? Присоединяйтесь!",
-      "releaseDate": "26 фев. 2016",
-      "genres": [
-        "симулятор жизни",
-        "ролевая игра"
-      ]
+      "releaseDate": "26 фев. 2016"
     }
   },
   {
@@ -649,13 +650,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394373/screenshots/image_sekiro_shadows_die_twice-38968-4096_0001_fzxstd.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394371/screenshots/4782775a375b48508d0a20fa8e13cab7_l_zcy8jk.jpg"
     ],
+    "genres": [
+      "Action/RPG",
+      "Action-adventure"
+    ],
     "ru": {
-      "description": "Sekiro™: Shadows Die Twice - GOTY Edition - захватывающая экшен-приключенческая игра в средневековом Японии. Сражайтесь с могущественными противниками, исследуйте мир и разгадывайте головоломки. Готовы к вызову? Присоединяйтесь!",
-      "releaseDate": "21 мар. 2019",
-      "genres": [
-        "Action/RPG",
-        "Action-adventure"
-      ]
+      "description": "Sekiro™: Shadows Die Twice - GOTY Edition - захватывающая Action-Adventure в средневековом Японии. Сражайтесь с могущественными противниками, исследуйте мир и разгадывайте головоломки. Готовы к вызову? Присоединяйтесь!",
+      "releaseDate": "21 мар. 2019"
     }
   },
   {
@@ -670,14 +671,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394377/screenshots/Sonic-Frontiers_2022_06-13-22_004_r259xj.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/Best-Games-Like-Sonic-Frontiers_catnjn.jpg"
     ],
+    "genres": [
+      "Platformer",
+      "Adventure",
+      "Fighting"
+    ],
     "ru": {
-      "description": "Sonic Frontiers - захватывающее приключение с Соником. Исследуйте мир, встречайте персонажей. Готовы к захватывающим моментам? Присоединяйтесь!",
-      "releaseDate": "8 ноя. 2022",
-      "genres": [
-        "Платформер",
-        "Приключенческая игра",
-        "Файтинг"
-      ]
+      "description": "Sonic Frontiers - захватывающее Adventure с Соником. Исследуйте мир, встречайте персонажей. Готовы к захватывающим моментам? Присоединяйтесь!",
+      "releaseDate": "8 ноя. 2022"
     }
   },
   {
@@ -692,17 +693,17 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394372/screenshots/GTA-V_hosmjp.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/20121112092721_rsg_gtav_screenshot_030.jpg_hi4ya4.webp"
     ],
+    "genres": [
+      "Open world",
+      "Action-adventure",
+      "Third person shooter",
+      "First person shooter",
+      "Nonlinearity",
+      "Adventure"
+    ],
     "ru": {
-      "description": "Grand Theft Auto V - культовая экшен-приключенческая игра. Откройте для себя огромный мир, сражайтесь, взаимодействуйте с персонажами. Готовы к преступному приключению? Присоединяйтесь!",
-      "releaseDate": "14 апр. 2015",
-      "genres": [
-        "Открытый мир",
-        "Action-adventure",
-        "Шутер от третьего лица",
-        "Шутер от первого лица",
-        "Нелинейность",
-        "Adventure"
-      ]
+      "description": "Grand Theft Auto V - культовая Action-Adventure. Откройте для себя огромный мир, сражайтесь, взаимодействуйте с персонажами. Готовы к преступному приключению? Присоединяйтесь!",
+      "releaseDate": "14 апр. 2015"
     }
   },
   {
@@ -717,15 +718,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394376/screenshots/resident-evil-2-remake-screenshot_bwvg.1080_xz8zxi.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394376/screenshots/RE2_Dec_Screen_10.0_tshnia.jpg"
     ],
+    "genres": [
+      "Survival horror",
+      "Puzzle",
+      "Shooter",
+      "Adventure"
+    ],
     "ru": {
       "description": "Resident Evil 2 - ужасающий survival horror. Выживайте, сражайтесь с монстрами, раскройте тайны. Готовы испытать ужасы? Присоединяйтесь!",
-      "releaseDate": "25 янв. 2019",
-      "genres": [
-        "Survival horror",
-        "Головоломка",
-        "Шутер",
-        "Приключенческая игра"
-      ]
+      "releaseDate": "25 янв. 2019"
     }
   },
   {
@@ -740,16 +741,16 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/124404138_ee7mlz.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394366/screenshots/apps_dvchmw.webp"
     ],
+    "genres": [
+      "Survival horror",
+      "First person shooter",
+      "Stealth",
+      "Puzzle",
+      "Action-adventure"
+    ],
     "ru": {
       "description": "Alien: Isolation - захватывающий survival horror. Выживайте, уклоняйтесь от опасного инопланетного существа. Готовы столкнуться с ужасом? Присоединяйтесь!",
-      "releaseDate": "6 окт. 2014",
-      "genres": [
-        "Survival horror",
-        "Шутер от первого лица",
-        "Стелс",
-        "Головоломка",
-        "Action-adventure"
-      ]
+      "releaseDate": "6 окт. 2014"
     }
   },
   {
@@ -764,12 +765,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394369/screenshots/Darkwood_02_evfq11.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394368/screenshots/Darkwood1_uyo34t.jpg"
     ],
+    "genres": [
+      "Survival horror"
+    ],
     "ru": {
       "description": "Darkwood - захватывающая survival horror игра с атмосферой ужаса и мистики. Выживайте в зловещем и загадочном лесу, сражайтесь с монстрами и темными силами. Исследуйте мир, укрепляйте базу, принимайте сложные решения. Готовы к мрачному приключению? Присоединяйтесь к Darkwood и переживите ночные кошмары!",
-      "releaseDate": "17 авг. 2017",
-      "genres": [
-        "survival horror"
-      ]
+      "releaseDate": "17 авг. 2017"
     }
   },
   {
@@ -784,17 +785,17 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394370/screenshots/dyinglight2e3_02_rwjnyd.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394369/screenshots/Dying-Light-2-Details-Upcoming-Changes-and-Updates_md1vdj.jpg"
     ],
+    "genres": [
+      "Adventure",
+      "Survival horror",
+      "Fighting",
+      "Platformer",
+      "Action/RPG",
+      "Adventure"
+    ],
     "ru": {
       "description": "Dying Light 2 - это ожидаемое продолжение популярной игры Dying Light, разрабатываемой студией Techland. Это экшн-хоррор с элементами выживания и открытым миром, который перенесет игроков в город, охваченный зомби-апокалипсисом, где их выборы и действия имеют влияние на ход сюжета и окружающий мир.",
-      "releaseDate": "4 фев. 2022",
-      "genres": [
-        "Приключенческая игра",
-        "Survival horror",
-        "Файтинг",
-        "Платформер",
-        "Action/RPG",
-        "Adventure"
-      ]
+      "releaseDate": "4 фев. 2022"
     }
   },
   {
@@ -809,12 +810,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394367/screenshots/1ae4e887aa1eebc8f580c2b6d2d0151120865661_mxhmv9.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394365/screenshots/072945_bajlac.jpg"
     ],
+    "genres": [
+      "First person shooter"
+    ],
     "ru": {
-      "description": "Deep Rock Galactic - захватывающая кооперативная шутер-песочница. Исследуйте пещеры, сражайтесь с врагами и добывайте ресурсы. Готовы к приключению? Присоединяйтесь!",
-      "releaseDate": "13 мая. 2020",
-      "genres": [
-        "Шутер от первого лица"
-      ]
+      "description": "Deep Rock Galactic - захватывающая кооперативная Shooter-песочница. Исследуйте пещеры, сражайтесь с врагами и добывайте ресурсы. Готовы к приключению? Присоединяйтесь!",
+      "releaseDate": "13 мая. 2020"
     }
   },
   {
@@ -829,13 +830,13 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394373/screenshots/half-life-alyx-combine-elevator-2160p_df5bad.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394373/screenshots/Half-Life-Alyx-new-1_janqg5.jpg"
     ],
+    "genres": [
+      "First person shooter",
+      "VR"
+    ],
     "ru": {
-      "description": "Half-Life: Alyx - захватывающая виртуальная реальность экшен-игра. Исследуйте мир Халф-Лайф, сражайтесь и решайте головоломки. Готовы к виртуальным приключениям? Присоединяйтесь!",
-      "releaseDate": "23 мар. 2020",
-      "genres": [
-        "шутер от первого лица",
-        "VR"
-      ]
+      "description": "Half-Life: Alyx - захватывающая виртуальная реальность Action-игра. Исследуйте мир Халф-Лайф, сражайтесь и решайте головоломки. Готовы к виртуальным приключениям? Присоединяйтесь!",
+      "releaseDate": "23 мар. 2020"
     }
   },
   {
@@ -850,14 +851,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394366/screenshots/113079MfOlJK1evI6nRDThhjWWx9iGk6aTAwa1aR_JJ8CgXQ8wX-yWX2CehTLWQw_d_DdNlKHjQwhcoP-I4VaG8Xzl0JWl3h_jeh4oj.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690396696/screenshots/doom-eternal-4k-pc-screenshot-001_jjokkm.jpg"
     ],
+    "genres": [
+      "First person shooter",
+      "Platformer",
+      "Adventure"
+    ],
     "ru": {
-      "description": "DOOM Eternal - адский шутер от первого лица. Сражайтесь с демонами, раскройте тайны. Готовы к апокалипсису? Присоединяйтесь!",
-      "releaseDate": "20 мар. 2020",
-      "genres": [
-        "Шутер от первого лица",
-        "Платформер",
-        "Приключенческая игра"
-      ]
+      "description": "DOOM Eternal - адский First person shooter. Сражайтесь с демонами, раскройте тайны. Готовы к апокалипсису? Присоединяйтесь!",
+      "releaseDate": "20 мар. 2020"
     }
   },
   {
@@ -872,12 +873,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394368/screenshots/Battlefield4PC11_zkhmko.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394366/screenshots/13644323717_jskb09.webp"
     ],
+    "genres": [
+      "First person shooter"
+    ],
     "ru": {
       "description": "Battlefield 4™ - захватывающий военный шутер. Сражайтесь на многопользовательских картах, используйте разнообразное оружие. Готовы к сражениям? Присоединяйтесь!",
-      "releaseDate": "29 окт. 2013",
-      "genres": [
-        "Шутер от первого лица"
-      ]
+      "releaseDate": "29 окт. 2013"
     }
   },
   {
@@ -892,15 +893,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394374/screenshots/LEGO-2K-Drive-release-date-5d315a7_ejdvds.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394365/screenshots/3600_akxuxt.webp"
     ],
+    "genres": [
+      "Racing",
+      "Adventure",
+      "Action",
+      "Racing"
+    ],
     "ru": {
       "description": "LEGO® 2K Drive - захватывающая гоночная игра с любимыми героями LEGO®, уникальными трассами и настройками машин. Бесплатно и для всех возрастов! Присоединяйтесь и станьте легендарным гонщиком LEGO®!",
-      "releaseDate": "19 мая. 2023",
-      "genres": [
-        "Гоночная игра",
-        "Приключенческая игра",
-        "Экшен",
-        "Racing"
-      ]
+      "releaseDate": "19 мая. 2023"
     }
   },
   {
@@ -916,14 +917,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394375/screenshots/ox2j_t6caq2.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394375/screenshots/ox2c_nzsfvt.jpg"
     ],
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Adventure"
+    ],
     "ru": {
       "description": "OXENFREE II: Lost Signals - ожидаемое продолжение приключенческой игры OXENFREE. Расскажет историю Райли, которая сталкивается с загадочными сигналами и сверхъестественными событиями на таинственном острове. Исследуйте мир, решайте головоломки и взаимодействуйте с уникальными персонажами. Ожидается на PC, PlayStation, Xbox и Nintendo Switch.",
-      "releaseDate": "12 июл. 2023",
-      "genres": [
-        "Приключенческая игра",
-        "Инди-игра",
-        "Adventure"
-      ]
+      "releaseDate": "12 июл. 2023"
     }
   },
   {
@@ -938,15 +939,15 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394370/screenshots/DREDGE_20230411192109_nkljsc.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394368/screenshots/Dredge_Header_rnaj8t.jpg"
     ],
+    "genres": [
+      "Adventure",
+      "Role-playing",
+      "Action",
+      "Fishing simulator"
+    ],
     "ru": {
       "description": "Dredge - захватывающая игра рыбалки с реалистичной графикой и увлекательным геймплеем. Путешествуйте по различным местам, ловите разнообразные виды рыбы и соревнуйтесь с другими игроками. Готовы стать настоящим профессионалом рыбалки? Присоединяйтесь к нам в Dredge!",
-      "releaseDate": "30 мар. 2023",
-      "genres": [
-        "Приключенческая игра",
-        "Компьютерная ролевая игра",
-        "Экшен",
-        "симулятор рыбалки"
-      ]
+      "releaseDate": "30 мар. 2023"
     }
   },
   {
@@ -961,16 +962,16 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394369/screenshots/Aliens-Dark-Descent-PV_05-25-23_sftldi.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394368/screenshots/add1_iyvmpw.jpg"
     ],
+    "genres": [
+      "Action",
+      "Real time strategy",
+      "Role-playing",
+      "Adventure",
+      "Strategy"
+    ],
     "ru": {
       "description": "Добро пожаловать в мрачный и опасный мир \"Aliens: Dark Descent\" - захватывающей научно-фантастической игры, где вы столкнетесь с ужасами неизведанного и битвами с опасными инопланетными созданиями!",
-      "releaseDate": "19 июн. 2023",
-      "genres": [
-        "Экшен",
-        "Стратегия в реальном времени",
-        "Компьютерная ролевая игра",
-        "Приключенческая игра",
-        "Strategy"
-      ]
+      "releaseDate": "19 июн. 2023"
     }
   },
   {
@@ -985,12 +986,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394377/screenshots/screen-2_af4aki.webp",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394376/screenshots/screen-0_fed9ox.jpg"
     ],
+    "genres": [
+      "Tactical Shooter"
+    ],
     "ru": {
       "description": "Rainbow Six Siege - увлекательная тактическая игра с уникальными операторами, интенсивными сражениями и стратегическим подходом. Сражайтесь в команде, используйте разрушаемое окружение и координируйте действия, чтобы одержать победу. Присоединяйтесь к Rainbow Six Siege и станьте настоящим оперативником!",
-      "releaseDate": "1 дек. 2015",
-      "genres": [
-        "Тактический шутер"
-      ]
+      "releaseDate": "1 дек. 2015"
     }
   },
   {
@@ -1006,14 +1007,14 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394369/screenshots/bl3_09_qntfmh.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394368/screenshots/Borderlands-3-Screenshot-2-1_luklzs.jpg"
     ],
+    "genres": [
+      "First person shooter",
+      "Adventure",
+      "Action/RPG"
+    ],
     "ru": {
-      "description": "Добро пожаловать в безумный и кровавый мир Borderlands 3! Это захватывающая шутер-ролевая игра, разработанная компанией Gearbox Software. Вас ждут безграничные оружейные сражения, море юмора и уникальный стиль визуального оформления, который сделает вашу игровую эпопею неповторимой.",
-      "releaseDate": "13 мар. 2020",
-      "genres": [
-        "Шутер от первого лица",
-        "Приключенческая игра",
-        "Action/RPG"
-      ]
+      "description": "Добро пожаловать в безумный и кровавый мир Borderlands 3! Это захватывающая Shooter-Role-playing, разработанная компанией Gearbox Software. Вас ждут безграничные оружейные сражения, море юмора и уникальный стиль визуального оформления, который сделает вашу игровую эпопею неповторимой.",
+      "releaseDate": "13 мар. 2020"
     }
   },
   {
@@ -1029,17 +1030,17 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394376/screenshots/Rain_World_screenshot_-_Underhang_1080_fhbblz.png",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394370/screenshots/bsxuu4rb66571_u5zyxf.png"
     ],
+    "genres": [
+      "Platformer",
+      "Indie",
+      "Action-adventure",
+      "Stealth",
+      "side scroller",
+      "Adventure"
+    ],
     "ru": {
       "description": "Rain World - это уникальная и захватывающая платформенная игра, разработанная студией Videocult. Она погружает игроков в загадочный и живописный мир, где им предстоит выживать и исследовать непростительно опасные окружающие условия.",
-      "releaseDate": "28 мар. 2017",
-      "genres": [
-        "Платформер",
-        "Инди-игра",
-        "Action-adventure",
-        "Стелс",
-        "Сайд-скроллер",
-        "Adventure"
-      ]
+      "releaseDate": "28 мар. 2017"
     }
   },
   {
@@ -1055,12 +1056,12 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394379/screenshots/tf2_08_akqmj8.jpg",
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394379/screenshots/tf2_01_avul4v.jpg"
     ],
+    "genres": [
+      "First person shooter"
+    ],
     "ru": {
       "description": "Titanfall® 2 - это захватывающий шутер от первого лица, разработанный студией Respawn Entertainment и изданный Electronic Arts. Он является сиквелом популярной игры Titanfall и представляет собой уникальное сочетание боев на суше и в гигантских роботах, называемых \"титанами\".",
-      "releaseDate": "28 окт. 2016",
-      "genres": [
-        "шутер от первого лица"
-      ]
+      "releaseDate": "28 окт. 2016"
     }
   }
 ]

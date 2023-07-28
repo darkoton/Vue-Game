@@ -26,7 +26,7 @@
           <span>{{ game.ru.releaseDate }}</span>
         </div>
         <div class="card__genres">
-          <div class="card__genre" v-for="genre in game.ru.genres" :key="genre">
+          <div class="card__genre" v-for="genre in game.genres" :key="genre">
             {{ genre }}
           </div>
         </div>

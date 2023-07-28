@@ -83,7 +83,7 @@
           <ul class="product-card__genres">
             <li
               class="product-card__genre"
-              v-for="genre in game.ru.genres"
+              v-for="genre in game.genres"
               :key="genre"
             >
               {{ genre }}

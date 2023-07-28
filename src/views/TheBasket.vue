@@ -37,7 +37,7 @@
               </div>
             </div>
 
-            <div class="basket__button">{{ $t("message.buy") }}:</div>
+            <div class="basket__button">{{ $t("message.buy") }}</div>
           </div>
         </div>
         <div class="basket__body" v-else>
