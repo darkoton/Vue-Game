@@ -33,13 +33,10 @@
                   :placeholder="$t('message.search')"
                   class="header__search-input"
                   :value="search"
-                  @input="(event) => (search = event.target.value)"
+                  @input="searchInput"
                   @blur="blur"
                   @focus="searchFocus = true"
-                  @keyup.enter="
-                    $router.push('/search/' + search.toLowerCase());
-                    search = '';
-                  "
+                  @keyup.enter="searchSubmit"
                 />
 
                 <div
@@ -82,7 +79,7 @@
                 class="header__action header__backet icon-backet"
               >
                 <span class="header__counter">{{
-                  this.$store.state.basket.length
+                  $store.state.basket.length
                 }}</span>
               </router-link>
               <router-link
@@ -90,7 +87,7 @@
                 class="header__action header__favorite icon-favorite"
               >
                 <span class="header__counter">{{
-                  this.$store.state.favorites.length
+                  $store.state.favorites.length
                 }}</span>
               </router-link>
             </div>
@@ -143,7 +140,7 @@
                 <span class="icon-backet"></span>
                 <span> {{ $t("message.basket") }} </span>
                 <span class="header__counter">{{
-                  this.$store.state.basket.length
+                  $store.state.basket.length
                 }}</span>
               </router-link>
               <router-link
@@ -153,7 +150,7 @@
                 <span class="icon-favorite"></span>
                 <span>{{ $t("message.favorites") }}</span>
                 <span class="header__counter">{{
-                  this.$store.state.favorites.length
+                  $store.state.favorites.length
                 }}</span>
               </router-link>
 
@@ -194,26 +191,20 @@
 </template>
 
 <script>
-import axios from "@/axios/base";
-
 export default {
   name: "TheHeader",
 
   data() {
     return {
-      search: "",
       burger: false,
       searchFocus: false,
+      timerId: null,
+      search: "",
     };
   },
   computed: {
     gamesResult() {
-      if (this.search.length) {
-        return this.$store.state.games.filter((el) =>
-          el.title.toLowerCase().includes(this.search.toLowerCase())
-        );
-      }
-      return [];
+      return this.$store.getters.searchResult;
     },
   },
   watch: {
@@ -227,21 +218,23 @@ export default {
         this.searchFocus = false;
       }, 100);
     },
+
+    searchInput(event) {
+      if (this.timerId) {
+        clearTimeout(this.timerId);
+      }
+      this.search = event.target.value;
+      this.timerId = setTimeout(() => {
+        this.$store.dispatch("getSearch", this.search);
+      }, 500);
+    },
+
     searchSubmit() {
       if (this.search.length) {
         this.$router.push("/search/" + this.search.toLowerCase());
         this.search = "";
       }
     },
-  },
-  mounted() {
-    if (!this.$store.state.games.length) {
-      axios.axios2
-        .get(process.env.VUE_APP_BACKEND_URL2 + "/games")
-        .then((r) => {
-          this.$store.state.games = r.data;
-        });
-    }
   },
 };
 </script>

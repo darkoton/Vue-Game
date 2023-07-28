@@ -1,3 +1,4 @@
+import axios from '@/axios/base';
 import { createStore } from 'vuex'
 
 const store = createStore({
@@ -5,10 +6,31 @@ const store = createStore({
     return {
       favorites: localStorage.favorites ? JSON.parse(localStorage.favorites) : [],
       basket: localStorage.basket ? JSON.parse(localStorage.basket) : [],
-      games: []
+      games: [],
+    }
+  },
+  actions: {
+    async getSearch({ commit }, search = "") {
+      if (search.length) {
+        let games = await axios.axios2
+          .get(process.env.VUE_APP_BACKEND_URL2 + `/games?title=${search}`)
+
+        commit("setSearchResult", games.data)
+        return
+      }
+      commit("setSearchResult", [])
+
+    }
+  },
+  getters: {
+    searchResult(state) {
+      return state.games;
     }
   },
   mutations: {
+    setSearchResult(state, value) {
+      state.games = value;
+    },
     favorite(state, game) {
       let fav = JSON.parse(localStorage.favorites);
       if (

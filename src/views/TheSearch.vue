@@ -2,12 +2,12 @@
   <div class="search">
     <div class="search__wrapper">
       <div class="search__container _container">
-        <div class="search__body" v-if="result.length">
+        <div class="search__body" v-if="games.length">
           <h1 class="search__title">
             {{ $t("message.resultSearch") }}: {{ $route.params.search }}
           </h1>
 
-          <products :gamesParent="result" />
+          <products :gamesParent="games" />
         </div>
 
         <div v-else class="search__body search__not-found">
@@ -32,12 +32,20 @@ export default {
   components: {
     products,
   },
-  computed: {
-    result() {
-      return this.$store.state.games.filter((el) =>
-        el.title.toLowerCase().includes(this.$route.params.search)
-      );
+  data() {
+    return {
+      games: [],
+    };
+  },
+  watch: {
+    async $route() {
+      await this.$store.dispatch("getSearch", this.$route.params.search);
+      this.games = this.$store.getters.searchResult;
     },
+  },
+  async mounted() {
+    await this.$store.dispatch("getSearch", this.$route.params.search);
+    this.games = this.$store.getters.searchResult;
   },
 };
 </script>
