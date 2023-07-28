@@ -22,8 +22,8 @@
         </div>
 
         <div class="banner__text">
-          <h2 class="banner__title">Эпические приключения</h2>
-          <button class="banner__button">Посмотреть</button>
+          <h2 class="banner__title">{{ $t("message.godOfWar") }}</h2>
+          <button class="banner__button">{{ $t("message.look") }}</button>
         </div>
       </swiper-slide>
       <swiper-slide class="banner__slide">
@@ -32,8 +32,8 @@
         </div>
 
         <div class="banner__text">
-          <h2 class="banner__title">Криминальный мир</h2>
-          <button class="banner__button">Посмотреть</button>
+          <h2 class="banner__title">{{ $t("message.gta5") }}</h2>
+          <button class="banner__button">{{ $t("message.look") }}</button>
         </div>
       </swiper-slide>
 
@@ -43,8 +43,8 @@
         </div>
 
         <div class="banner__text">
-          <h2 class="banner__title">Красивые приёмы</h2>
-          <button class="banner__button">Посмотреть</button>
+          <h2 class="banner__title">{{ $t("message.tekken8") }}</h2>
+          <button class="banner__button">{{ $t("message.look") }}</button>
         </div>
       </swiper-slide>
 
@@ -54,8 +54,8 @@
         </div>
 
         <div class="banner__text">
-          <h2 class="banner__title">Красивый открыйтый мир</h2>
-          <button class="banner__button">Посмотреть</button>
+          <h2 class="banner__title">{{ $t("message.rdr2") }}</h2>
+          <button class="banner__button">{{ $t("message.look") }}</button>
         </div>
       </swiper-slide>
 
@@ -65,8 +65,8 @@
         </div>
 
         <div class="banner__text">
-          <h2 class="banner__title">Завораживающий сюжет</h2>
-          <button class="banner__button">Посмотреть</button>
+          <h2 class="banner__title">{{ $t("message.hollowKnight") }}</h2>
+          <button class="banner__button">{{ $t("message.look") }}</button>
         </div>
       </swiper-slide>
     </swiper>
