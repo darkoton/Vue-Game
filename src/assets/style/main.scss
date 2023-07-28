@@ -19,7 +19,6 @@ body {
   font-family: $fontInter;
   color: $colorDark;
   font-size: 14px;
-  overflow-x:hidden;
 
   // ._lock-scroll
   &._lock-scroll {
@@ -40,6 +39,7 @@ body {
 #app{
   height: 100%;
   width: 100%;
+  overflow-x:hidden;
 }
 
 //< " ОБОЛОЧКА " >=============================================================================================================>//

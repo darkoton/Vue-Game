@@ -4,6 +4,7 @@
     :class="{ active: burger }"
     @click="burger = false"
   ></div>
+
   <div class="header" :class="{ _focus: searchFocus }">
     <div class="header__wrapper">
       <div class="header__container _container">
@@ -35,8 +36,11 @@
                   @input="(event) => (search = event.target.value)"
                   @blur="blur"
                   @focus="searchFocus = true"
+                  @keyup.enter="
+                    $router.push('/search/' + search.toLowerCase());
+                    search = '';
+                  "
                 />
-                {{ search }}
 
                 <div
                   class="header__search-close icon-close"
@@ -67,7 +71,15 @@
                   </li>
                 </ul>
               </div>
-              <button class="header__search-submit">Поиск</button>
+              <button
+                @click="
+                  $router.push('/search/' + search.toLowerCase());
+                  search = '';
+                "
+                class="header__search-submit"
+              >
+                Поиск
+              </button>
             </div>
 
             <div class="header__actions">
@@ -186,13 +198,12 @@ export default {
       search: "",
       burger: false,
       searchFocus: false,
-      games: [],
     };
   },
   computed: {
     gamesResult() {
       if (this.search.length) {
-        return this.games.filter((el) =>
+        return this.$store.state.games.filter((el) =>
           el.title.toLowerCase().includes(this.search.toLowerCase())
         );
       }
@@ -212,9 +223,13 @@ export default {
     },
   },
   mounted() {
-    axios.axios2.get(process.env.VUE_APP_BACKEND_URL2 + "/games").then((r) => {
-      this.games = r.data;
-    });
+    if (!this.$store.state.games.length) {
+      axios.axios2
+        .get(process.env.VUE_APP_BACKEND_URL2 + "/games")
+        .then((r) => {
+          this.$store.state.games = r.data;
+        });
+    }
   },
 };
 </script>
@@ -432,6 +447,8 @@ export default {
       background: #38d991;
       border: 1px solid #38d991;
       min-height: 38px;
+      display: flex;
+      align-items: center;
 
       @media (any-hover: hover) {
         cursor: pointer;
@@ -629,6 +646,7 @@ export default {
     &__actions {
       flex-direction: column;
       row-gap: 20px;
+      max-width: none;
       & a {
         @include adaptiv-font(24, 18);
         display: flex;

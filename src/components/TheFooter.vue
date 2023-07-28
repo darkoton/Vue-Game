@@ -30,7 +30,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    @include adaptiv-padding(50, 20, 0, 0, 1);
   }
   &__logo {
     display: flex;

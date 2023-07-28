@@ -1,6 +1,5 @@
 <template>
   <div class="products">
-    {{ filterId }}
     <ul class="products__list">
       <card v-for="game in filterGames" :key="game" :game="game" />
     </ul>
@@ -18,6 +17,12 @@ export default {
     filterId: {
       default: 0,
     },
+    gamesParent: {
+      type: Array,
+      default: () => {
+        return [];
+      },
+    },
   },
   components: {
     card,
@@ -30,9 +35,13 @@ export default {
   },
   computed: {
     filterGames() {
-      return this.games.filter((el) => {
-        return el.id != this.filterId;
-      });
+      if (!this.gamesParent.length) {
+        return this.games.filter((el) => {
+          return el.id != this.filterId;
+        });
+      }
+
+      return this.gamesParent;
     },
   },
   methods: {
@@ -49,7 +58,9 @@ export default {
     },
   },
   mounted() {
-    this.getProducts();
+    if (!this.gamesParent.length) {
+      this.getProducts();
+    }
   },
 };
 </script>
@@ -60,9 +71,16 @@ export default {
   &__list {
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
     justify-items: center;
 
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
     }

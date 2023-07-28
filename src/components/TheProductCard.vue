@@ -89,6 +89,11 @@ export default {
   flex-direction: column;
   font-family: $fontJura;
   overflow: hidden;
+
+  @media (max-width: 1200px) {
+    max-width: 350px;
+  }
+
   &__top {
     position: relative;
     max-height: 282px;
