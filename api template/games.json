@@ -113,7 +113,8 @@
     ],
     "genres": [
       "Adventure",
-      "Action"
+      "Action",
+      "Fighting"
     ],
     "ru": {
       "description": "Street Fighter 6 - легендарная файтинговаявая игра с уникальными бойцами и захватывающими боями. Сражайтесь с игроками со всего мира, улучшайте навыки и станьте настоящим чемпионом. Готовы к вызову? Присоединяйтесь к Street Fighter 6 и покажите свое мастерство!",
@@ -137,7 +138,8 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394366/screenshots/3253891-3844325224-DDOyp_wyp1fm.jpg"
     ],
     "genres": [
-      "Action"
+      "Action",
+      "Fighting"
     ],
     "ru": {
       "description": "DRAGON BALL FighterZ - захватывающая файтинговая игра с легендарными героями и уникальными боями. Выберите свою команду и сразитесь с другими игроками в онлайн-режиме. Погрузитесь в аниме-стиль и станьте самым мощным воином DRAGON BALL. Готовы к эпическим схваткам? Присоединяйтесь к DRAGON BALL FighterZ!",
@@ -161,7 +163,8 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394372/screenshots/guiltygear-xx-accent-core-wii-screenshot10_a25unx.jpg"
     ],
     "genres": [
-      "Action"
+      "Action",
+      "Fighting"
     ],
     "ru": {
       "description": "GUILTY GEAR -STRIVE-: захватывающий файтинг с уникальными бойцами и красочными сражениями. Погрузитесь в эпический мир сюжета и испытайте невероятные комбо. Готовы к адреналиновой битве? Присоединяйтесь к GUILTY GEAR -STRIVE- и станьте настоящим мастером Fightingа!",
@@ -185,7 +188,8 @@
       "https://res.cloudinary.com/dk0jh3jqa/image/upload/v1690394374/screenshots/mkx_11_hyvccg.jpg"
     ],
     "genres": [
-      "Action"
+      "Action",
+      "Fighting"
     ],
     "ru": {
       "description": "Mortal Kombat X - культовая файтинговая игра, где ждут кровавые поединки, захватывающие бойцы и уникальные фаталити. Выберите своего любимого бойца, сражайтесь с оппонентами и станьте легендой арены. Готовы к смертельным схваткам? Присоединяйтесь к Mortal Kombat X и докажите свою силу!",

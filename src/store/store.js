@@ -14,7 +14,7 @@ const store = createStore({
     async getSearch({ commit }, search = "") {
       if (search.length) {
         let games = await axios.axios2
-          .get(process.env.VUE_APP_BACKEND_URL2 + `/games?title=${search}`)
+          .get(process.env.VUE_APP_BACKEND_URL2 + `/games?filter=${search}`)
 
         commit("setSearchResult", games.data)
         return

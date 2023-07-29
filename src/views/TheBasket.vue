@@ -194,6 +194,10 @@ export default {
     &__clear {
       color: #38d991;
     }
+    &__value,
+    &__price {
+      color: #fff;
+    }
   }
 }
 
@@ -204,6 +208,10 @@ export default {
     }
     &__clear {
       color: #00a35a;
+    }
+    &__value,
+    &__price {
+      color: #000;
     }
   }
 }

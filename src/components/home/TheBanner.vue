@@ -23,7 +23,12 @@
 
         <div class="banner__text">
           <h2 class="banner__title">{{ $t("message.godOfWar") }}</h2>
-          <button class="banner__button">{{ $t("message.look") }}</button>
+          <button
+            class="banner__button"
+            @click="$router.push('/search/adventure')"
+          >
+            {{ $t("message.look") }}
+          </button>
         </div>
       </swiper-slide>
       <swiper-slide class="banner__slide">
@@ -33,7 +38,12 @@
 
         <div class="banner__text">
           <h2 class="banner__title">{{ $t("message.gta5") }}</h2>
-          <button class="banner__button">{{ $t("message.look") }}</button>
+          <button
+            class="banner__button"
+            @click="$router.push('/search/Action-adventure')"
+          >
+            {{ $t("message.look") }}
+          </button>
         </div>
       </swiper-slide>
 
@@ -44,7 +54,12 @@
 
         <div class="banner__text">
           <h2 class="banner__title">{{ $t("message.tekken8") }}</h2>
-          <button class="banner__button">{{ $t("message.look") }}</button>
+          <button
+            class="banner__button"
+            @click="$router.push('/search/fighting')"
+          >
+            {{ $t("message.look") }}
+          </button>
         </div>
       </swiper-slide>
 
@@ -55,7 +70,12 @@
 
         <div class="banner__text">
           <h2 class="banner__title">{{ $t("message.rdr2") }}</h2>
-          <button class="banner__button">{{ $t("message.look") }}</button>
+          <button
+            class="banner__button"
+            @click="$router.push('/search/Third person shooter')"
+          >
+            {{ $t("message.look") }}
+          </button>
         </div>
       </swiper-slide>
 
@@ -66,7 +86,9 @@
 
         <div class="banner__text">
           <h2 class="banner__title">{{ $t("message.hollowKnight") }}</h2>
-          <button class="banner__button">{{ $t("message.look") }}</button>
+          <button class="banner__button" @click="$router.push('/search/Indie')">
+            {{ $t("message.look") }}
+          </button>
         </div>
       </swiper-slide>
     </swiper>
