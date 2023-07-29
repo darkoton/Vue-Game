@@ -140,7 +140,6 @@ export default {
         this.$router.push("/basket");
         return;
       }
-
       this.$store.commit("basket", this.game);
     },
     async get() {

@@ -49,7 +49,7 @@
             @click="
               $store.state.basket.find((el) => el.id == game.id)
                 ? $router.push('/basket')
-                : ($store.commit('basket', game), $router.push('/basket'))
+                : $store.commit('basket', game)
             "
           >
             {{
