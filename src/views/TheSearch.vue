@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div class="search__wrapper">
-      <div class="search__container _container">
+      <div class="search__container _container" v-if="games">
         <div class="search__body" v-if="games.length">
           <h1 class="search__title">
             {{ $t("message.resultSearch") }}: {{ $route.params.search }}
@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      games: [],
+      games: null,
     };
   },
   watch: {
