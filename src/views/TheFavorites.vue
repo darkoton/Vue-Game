@@ -36,7 +36,7 @@
           <div class="favorites__empty">
             <div class="favorites__animation">
               <img
-                :src="'/assets/img/favorites/frame ' + imgFrame + '.png'"
+                :src="'./assets/img/favorites/frame ' + imgFrame + '.png'"
                 alt=""
               />
             </div>

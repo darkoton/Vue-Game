@@ -136,6 +136,11 @@ export default {
       this.$store.commit("favorite", this.game);
     },
     basket() {
+      if (this.$store.state.basket.find((el) => el.id == this.game.id)) {
+        this.$router.push("/basket");
+        return;
+      }
+
       this.$store.commit("basket", this.game);
     },
     async get() {
