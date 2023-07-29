@@ -78,7 +78,10 @@
             </div>
           </div>
           <p class="product-card__description">
-            {{ $t("message.description") }}: {{ game.ru.description }}
+            {{ $t("message.description") }}:
+            {{
+              $i18n.locale == "ru" ? game.ru.description : game.en.description
+            }}
           </p>
           <ul class="product-card__genres">
             <li
@@ -91,7 +94,10 @@
           </ul>
 
           <div class="product-card__release">
-            {{ $t("message.released") }}: {{ game.ru.releaseDate }}
+            {{ $t("message.released") }}:
+            {{
+              $i18n.locale == "ru" ? game.ru.releaseDate : game.en.releaseDate
+            }}
           </div>
         </div>
       </div>

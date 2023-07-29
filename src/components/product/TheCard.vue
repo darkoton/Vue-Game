@@ -23,7 +23,9 @@
         >
         <div class="card__realese">
           {{ $t("message.released").toUpperCase() }}:
-          <span>{{ game.ru.releaseDate }}</span>
+          <span>{{
+            $i18n.locale == "ru" ? game.ru.releaseDate : game.en.releaseDate
+          }}</span>
         </div>
         <div class="card__genres">
           <div class="card__genre" v-for="genre in game.genres" :key="genre">

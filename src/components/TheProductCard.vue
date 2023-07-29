@@ -27,7 +27,9 @@
           class="card__title"
           >{{ game.title }}</router-link
         >
-        <div class="card__description">{{ game.ru.description }}</div>
+        <div class="card__description">
+          {{ $i18n.locale == "ru" ? game.ru.description : game.en.description }}
+        </div>
       </div>
       <div class="card__price" v-if="game.state == 'released'">
         <span v-if="game.discount" class="discount">
