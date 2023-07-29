@@ -52,6 +52,10 @@ export default {
 
 <style lang="scss" scoped>
 .search {
+  & * {
+    transition: all 0.3s ease 0s;
+  }
+
   &__body {
     @include adaptiv-value(padding-top, 30, 20, 1);
   }

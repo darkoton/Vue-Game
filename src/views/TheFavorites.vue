@@ -121,22 +121,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  width: 400px;
-  padding: 20px;
-}
-.li {
-  height: 100%;
-  font-size: 20px;
-  padding: 20px 10px;
-  background: #fff;
-  list-style: none;
-  display: flex;
-}
 .favorites {
+  & * {
+    transition: all 0.3s ease 0s;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;

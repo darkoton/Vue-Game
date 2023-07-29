@@ -78,6 +78,10 @@ export default {
 
 <style lang="scss" scoped>
 .basket {
+  & * {
+    transition: all 0.3s ease 0s;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;

@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  transition: all 0.3s ease 0s;
+}
 .navigation {
   @include adaptiv-value(margin-bottom, 50, 20, 1);
 }

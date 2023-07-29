@@ -177,7 +177,12 @@
             </div>
 
             <div
-              class="burger-menu__theme header__theme icon-sun"
+              class="burger-menu__theme header__theme"
+              :class="{
+                'icon-sun': $store.state.theme == 'dark',
+                'icon-moon': $store.state.theme == 'light',
+              }"
+              v-if="$store.state.theme == 'dark'"
               @click="$store.commit('changeTheme')"
             ></div>
           </div>
@@ -353,6 +358,7 @@ export default {
   }
   &__theme {
     font-size: 22px;
+    width: 25px;
     color: #fff;
     margin-left: 20px;
     cursor: pointer;

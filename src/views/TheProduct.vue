@@ -30,6 +30,9 @@ export default {
 
 <style lang="scss" scoped>
 .product {
+  & * {
+    transition: all 0.3s ease 0s;
+  }
   &__title {
     color: #fff;
     @include adaptiv-font(30, 25);

@@ -53,7 +53,11 @@
             </div>
 
             <div
-              class="header-banner__theme icon-sun"
+              class="header-banner__theme"
+              :class="{
+                'icon-sun': $store.state.theme == 'dark',
+                'icon-moon': $store.state.theme == 'light',
+              }"
               @click="$store.commit('changeTheme')"
             ></div>
           </div>
@@ -174,6 +178,7 @@ export default {
   }
   &__theme {
     font-size: 22px;
+    width: 25px;
     color: #fff;
     margin-left: 20px;
     cursor: pointer;

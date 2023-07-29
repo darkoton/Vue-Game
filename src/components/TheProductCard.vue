@@ -88,6 +88,10 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  & * {
+    transition: all 0.3s ease 0s;
+  }
+
   position: relative;
   width: 100%;
   max-width: 282px;
