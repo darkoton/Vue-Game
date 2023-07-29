@@ -59,4 +59,16 @@ export default {
   font-weight: 700;
   line-height: 22px;
 }
+
+.dark {
+  .title {
+    color: #fff;
+  }
+}
+
+.light {
+  .title {
+    color: #000;
+  }
+}
 </style>

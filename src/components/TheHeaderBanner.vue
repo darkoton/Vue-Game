@@ -52,7 +52,10 @@
               </div>
             </div>
 
-            <div class="header-banner__theme icon-sun"></div>
+            <div
+              class="header-banner__theme icon-sun"
+              @click="$store.commit('changeTheme')"
+            ></div>
           </div>
         </div>
       </div>
@@ -72,7 +75,11 @@ export default {
 
 <style lang="scss" scoped>
 .header-banner {
+  transition: all 0.3s ease 0s;
   background: #111;
+  & * {
+    transition: all 0.3s ease 0s;
+  }
   &__body {
     width: 100%;
     display: flex;
@@ -175,6 +182,85 @@ export default {
       transition: all 0.3s ease 0s;
       &:hover {
         color: #3ad992;
+      }
+    }
+  }
+}
+.dark {
+  .header-banner {
+    background: #111;
+    &__info {
+      &-icon {
+        color: #8b8b8b;
+      }
+
+      &-title {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      &-tel {
+        color: #38d991;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #207a52;
+          }
+        }
+      }
+      &-ordinary {
+        color: #e6e1e5;
+      }
+    }
+    &__language {
+      color: #fff;
+    }
+    &__theme {
+      color: #fff;
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: #3ad992;
+        }
+      }
+    }
+  }
+}
+.light {
+  .header-banner {
+    background: rgba(212, 212, 212, 0.8);
+    &__info {
+      &-icon {
+        color: rgba(44, 180, 119, 1);
+      }
+      &-title {
+        color: rgba(0, 0, 0, 0.7);
+      }
+      &-tel {
+        color: #2cb477;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #207a52;
+          }
+        }
+      }
+      &-ordinary {
+        color: #000;
+      }
+    }
+    &__language {
+      color: #000;
+    }
+    &__theme {
+      color: #000;
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: #00a55b;
+        }
       }
     }
   }

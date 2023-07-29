@@ -341,4 +341,60 @@ export default {
     }
   }
 }
+
+.dark {
+  .card {
+    background: #222;
+    color: #fff;
+
+    .percent {
+      background: #111;
+      color: #38d991;
+    }
+    &__title {
+      color: #fff;
+    }
+    &__description {
+      color: #9d9d9d;
+    }
+    &__price {
+      color: #38d991;
+
+      .start {
+        color: rgba(#38d991, 0.3);
+        &::after {
+          background: #38d991;
+        }
+      }
+    }
+  }
+}
+
+.light {
+  .card {
+    background: #e0e0e0;
+    color: #000;
+
+    .percent {
+      background: rgba(17, 17, 17, 0.5);
+      color: #38d991;
+    }
+    &__title {
+      color: #000;
+    }
+    &__description {
+      color: #4f4f4f;
+    }
+    &__price {
+      color: #22be78;
+
+      .start {
+        color: rgba(#1caf6d, 0.3);
+        &::after {
+          background: #1caf6d;
+        }
+      }
+    }
+  }
+}
 </style>

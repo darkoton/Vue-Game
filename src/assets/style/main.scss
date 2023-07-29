@@ -15,7 +15,6 @@
 
 
 body {
-  background-color: $colorBg;
   font-family: $fontInter;
   color: $colorDark;
   font-size: 14px;
@@ -59,6 +58,16 @@ body {
   flex: 1 1 auto;
   display:flex;
   flex-direction:column;
+  background-color: $colorBg;
+  transition: all 0.3s ease 0s;
+
+  &.dark{
+    background-color: $colorBg;
+
+  }
+  &.light{
+    background-color: #fff;
+  }
 }
 
 // ._container

@@ -55,4 +55,26 @@ export default {
     letter-spacing: 0.1px;
   }
 }
+
+.dark {
+  .footer {
+    &__title {
+      color: #3ad992;
+    }
+    &__subtitle {
+      color: #3ad992;
+    }
+  }
+}
+
+.light {
+  .footer {
+    &__title {
+      color: #2cb477;
+    }
+    &__subtitle {
+      color: #2cb477;
+    }
+  }
+}
 </style>

@@ -7,6 +7,7 @@ const store = createStore({
       favorites: localStorage.favorites ? JSON.parse(localStorage.favorites) : [],
       basket: localStorage.basket ? JSON.parse(localStorage.basket) : [],
       games: [],
+      theme: "dark"
     }
   },
   actions: {
@@ -25,11 +26,18 @@ const store = createStore({
   getters: {
     searchResult(state) {
       return state.games;
-    }
+    },
   },
   mutations: {
     setSearchResult(state, value) {
       state.games = value;
+    },
+    changeTheme(state) {
+      localStorage.theme == "dark" ?
+        localStorage.setItem('theme', 'light')
+        : localStorage.setItem('theme', 'dark')
+
+      state.theme = localStorage.theme
     },
     favorite(state, game) {
       let fav = JSON.parse(localStorage.favorites);

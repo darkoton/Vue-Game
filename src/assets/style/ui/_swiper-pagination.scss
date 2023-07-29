@@ -15,3 +15,14 @@
     margin: calc(0px + 0 * ((100vw - 320px) / 880)) calc(5px + 5 * ((100vw - 320px) / 880));
   }
 }
+
+.dark{
+  .swiper-pagination-bullet{
+    background: #FFF;
+  }
+}
+.light{
+  .swiper-pagination-bullet{
+    background: #000000;
+  }
+}

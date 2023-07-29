@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="content">
+    <div class="content" :class="$store.state.theme">
       <the-header-banner></the-header-banner>
       <the-header></the-header>
       <router-view class="page" />
@@ -30,6 +30,11 @@ export default {
     if (!localStorage.language) {
       localStorage.setItem("language", "ru");
     }
+    if (!localStorage.theme) {
+      localStorage.setItem("theme", "dark");
+    }
+
+    this.$store.state.theme = localStorage.theme;
   },
 };
 </script>

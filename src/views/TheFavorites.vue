@@ -210,4 +210,26 @@ export default {
     }
   }
 }
+
+.dark {
+  .favorites {
+    &__title {
+      color: #38d991;
+    }
+    &__clear {
+      color: #38d991;
+    }
+  }
+}
+
+.light {
+  .favorites {
+    &__title {
+      color: #000;
+    }
+    &__clear {
+      color: #00a35a;
+    }
+  }
+}
 </style>

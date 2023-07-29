@@ -21,38 +21,7 @@ export default {
     genres: {
       type: Array,
       default() {
-        return [
-          {
-            title: "Приключения",
-          },
-          {
-            title: "Файтинг",
-          },
-          {
-            title: "Выживание",
-          },
-          {
-            title: "Кооператив",
-          },
-          {
-            title: "Стратегия",
-          },
-          {
-            title: "Рогалик",
-          },
-          {
-            title: "Экшен",
-          },
-          {
-            title: "Открыйтый мир",
-          },
-          {
-            title: "Хоррор",
-          },
-          {
-            title: "Шутер",
-          },
-        ];
+        return [];
       },
     },
   },
@@ -87,6 +56,32 @@ export default {
       border-radius: 2px;
       background: rgba(0, 0, 0, 0.2);
       color: #fff;
+    }
+  }
+}
+
+.dark {
+  .navigation {
+    &__list {
+      background: rgba(63, 63, 63, 0.46);
+    }
+    &__genre {
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+.light {
+  .navigation {
+    &__list {
+      background: #c9c9c9;
+    }
+    &__genre {
+      color: rgba(0, 0, 0, 0.4);
+
+      &-active {
+        background: rgba(0, 0, 0, 0.2);
+        color: #000;
+      }
     }
   }
 }

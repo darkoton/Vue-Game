@@ -1,10 +1,4 @@
 <template>
-  <div
-    class="header__backdrop-shadow"
-    :class="{ active: burger }"
-    @click="burger = false"
-  ></div>
-
   <div class="header" :class="{ _focus: searchFocus }">
     <div class="header__wrapper">
       <div class="header__container _container">
@@ -104,7 +98,7 @@
                   alt=""
                   class="header__logo-img"
                 />
-                <span class="header__logo-text">Vue Game</span>
+                <span class="header__logo-text">Vue Game </span>
               </router-link>
 
               <div
@@ -182,8 +176,17 @@
               </div>
             </div>
 
-            <div class="burger-menu__theme header__theme icon-sun"></div>
+            <div
+              class="burger-menu__theme header__theme icon-sun"
+              @click="$store.commit('changeTheme')"
+            ></div>
           </div>
+
+          <div
+            class="header__backdrop-shadow"
+            :class="{ active: burger }"
+            @click="burger = false"
+          ></div>
         </div>
       </div>
     </div>
@@ -245,6 +248,11 @@ export default {
   top: 0;
   z-index: 10;
   background: #111;
+  transition: all 0.3s ease 0s;
+
+  & * {
+    transition: all 0.3s ease 0s;
+  }
 
   &__body {
     display: flex;
@@ -382,9 +390,12 @@ export default {
     position: relative;
     flex: 1 1 auto;
     justify-content: flex-end;
-    transition: all 0.5s ease-in 0s;
+    transition: all 0.5s ease-in 0s, background 0.3s ease 0s;
     @include adaptiv-value(margin-right, 20, 10, 1);
-    background: #111;
+
+    @media (max-width: 520px) {
+      background: #111;
+    }
     &-left {
       display: flex;
       border: 1px solid #d9d9d9;
@@ -420,9 +431,6 @@ export default {
       &::placeholder {
         color: #fff;
         transition: all 0.3s ease 0s;
-      }
-      &:focus {
-        border-color: #00b588;
       }
     }
     &-close {
@@ -674,27 +682,6 @@ export default {
     }
   }
 
-  &__navigation {
-    display: none;
-    justify-content: space-between;
-    column-gap: 10px;
-    color: #fff;
-    width: 100%;
-    padding: 10px 0;
-    padding-bottom: 20px;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-
-    @media (max-width: 900px) {
-      display: flex;
-    }
-
-    & .header__nav {
-      white-space: nowrap;
-    }
-  }
-
   &._focus {
     @media (max-width: 520px) {
       & .header__burger {
@@ -723,7 +710,7 @@ export default {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -100%;
   left: 0;
   z-index: -1;
   opacity: 0;
@@ -735,7 +722,335 @@ export default {
 
   &.active {
     opacity: 1;
-    z-index: 9;
+    top: 0;
+    z-index: 20;
+  }
+}
+
+//themes
+
+//dark
+.dark {
+  .header {
+    background: #111;
+
+    &__info {
+      &-icon {
+        color: #8b8b8b;
+      }
+      &-title {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      &-tel {
+        color: #38d991;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #207a52;
+          }
+        }
+      }
+      &-ordinary {
+        color: #e6e1e5;
+      }
+    }
+    &__language {
+      color: #fff;
+    }
+    &__theme {
+      color: #fff;
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: #3ad992;
+        }
+      }
+    }
+
+    &__logo {
+      color: #3ad992;
+    }
+    &__search {
+      @media (max-width: 520px) {
+        background: #111;
+      }
+      &-left {
+        border: 1px solid #d9d9d9;
+      }
+      &-icon {
+        color: #38d991;
+      }
+      &-input {
+        color: #fff;
+
+        &::placeholder {
+          color: #fff;
+          transition: all 0.3s ease 0s;
+        }
+      }
+      &-close {
+        color: #fff;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #00b588;
+          }
+        }
+      }
+      &-submit {
+        color: #000;
+
+        background: #38d991;
+        border: 1px solid #38d991;
+
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            background: transparent;
+            color: #fff;
+          }
+        }
+      }
+
+      &-result {
+        background: rgba(34, 34, 34, 0.95);
+
+        &::-webkit-scrollbar-track {
+          background: #111;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #38d991;
+        }
+
+        & li {
+          color: #fff;
+        }
+
+        &-price {
+          color: #38d991;
+        }
+      }
+
+      & li {
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            background: #ccc;
+            color: #000;
+
+            & .header__search-result-price {
+              color: #198554;
+            }
+          }
+        }
+      }
+    }
+
+    &__actions {
+      a {
+        color: #fff;
+
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #00b588;
+          }
+        }
+      }
+    }
+
+    &__counter {
+      background: #38d991;
+      color: #000;
+    }
+    &__burger {
+      span {
+        background: #38d991;
+      }
+    }
+
+    & .burger-menu {
+      background: #000;
+
+      &__close {
+        color: #fff;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #38d991;
+          }
+        }
+      }
+    }
+  }
+}
+
+//light
+.light {
+  .header {
+    background: rgba(212, 212, 212, 0.8);
+
+    &__info {
+      &-icon {
+        color: rgba(44, 180, 119, 1);
+      }
+      &-title {
+        color: rgba(0, 0, 0, 0.7);
+      }
+      &-tel {
+        color: #2cb477;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #207a52;
+          }
+        }
+      }
+      &-ordinary {
+        color: #000;
+      }
+    }
+    &__language {
+      color: #000;
+    }
+    &__theme {
+      color: #000;
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: #00a55b;
+        }
+      }
+    }
+
+    &__logo {
+      color: #2cb477;
+    }
+    &__search {
+      @media (max-width: 520px) {
+        background: #e9e9e9;
+      }
+      &-left {
+        border: 1px solid rgb(184, 184, 184);
+      }
+      &-icon {
+        color: #38d991;
+      }
+      &-input {
+        color: #000;
+
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.5);
+          transition: all 0.3s ease 0s;
+        }
+      }
+      &-close {
+        color: #000;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #00b588;
+          }
+        }
+      }
+      &-submit {
+        color: #000;
+
+        background: #38d991;
+        border: 1px solid #38d991;
+
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+
+      &-result {
+        background: rgba(209, 209, 209, 0.95);
+
+        &::-webkit-scrollbar-track {
+          background: #fff;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #38d991;
+        }
+
+        & li {
+          color: #000;
+        }
+
+        &-price {
+          color: #38d991;
+        }
+      }
+
+      & li {
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            background: #bbbbbb;
+            color: #000;
+
+            & .header__search-result-price {
+              color: #198554;
+            }
+          }
+        }
+      }
+    }
+
+    &__actions {
+      a {
+        color: #000000;
+
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #00b588;
+          }
+        }
+      }
+    }
+
+    &__counter {
+      background: #38d991;
+      color: #000;
+    }
+    &__burger {
+      span {
+        background: #000000;
+      }
+    }
+
+    & .burger-menu {
+      background: #ececec;
+
+      &__close {
+        color: #000;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #38d991;
+          }
+        }
+      }
+    }
   }
 }
 </style>

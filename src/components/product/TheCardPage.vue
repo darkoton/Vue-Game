@@ -311,4 +311,51 @@ export default {
     }
   }
 }
+
+.dark {
+  .product-card {
+    color: #fff;
+
+    &__basket {
+      &:disabled {
+        pointer-events: none;
+        background: #165a3b;
+        border-color: #165a3b;
+      }
+    }
+    &__genre {
+      background: #333;
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: #38d991;
+        }
+      }
+    }
+  }
+}
+.light {
+  .product-card {
+    color: #000;
+
+    &__basket {
+      &:disabled {
+        pointer-events: none;
+        background: #01a75c;
+        border-color: #01a75c;
+      }
+    }
+    &__genre {
+      background: #bebebe;
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: #00a85d;
+        }
+      }
+    }
+  }
+}
 </style>

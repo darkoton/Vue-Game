@@ -37,4 +37,20 @@ export default {
     @include adaptiv-value(margin-bottom, 20, 10, 1);
   }
 }
+
+.dark {
+  .product {
+    &__title {
+      color: #fff;
+    }
+  }
+}
+
+.light {
+  .product {
+    &__title {
+      color: #000;
+    }
+  }
+}
 </style>

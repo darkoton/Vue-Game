@@ -23,10 +23,9 @@
     @include adaptiv-value(padding-top, 40, 20, 1);
   }
   &__message {
-    animation: flickering 10s infinite;
     font-size: 70px;
     @include adaptiv-font(70, 50);
-
+    color: #3ad991;
     font-family: $fontPressStart;
     margin-bottom: 20px;
   }
@@ -104,6 +103,22 @@
       text-shadow: 0px 0px 10px #3ad991;
       filter: dropshadow(color=#3ad991, offx=0, offy=0);
       color: white;
+    }
+  }
+}
+
+.dark {
+  .error {
+    &__message {
+      color: #38d991;
+    }
+  }
+}
+
+.light {
+  .error {
+    &__message {
+      color: #38d991;
     }
   }
 }

@@ -191,7 +191,7 @@ export default {
     & .card__price {
       @include adaptiv-font(14, 12);
       height: 100%;
-      @include adaptiv-padding(8, 5, 20, 10, 1);
+      @include adaptiv-padding(6, 5, 20, 10, 1);
       display: flex;
       flex-wrap: wrap;
       column-gap: 10px;
@@ -339,6 +339,159 @@ export default {
 
       & .card__title {
         color: #38d991;
+      }
+    }
+  }
+}
+
+.dark {
+  .card {
+    background: #111;
+    &__move {
+      color: #fff;
+    }
+    &__main {
+      border-left: 1px solid #10412b;
+    }
+    &__title {
+      color: #fff;
+    }
+
+    &__realese {
+      color: #777;
+    }
+    &__genre {
+      background: #333;
+    }
+
+    &__submit {
+      background: rgba(29, 112, 73, 0.4);
+
+      & .card__price {
+        color: #38d991;
+        &-discount {
+          color: #119258;
+          &::after {
+            background: #38d991;
+          }
+        }
+      }
+
+      button {
+        background: #38d991;
+        border: 2px solid #38d991;
+        color: #000;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #38d991;
+            background: transparent;
+          }
+        }
+
+        &:disabled {
+          background: #165a3b;
+          border-color: #165a3b;
+        }
+      }
+    }
+    &__added-date {
+      color: #8f8f8f;
+      span {
+        color: #5e5e5e;
+      }
+    }
+
+    &__remove {
+      span {
+        background: #fff;
+      }
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          span {
+            background: #d95038;
+          }
+        }
+      }
+    }
+  }
+}
+
+.light {
+  .card {
+    background: #d3d3d3;
+    &__move {
+      color: #000;
+    }
+    &__main {
+      border-left: 1px solid #86c9ab;
+    }
+    &__title {
+      color: #000;
+    }
+
+    &__realese {
+      color: #494949;
+    }
+    &__genre {
+      background: #707070;
+    }
+    &__submit {
+      background: rgba(15, 112, 67);
+
+      & .card__price {
+        color: #38d991;
+        &-discount {
+          color: #119258;
+          &::after {
+            background: #38d991;
+          }
+        }
+      }
+
+      button {
+        background: #38d991;
+        border: 2px solid #38d991;
+        color: #000;
+        @media (any-hover: hover) {
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: #38d991;
+            background: transparent;
+          }
+        }
+
+        &:disabled {
+          background: #165a3b;
+          border-color: #165a3b;
+        }
+      }
+    }
+    &__added-date {
+      color: #252525;
+      span {
+        color: #707070;
+      }
+    }
+
+    &__remove {
+      span {
+        background: #000;
+      }
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          span {
+            background: #ff2600;
+          }
+        }
       }
     }
   }

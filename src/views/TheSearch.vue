@@ -97,4 +97,20 @@ export default {
     }
   }
 }
+
+.dark {
+  .search {
+    &__message {
+      color: #fff;
+    }
+  }
+}
+
+.light {
+  .search {
+    &__message {
+      color: #000;
+    }
+  }
+}
 </style>
