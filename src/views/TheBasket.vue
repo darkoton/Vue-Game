@@ -121,20 +121,20 @@ export default {
   &__left {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    @include adaptiv-value(row-gap, 20, 10, 1);
   }
   &__price,
   &__value {
-    font-size: 20px;
+    @include adaptiv-font(20, 16);
     color: #fff;
-    margin-left: 30px;
+    @include adaptiv-value(margin-left, 30, 10, 1);
   }
   &__button {
-    font-size: 20px;
+    @include adaptiv-font(20, 16);
     color: #000;
     background: #38d991;
     border: 2px solid #38d991;
-    padding: 15px 30px;
+    @include adaptiv-padding(15, 10, 30, 20, 1);
     display: flex;
     align-items: center;
     justify-content: center;

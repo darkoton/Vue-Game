@@ -182,7 +182,6 @@
                 'icon-sun': $store.state.theme == 'dark',
                 'icon-moon': $store.state.theme == 'light',
               }"
-              v-if="$store.state.theme == 'dark'"
               @click="$store.commit('changeTheme')"
             ></div>
           </div>
@@ -708,6 +707,12 @@ export default {
       & .header__search-left {
         max-width: 100%;
       }
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__container {
+      padding: 0 15px;
     }
   }
 }

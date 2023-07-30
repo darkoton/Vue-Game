@@ -306,7 +306,7 @@ export default {
       width: 100%;
     }
     & .card__price {
-      padding: 10px 5px;
+      padding: 5px;
     }
   }
   @media (max-width: 380px) {
