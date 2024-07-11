@@ -3,39 +3,19 @@
     <div class="product-card__main" v-if="game">
       <div class="product-card__left">
         <div class="product-card__sliders">
-          <swiper
-            :style="{
-              '--swiper-navigation-color': '#fff',
-              '--swiper-pagination-color': '#fff',
-            }"
-            :spaceBetween="10"
-            :navigation="true"
-            :thumbs="{ swiper: thumbsSwiper }"
-            :modules="modules"
-            class="product-card__slider product-card__slider-1"
-          >
-            <swiper-slide
-              class="product-card__slide-big"
-              v-for="img in game.screenshots"
-              :key="img"
-              ><img :src="img"
-            /></swiper-slide>
+          <swiper :style="{
+            '--swiper-navigation-color': '#fff',
+            '--swiper-pagination-color': '#fff',
+          }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
+            class="product-card__slider product-card__slider-1">
+            <swiper-slide class="product-card__slide-big" v-for="img in game.screenshots" :key="img"><img
+                :src="img" /></swiper-slide>
           </swiper>
 
-          <swiper
-            @swiper="setThumbsSwiper"
-            :spaceBetween="10"
-            :slidesPerView="3"
-            :watchSlidesProgress="true"
-            :modules="modules"
-            class="product-card__slider product-card__slider-2"
-          >
-            <swiper-slide
-              class="product-card__slide-small"
-              v-for="img in game.screenshots"
-              :key="img"
-              ><img :src="img"
-            /></swiper-slide>
+          <swiper @swiper="setThumbsSwiper" :spaceBetween="10" :slidesPerView="3" :watchSlidesProgress="true"
+            :modules="modules" class="product-card__slider product-card__slider-2">
+            <swiper-slide class="product-card__slide-small" v-for="img in game.screenshots" :key="img"><img
+                :src="img" /></swiper-slide>
           </swiper>
         </div>
       </div>
@@ -55,25 +35,18 @@
               </div>
             </div>
 
-            <button
-              class="product-card__basket"
-              :disabled="game.state == 'in developing'"
-              @click="basket"
-            >
+            <button class="product-card__basket" :disabled="game.state == 'in developing'" @click="basket">
               {{
                 $store.state.basket.find((el) => el.id == game.id)
                   ? $t("message.inBasket")
                   : game.state == "in developing"
-                  ? $t("message.soon")
-                  : $t("message.addCart")
+                    ? $t("message.soon")
+                    : $t("message.addCart")
               }}
             </button>
             <div class="product-card__favorite" @click="favorite">
-              <img
-                src="@/assets/img/card/heart.png"
-                alt=""
-                v-if="!$store.state.favorites.find((el) => el.id == game.id)"
-              />
+              <img src="@/assets/img/card/heart.png" alt=""
+                v-if="!$store.state.favorites.find((el) => el.id == game.id)" />
               <img src="@/assets/img/card/heart-active.png" alt="" v-else />
             </div>
           </div>
@@ -84,11 +57,7 @@
             }}
           </p>
           <ul class="product-card__genres">
-            <li
-              class="product-card__genre"
-              v-for="genre in game.genres"
-              :key="genre"
-            >
+            <li class="product-card__genre" v-for="genre in game.genres" :key="genre">
               {{ genre }}
             </li>
           </ul>
@@ -145,9 +114,10 @@ export default {
     async get() {
       this.game = (
         await axios.axios2.get(
-          process.env.VUE_APP_BACKEND_URL2 + "games/" + this.$route.params.id
+          process.env.VUE_APP_BACKEND_URL + "games/" + this.$route.params.id
         )
       ).data;
+
     },
   },
   watch: {
@@ -165,34 +135,42 @@ export default {
 <style lang="scss" scoped>
 .product-card {
   color: #fff;
+
   &__main {
     display: flex;
     column-gap: 20px;
     @include adaptiv-value(padding-top, 40, 20, 1);
   }
+
   &__left,
   &__right {
     width: 50%;
   }
+
   &__right {
     width: 60%;
   }
+
   &__sliders {
     display: flex;
     flex-direction: column;
   }
+
   &__slider {
     width: 100%;
+
     &-1 {
       max-height: 500px;
       border-radius: 10px;
       @include adaptiv-value(--swiper-navigation-size, 50, 25, 1);
     }
+
     &-2 {
       max-height: 200px;
       margin-top: 10px;
     }
   }
+
   &__slide {
     &-big {
       img {
@@ -202,8 +180,10 @@ export default {
         object-fit: cover;
       }
     }
+
     &-small {
       cursor: pointer;
+
       img {
         border-radius: 10px;
         width: 100%;
@@ -218,17 +198,20 @@ export default {
     display: flex;
     flex-direction: column;
   }
+
   &__title {
     font-size: 30px;
     @include adaptiv-font(30, 18);
     font-weight: bold;
     @include adaptiv-value(margin-bottom, 20, 10, 1);
   }
+
   &__actions {
     display: flex;
     align-items: center;
     @include adaptiv-value(margin-bottom, 20, 10, 1);
   }
+
   &__price {
     padding: 10px;
     @include adaptiv-font(20, 14);
@@ -239,6 +222,7 @@ export default {
       color: #1c6d49;
       margin-right: 10px;
       position: relative;
+
       &::after {
         content: "";
         position: absolute;
@@ -252,6 +236,7 @@ export default {
       }
     }
   }
+
   &__basket {
     @include adaptiv-font(22, 14);
     background: #38d991;
@@ -259,28 +244,34 @@ export default {
     height: 100%;
     padding: 6px;
     border: 2px solid #38d991;
+
     @media (any-hover: hover) {
       cursor: pointer;
       transition: all 0.3s ease 0s;
+
       &:hover {
         background: transparent;
         color: #38d991;
       }
     }
+
     &:disabled {
       pointer-events: none;
       background: #165a3b;
       border-color: #165a3b;
     }
   }
+
   &__favorite {
     margin-left: 10px;
     cursor: pointer;
   }
+
   &__description {
     font-size: 14px;
     margin-bottom: 10px;
   }
+
   &__genres {
     display: flex;
     flex-wrap: wrap;
@@ -288,27 +279,33 @@ export default {
     column-gap: 5px;
     margin-bottom: 20px;
   }
+
   &__genre {
     padding: 5px;
     font-size: 10px;
     background: #333;
     border-radius: 3px;
+
     @media (any-hover: hover) {
       cursor: pointer;
       transition: all 0.3s ease 0s;
+
       &:hover {
         color: #38d991;
       }
     }
   }
+
   &__release {
     color: #01492a;
   }
+
   @media (max-width: 750px) {
     &__main {
       flex-direction: column;
       row-gap: 20px;
     }
+
     &__right,
     &__left {
       width: 100%;
@@ -327,11 +324,14 @@ export default {
         border-color: #165a3b;
       }
     }
+
     &__genre {
       background: #333;
+
       @media (any-hover: hover) {
         cursor: pointer;
         transition: all 0.3s ease 0s;
+
         &:hover {
           color: #38d991;
         }
@@ -339,6 +339,7 @@ export default {
     }
   }
 }
+
 .light {
   .product-card {
     color: #000;
@@ -350,11 +351,14 @@ export default {
         border-color: #01a75c;
       }
     }
+
     &__genre {
       background: #bebebe;
+
       @media (any-hover: hover) {
         cursor: pointer;
         transition: all 0.3s ease 0s;
+
         &:hover {
           color: #00a85d;
         }
